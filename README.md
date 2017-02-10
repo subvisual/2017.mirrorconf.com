@@ -63,8 +63,8 @@ Contributions must follow [Subvisual's guides](https://github.com/subvisual/guid
 Resources
 ---------
 
-* [Zeplin]()
-* [Marvel]()
+* [Zeplin](https://zpl.io/Z1OSFD0)
+* [Marvel](https://marvelapp.com/298e0jg)
 
 About
 -----
