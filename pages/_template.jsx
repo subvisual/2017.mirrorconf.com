@@ -1,57 +1,21 @@
-import React from 'react'
-import { Container } from 'react-responsive-grid'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
+import { prefixLink } from 'gatsby-helpers'
+
 import '../css/markdown-styles'
 
-import { rhythm } from '../utils/typography'
+export default class Template extends Component {
+  static propTypes = {
+    children: PropTypes.any
+  }
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    }
-  },
-  render () {
-    return (
-      <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
-          style={{
-            background: '#252525'
-          }}
-        >
-          <Container
-            style={{
-              maxWidth: 960,
-              paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            }}
-          >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Your Brand!
-            </Link>
-          </Container>
-        </Headroom>
-        <Container
-          style={{
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3/4)}`,
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children}
-        </Container>
-      </div>
-    )
-  },
-})
+  render() {
+    return <div className="Layout">
+      <Headroom>
+      </Headroom>
+
+      {this.props.children}
+    </div>
+  }
+}
