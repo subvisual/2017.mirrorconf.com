@@ -42,14 +42,6 @@ To start your development environment run:
 npm run develop
 ```
 
-This will start the node application, Redis, and Gulp.
-ProjectName uses Gulp to watch and compile frontend assets.
-To build the assets only once, not watching for changes, run:
-
-```
-npm run build
-```
-
 Deployment
 ----------
 
