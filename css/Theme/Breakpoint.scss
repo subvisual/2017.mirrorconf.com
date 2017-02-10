@@ -1,0 +1,20 @@
+$Breakpoint-mobile: 650px;
+$Breakpoint-desktop: 1024px;
+
+@mixin Breakpoint-mobileOnly {
+  @media screen and (max-width: $Breakpoint-mobile) {
+    @content
+  };
+};
+
+@mixin Breakpoint-tabletOnly {
+  @media screen and (min-width: $Breakpoint-mobile) and (max-width: $Breakpoint-desktop) {
+    @content
+  };
+};
+
+@mixin Breakpoint-desktopOnly {
+  @media screen and (min-width: $Breakpoint-desktop) {
+    @content
+  };
+};

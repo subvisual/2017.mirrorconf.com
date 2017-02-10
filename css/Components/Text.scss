@@ -1,0 +1,15 @@
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
+
+$Text-font-size: 18px;
+$Text-line-height: 26px;
+$Text-font-family: "ProximaNova";
+$Text-font-weight: normal;
+
+.Text {
+  color: $Color-madison;
+  font-size: $Text-font-size;
+  line-height: $Text-line-height;
+  font-family: $Text-font-family;
+  font-weight: $Text-font-weight;
+}

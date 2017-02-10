@@ -1,0 +1,22 @@
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
+
+$Title-font-size: 72px;
+$Title-line-height: 91px;
+$Title-font-size-mobile: 39px;
+$Title-line-height-mobile: 52px;
+$Title-font-family: "MatrixIIOT";
+$Title-font-weight: 800;
+
+.Title {
+  color: $Color-madison;
+  font-size: $Title-font-size-mobile;
+  line-height: $Title-line-height-mobile;
+  font-family: $Title-font-family;
+  font-weight: $Title-font-weight;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $Title-font-size;
+    line-height: $Title-line-height;
+  }
+}

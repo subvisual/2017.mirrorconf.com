@@ -1,0 +1,18 @@
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
+
+$Caption-font-size: 13px;
+$Caption-line-height: 26px;
+$Caption-font-family: "ProximaNova";
+$Caption-font-weight: bold;
+$Caption-letter-spacing: 0.5px;
+
+.Caption {
+  color: $Color-madison;
+  font-size: $Caption-font-size;
+  line-height: $Caption-line-height;
+  font-family: $Caption-font-family;
+  font-weight: $Caption-font-weight;
+  letter-spacing: $Caption-letter-spacing;
+  text-transform: uppercase;
+}
