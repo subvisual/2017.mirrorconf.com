@@ -5,11 +5,11 @@ $SubSectionTitle-font-size: 26px;
 $SubSectionTitle-line-height: 39px;
 $SubSectionTitle-font-size-mobile: 18px;
 $SubSectionTitle-line-height-mobile: 26px;
-$SubSectionTitle-font-family: "MatrixIIOT";
-$SubSectionTitle-font-weight: 800;
+$SubSectionTitle-font-family: "matrix-ii";
+$SubSectionTitle-font-weight: bold;
 
 .SubSectionTitle {
-  color: $Color-madison;
+  color: $Color-white;
   font-size: $SubSectionTitle-font-size-mobile;
   line-height: $SubSectionTitle-line-height-mobile;
   font-family: $SubSectionTitle-font-family;
@@ -19,4 +19,9 @@ $SubSectionTitle-font-weight: 800;
     font-size: $SubSectionTitle-font-size;
     line-height: $SubSectionTitle-line-height;
   }
+}
+
+.SubSectionTitle.SubSectionTitle--alternate {
+  color: $Color-razzmatazz;
+  font-weight: normal;
 }

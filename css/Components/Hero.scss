@@ -1,0 +1,196 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Hero-max-width: 1211px;
+$Hero-uvp-max-width: 523px;
+$Hero-z-index-background: 0;
+$Hero-z-index-foreground: 1;
+$Hero-font-size: 26px;
+$Hero-line-height: 39px;
+$Hero-font-size-mobile: 18px;
+$Hero-line-height-mobile: 26px;
+$Hero-uvp-font-size-desktop: 72px;
+$Hero-uvp-line-height-desktop: 91px;
+$Hero-uvp-font-size-mobile: 39px;
+$Hero-uvp-line-height-mobile: 52px;
+$Hero-font-family: "matrix-ii";
+$Hero-font-weight: bold;
+
+.Hero {
+  position: relative;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0 $Spacing-small;
+  }
+}
+
+.Hero-background {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100;
+
+  z-index: $Hero-z-index-background;
+}
+
+.Hero-foreground {
+  padding-top: $Spacing-base;
+  padding-bottom: $Spacing-xxSmall;
+
+  z-index: $Hero-z-index-foreground;
+
+  @include Breakpoint-desktopOnly {
+    max-width: $Hero-max-width;
+
+    padding-top: $Spacing-large;
+
+    margin: 0 auto;
+  };
+}
+
+.Hero-content {
+  padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    display: flex;
+    align-items: center;
+
+    padding: 0 $Spacing-large;
+  };
+}
+
+.Hero-title {
+  @include Breakpoint-desktopOnly {
+    flex: 2;
+
+    padding-left: $Spacing-small
+  };
+}
+
+.Hero-uvp {
+  margin-top: $Spacing-xSmall;
+  margin-bottom: $Spacing-xxSmall;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
+
+  color: transparent;
+  font-size: $Hero-uvp-font-size-mobile;
+  line-height: $Hero-uvp-line-height-mobile;
+  font-family: $Hero-font-family;
+  font-weight: $Hero-font-weight;
+
+  @include Breakpoint-desktopOnly {
+    max-width: $Hero-uvp-max-width;
+
+    font-size: $Hero-uvp-font-size-desktop;
+    line-height: $Hero-uvp-line-height-desktop;
+  }
+}
+
+.Hero-date,
+.Hero-headline {
+  color: $Color-white;
+  font-size: $Hero-font-size-mobile;
+  line-height: $Hero-line-height-mobile;
+  font-family: $Hero-font-family;
+  font-weight: $Hero-font-weight;
+
+
+  @include Breakpoint-desktopOnly {
+    font-size: $Hero-font-size;
+    line-height: $Hero-line-height;
+  }
+}
+
+.Hero-date {
+  font-style: italic;
+}
+
+.Hero-actions {
+  margin-top: $Spacing-base;
+
+  @include Breakpoint-desktopOnly {
+    flex: 1;
+
+    margin: 0;
+
+    text-align: right;
+  };
+}
+
+.Hero-playButton {
+  position: relative;
+
+  padding-left: $Spacing-xxSmall;
+
+  text-decoration: none;
+
+  @include Breakpoint-desktopOnly {
+    display: inline-block;
+
+    text-align: left;
+  }
+
+  &:hover {
+    .Hero-playButtonImage {
+      transform: translateX(-4px) scale(0.95, 0.95);
+    }
+
+    .Hero-playButtonLabel {
+      transform: translateX(8px);
+    }
+  }
+}
+
+.Hero-playButtonImage {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  height: 100%;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.Hero-playButtonLabel {
+  position: relative;
+
+  transition: all 0.3s cubic-bezier(.03, 1.14, .33, .66);
+  -webkit-transition: all 0.3s cubic-bezier(.03, 1, .33, .66);
+}
+
+.Hero-footer {
+  display: flex;
+  align-items: center;
+
+  margin-top: $Spacing-base;
+  padding: 0 $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-large;
+    padding: 0;
+  }
+}
+
+.Hero-socialLink {
+  height: 100%;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+
+    opacity: 0.9;
+  }
+}
+
+.Hero-socialLink:not(:last-child) {
+  margin-right: $Spacing-xSmall;
+}

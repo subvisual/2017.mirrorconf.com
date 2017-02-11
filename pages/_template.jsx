@@ -1,9 +1,11 @@
-import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
-import Headroom from 'react-headroom'
-import { prefixLink } from 'gatsby-helpers'
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
+import Headroom from 'react-headroom';
+import { prefixLink } from 'gatsby-helpers';
 
-import '../css/markdown-styles'
+import '../css/reset';
+import '../css/markdown-styles';
+import '../css/Components/Layout';
 
 export default class Template extends Component {
   static propTypes = {
@@ -13,9 +15,12 @@ export default class Template extends Component {
   render() {
     return <div className="Layout">
       <Headroom>
+        <nav className="Layout-navbar"></nav>
       </Headroom>
 
-      {this.props.children}
-    </div>
+      <div className="Layout-content">
+        {this.props.children}
+      </div>
+    </div>;
   }
 }

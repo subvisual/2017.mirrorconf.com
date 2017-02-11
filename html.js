@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Helmet from "react-helmet"
+import Helmet from 'react-helmet'
 
 import { prefixLink } from 'gatsby-helpers'
 
@@ -32,6 +32,8 @@ export default class Html extends Component {
       </head>
       <body>
         <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+        <script src="https://use.typekit.net/tzn4lss.js"/>
+        <script>{`try{Typekit.load({ async: true });}catch(e){}`}</script>
         <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
       </body>
     </html>

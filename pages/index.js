@@ -4,6 +4,8 @@ import { prefixLink } from 'gatsby-helpers'
 import Helmet from "react-helmet"
 import { config } from 'config'
 
+import Hero from '../Components/Hero'
+
 export default class Index extends React.Component {
   render () {
     return (
@@ -15,10 +17,8 @@ export default class Index extends React.Component {
             {"name": "keywords", "content": "sample, something"},
           ]}
         />
-        <h1>
-          Hello World!
-        </h1>
-        <p>Welcome to your new clean Gatsby site</p>
+
+        <Hero/>
       </div>
     )
   }

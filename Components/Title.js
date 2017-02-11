@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 
 import '../css/Components/Title';
 
@@ -8,7 +9,11 @@ export default class Title extends Component {
   }
 
   render() {
-    return <h1 className="Title">
+    const className = classNames({
+      'Title': true
+    });
+
+    return <h1 className={className}>
       {this.props.children}
     </h1>;
   }
