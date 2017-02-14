@@ -1,0 +1,4 @@
+#!/bin/sh
+
+yarn
+bundle check || bundle install
