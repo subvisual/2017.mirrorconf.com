@@ -10,10 +10,11 @@ $SubSectionTitle-font-weight: bold;
 
 .SubSectionTitle {
   color: $Color-white;
-  font-size: $SubSectionTitle-font-size-mobile;
-  line-height: $SubSectionTitle-line-height-mobile;
+
   font-family: $SubSectionTitle-font-family;
+  font-size: $SubSectionTitle-font-size-mobile;
   font-weight: $SubSectionTitle-font-weight;
+  line-height: $SubSectionTitle-line-height-mobile;
 
   @include Breakpoint-desktopOnly {
     font-size: $SubSectionTitle-font-size;
@@ -23,5 +24,6 @@ $SubSectionTitle-font-weight: bold;
 
 .SubSectionTitle.SubSectionTitle--alternate {
   color: $Color-razzmatazz;
+
   font-weight: normal;
 }

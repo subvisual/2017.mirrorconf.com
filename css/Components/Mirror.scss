@@ -7,11 +7,21 @@
   width: 100%;
 }
 
+.Mirror-original {
+  position: relative; //hack to make this allways on top
+
+  z-index: 1;
+}
+
 .Mirror-reflection {
   position: absolute;
   top: 0;
   left: 0;
-  transform: scaleX(-1);
-  filter: opacity(0.5) blur(10px);
+  z-index: 0;
+
   pointer-events: none;
+
+  transform: scaleX(-1);
+
+  filter: opacity(0.5) blur(10px);
 }

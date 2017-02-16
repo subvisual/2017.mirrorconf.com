@@ -1,33 +1,28 @@
-import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
-import Headroom from 'react-headroom';
-import { prefixLink } from 'gatsby-helpers';
+import React, { PropTypes } from 'react';
 
 import '../css/reset';
 import '../css/markdown-styles';
 import '../css/Components/Layout';
 
 import Navbar from '../Components/Navbar';
-import Mirror from '../Components/Mirror'
+import Mirror from '../Components/Mirror';
 
-export default class Template extends Component {
-  static propTypes = {
-    children: PropTypes.any
-  }
-
-  render() {
-    return <div className="Layout">
-      <Mirror>
-      <Headroom>
-        <nav className="Layout-navbar">
-          <Navbar/>
-        </nav>
-      </Headroom>
+const Template = ({ children }) => (
+  <div className="Layout">
+    <Mirror>
+      <nav className="Layout-navbar">
+        <Navbar />
+      </nav>
 
       <div className="Layout-content">
-        {this.props.children}
+        {children}
       </div>
-      </Mirror>
-    </div>;
-  }
-}
+    </Mirror>
+  </div>
+);
+
+Template.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Template;

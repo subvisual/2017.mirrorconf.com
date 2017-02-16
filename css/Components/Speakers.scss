@@ -1,0 +1,53 @@
+@import "../Theme/Spacing";
+@import "../Theme/Global";
+
+$Speakers-2-column-size: $Global-speaker-width * 2 + $Spacing-xSmall;
+$Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
+
+.Speakers-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: $Spacing-base auto 0;
+}
+
+@media (max-width: $Speakers-2-column-size) {
+  .Speakers-list {
+    justify-content: center;
+  }
+}
+
+@media (min-width: $Speakers-2-column-size) and (max-width: $Speakers-3-column-size) {
+  .Speakers-list {
+    max-width: $Speakers-2-column-size;
+  }
+
+  .Speakers-list .Speakers-item:nth-child(2n - 1) {
+    margin-top: $Spacing-base;
+    margin-right: $Spacing-xSmall;
+  }
+}
+
+@media (min-width: $Speakers-3-column-size) {
+  .Speakers-list {
+    max-width: $Speakers-3-column-size;
+
+    padding-bottom: $Spacing-base + $Spacing-xxSmall;
+  }
+
+  .Speakers-list .Speakers-item {
+    margin-bottom: $Spacing-small;
+  }
+
+  .Speakers-list .Speakers-item:nth-child(3n - 2) {
+    margin-right: $Spacing-xSmall;
+
+    transform: translateY($Spacing-base);
+  }
+
+  .Speakers-list .Speakers-item:nth-child(3n - 1) {
+    margin-right: $Spacing-xSmall;
+
+    transform: translateY($Spacing-base * 2);
+  }
+}

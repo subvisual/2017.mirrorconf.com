@@ -3,6 +3,7 @@ import Burger from './Burger';
 import Caption from './Caption';
 import OverlayMenu from './OverlayMenu';
 
+import Section from './Section';
 import '../css/Components/Navbar';
 import MirrorLogo from '../images/logo.svg';
 
@@ -27,24 +28,28 @@ export default class Navbar extends Component {
   render() {
     const { overlayOpen } = this.state;
 
-    return (<div className="Navbar">
-      <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+    return (
+      <Section>
+        <div className="Navbar">
+          <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
 
-      <div className="Navbar-links">
-        {LINKS}
-      </div>
+          <div className="Navbar-links">
+            {LINKS}
+          </div>
 
-      <OverlayMenu isOpen={overlayOpen}>
-        {LINKS}
-        <Caption>+351 916 748 994</Caption>
-        <Caption>hello@mirrorconf.com</Caption>
-      </OverlayMenu>
+          <OverlayMenu isOpen={overlayOpen}>
+            {LINKS}
+            <Caption>+351 916 748 994</Caption>
+            <Caption>hello@mirrorconf.com</Caption>
+          </OverlayMenu>
 
-      <Burger
-        openLabel="Menu"
-        closeLabel="Close"
-        onClick={this.toggleOverlayMenu}
-      />
-    </div>);
+          <Burger
+            openLabel="Menu"
+            closeLabel="Close"
+            onClick={this.toggleOverlayMenu}
+          />
+        </div>
+      </Section>
+    );
   }
 }

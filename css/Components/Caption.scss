@@ -9,10 +9,11 @@ $Caption-letter-spacing: 0.5px;
 
 .Caption {
   color: $Color-white;
-  font-size: $Caption-font-size;
-  line-height: $Caption-line-height;
+
   font-family: $Caption-font-family;
+  font-size: $Caption-font-size;
   font-weight: $Caption-font-weight;
   letter-spacing: $Caption-letter-spacing;
+  line-height: $Caption-line-height;
   text-transform: uppercase;
 }

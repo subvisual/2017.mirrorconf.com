@@ -36,29 +36,29 @@ $Burger-label-letter-spacing: 0.5px;
 .Burger-closeLabel {
   display: block;
 
-  color: transparent;
   background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: transparent;
 
-  font-size: $Burger-label-font-size;
-  line-height: $Burger-label-line-height;
   font-family: $Burger-label-font-family;
+  font-size: $Burger-label-font-size;
   font-weight: $Burger-label-font-weight;
   letter-spacing: $Burger-label-letter-spacing;
+  line-height: $Burger-label-line-height;
   text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
+
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .Burger.is-open {
   .Burger-line:nth-child(1) {
-    transform-origin: center;
     transform: rotate(-45deg) translate(-4px, 4px);
+    transform-origin: center;
   }
 
   .Burger-line:nth-child(2) {
-    transform-origin: center;
     transform: rotate(45deg);
+    transform-origin: center;
   }
 
   .Burger-line:nth-child(3) {

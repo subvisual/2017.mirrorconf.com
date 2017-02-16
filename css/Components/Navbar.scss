@@ -10,7 +10,11 @@ $Navbar-logo-height-desktop: 39px;
   align-items: center;
   justify-content: space-between;
 
-  padding: $Spacing-xxSmall $Spacing-xxSmall 0
+  padding: $Spacing-xxSmall $Spacing-xxSmall 0;
+
+  @include Breakpoint-desktopOnly {
+    padding: $Spacing-xSmall 0 0;
+  }
 }
 
 .Navbar-logo {
@@ -26,6 +30,7 @@ $Navbar-logo-height-desktop: 39px;
 
   @include Breakpoint-desktopOnly {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
 
     width: 100%;
@@ -43,27 +48,28 @@ $Navbar-logo-height-desktop: 39px;
 
 .Navbar-cta {
   position: relative;
+  z-index: 1;
 
-  margin-bottom: $Spacing-xSmall;
   padding: $Spacing-xxSmall $Spacing-xSmall;
+  margin-bottom: $Spacing-xSmall;
 
   color: $Color-white;
-  font-family: "proxima-nova";
-  font-size: 13px;
-  line-height: 0;
-  font-weight: bold;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-
   cursor: pointer;
 
+  font-family: "proxima-nova";
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  line-height: 13px;
+  text-transform: uppercase;
+
   @include Breakpoint-desktopOnly {
-    margin-left: $Spacing-xSmall;
     margin-bottom: 0;
+    margin-left: $Spacing-xSmall;
   };
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     content: "";
 
     position: absolute;
@@ -74,30 +80,28 @@ $Navbar-logo-height-desktop: 39px;
     height: 100%;
   }
 
-  &:before {
+  &::before {
     top: 0;
     left: 0;
+    z-index: -1;
 
     background-image: linear-gradient(107deg, $Color-coral, $Color-razzmatazz);
-
-    z-index: -1;
   }
 
-  &:after {
+  &::after {
     top: 3px;
     left: 3px;
+    z-index: -2;
 
     border: 2px solid $Color-white;
-
-    z-index: -2;
 
     transition: all 0.2s ease-in-out;
   }
 
   &:hover {
-    &:after {
-      top: 0px;
-      left: 0px;
+    &::after {
+      top: 0;
+      left: 0;
     }
   }
 }

@@ -1,0 +1,38 @@
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Speaker-height: 416px;
+$Speaker-name-font-size: 26px;
+$Speaker-name-line-height: 39px;
+$Speaker-name-font-size-mobile: 18px;
+$Speaker-name-line-height-mobile: 26px;
+$Speaker-name-font-family: "matrix-ii";
+$Speaker-name-font-weight: bold;
+
+.Speaker {
+  display: flex;
+  align-items: flex-end;
+
+  width: $Global-speaker-width;
+  height: $Speaker-height;
+}
+
+.Speaker-details {
+  transform: translateX(- $Spacing-xxSmall);
+}
+
+.Speaker-name {
+  color: $Color-coral;
+
+  font-family: $Speaker-name-font-family;
+  font-size: $Speaker-name-font-size-mobile;
+  font-weight: $Speaker-name-font-weight;
+  line-height: $Speaker-name-line-height-mobile;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $Speaker-name-font-size;
+    line-height: $Speaker-name-line-height;
+  }
+}

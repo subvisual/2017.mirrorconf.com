@@ -7,8 +7,9 @@ $Footer-gradient-end: rgba(0, 0, 0, 0.3);
 $Footer-separator-height: 1px;
 
 .Footer {
-  background: linear-gradient(to bottom, $Footer-gradient-start, $Footer-gradient-end);
   padding: 0 $Spacing-xxSmall;
+
+  background: linear-gradient(to bottom, $Footer-gradient-start, $Footer-gradient-end);
 
   @include Breakpoint-desktopOnly {
     padding: 0 $Spacing-small;
@@ -16,11 +17,12 @@ $Footer-separator-height: 1px;
 }
 
 .Footer-content {
-  max-width: 1206px;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  max-width: 1206px;
+  margin: 0 auto;
 }
 
 .Footer-upper {
@@ -66,15 +68,17 @@ $Footer-separator-height: 1px;
 .Footer-separator {
   width: 100%;
   height: $Footer-separator-height;
-  background-color: $Color-white;
   margin: $Spacing-xSmall 0;
+
+  background-color: $Color-white;
 }
 
 .Footer-mobileSeparator {
   width: 100%;
   height: $Footer-separator-height;
-  background-color: $Color-white;
   margin: $Spacing-xSmall 0;
+
+  background-color: $Color-white;
 
   @include Breakpoint-desktopOnly {
     display: none;

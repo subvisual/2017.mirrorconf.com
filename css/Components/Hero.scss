@@ -2,7 +2,6 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 
-$Hero-max-width: 1211px;
 $Hero-uvp-max-width: 523px;
 $Hero-z-index-background: 0;
 $Hero-z-index-foreground: 1;
@@ -30,25 +29,19 @@ $Hero-font-weight: bold;
 
   top: 0;
   left: 0;
+  z-index: $Hero-z-index-background;
 
   width: 100%;
   height: 100;
-
-  z-index: $Hero-z-index-background;
 }
 
 .Hero-foreground {
-  padding-top: $Spacing-base;
-  padding-bottom: $Spacing-xxSmall;
-
   z-index: $Hero-z-index-foreground;
 
+  padding-top: $Spacing-base;
+
   @include Breakpoint-desktopOnly {
-    max-width: $Hero-max-width;
-
     padding-top: $Spacing-large;
-
-    margin: 0 auto;
   };
 }
 
@@ -67,7 +60,7 @@ $Hero-font-weight: bold;
   @include Breakpoint-desktopOnly {
     flex: 2;
 
-    padding-left: $Spacing-small
+    padding-left: $Spacing-small;
   };
 }
 
@@ -75,15 +68,16 @@ $Hero-font-weight: bold;
   margin-top: $Spacing-xSmall;
   margin-bottom: $Spacing-xxSmall;
 
+  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
+  color: transparent;
+
+  font-family: $Hero-font-family;
+  font-size: $Hero-uvp-font-size-mobile;
+  font-weight: $Hero-font-weight;
+  line-height: $Hero-uvp-line-height-mobile;
+
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
-
-  color: transparent;
-  font-size: $Hero-uvp-font-size-mobile;
-  line-height: $Hero-uvp-line-height-mobile;
-  font-family: $Hero-font-family;
-  font-weight: $Hero-font-weight;
 
   @include Breakpoint-desktopOnly {
     max-width: $Hero-uvp-max-width;
@@ -96,11 +90,11 @@ $Hero-font-weight: bold;
 .Hero-date,
 .Hero-headline {
   color: $Color-white;
-  font-size: $Hero-font-size-mobile;
-  line-height: $Hero-line-height-mobile;
-  font-family: $Hero-font-family;
-  font-weight: $Hero-font-weight;
 
+  font-family: $Hero-font-family;
+  font-size: $Hero-font-size-mobile;
+  font-weight: $Hero-font-weight;
+  line-height: $Hero-line-height-mobile;
 
   @include Breakpoint-desktopOnly {
     font-size: $Hero-font-size;
@@ -164,19 +158,19 @@ $Hero-font-weight: bold;
   position: relative;
 
   transition: all 0.3s cubic-bezier(.03, 1.14, .33, .66);
-  -webkit-transition: all 0.3s cubic-bezier(.03, 1, .33, .66);
 }
 
 .Hero-footer {
   display: flex;
   align-items: center;
 
-  margin-top: $Spacing-base;
   padding: 0 $Spacing-xxSmall;
+  margin-top: $Spacing-base;
 
   @include Breakpoint-desktopOnly {
-    margin-top: $Spacing-large;
     padding: 0;
+
+    margin-top: $Spacing-large;
   }
 }
 
@@ -186,9 +180,9 @@ $Hero-font-weight: bold;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.1, 1.1);
-
     opacity: 0.9;
+
+    transform: scale(1.1, 1.1);
   }
 }
 

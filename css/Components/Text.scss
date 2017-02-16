@@ -7,9 +7,10 @@ $Text-font-family: "proxima-nova";
 $Text-font-weight: normal;
 
 .Text {
-  color: $Color-madison;
-  font-size: $Text-font-size;
-  line-height: $Text-line-height;
+  color: $Color-white;
+
   font-family: $Text-font-family;
+  font-size: $Text-font-size;
   font-weight: $Text-font-weight;
+  line-height: $Text-line-height;
 }

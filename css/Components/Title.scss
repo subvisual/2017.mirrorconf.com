@@ -10,10 +10,11 @@ $Title-font-weight: bold;
 
 .Title {
   color: $Color-white;
-  font-size: $Title-font-size-mobile;
-  line-height: $Title-line-height-mobile;
+
   font-family: $Title-font-family;
+  font-size: $Title-font-size-mobile;
   font-weight: $Title-font-weight;
+  line-height: $Title-line-height-mobile;
 
   @include Breakpoint-desktopOnly {
     font-size: $Title-font-size-desktop;

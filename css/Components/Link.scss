@@ -7,13 +7,14 @@ $Link-line-height: 26px;
 
 .Link {
   color: $Color-white;
-  text-decoration: none;
-  font-size: $Link-font-size;
+
   font-family: $Link-font-family;
+  font-size: $Link-font-size;
   line-height: $Link-line-height;
+  text-decoration: none;
 }
 
 .Link.Link--uppercase {
-  text-transform: uppercase;
   font-size: $Link-font-size-small;
+  text-transform: uppercase;
 }

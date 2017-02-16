@@ -1,27 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Helmet from "react-helmet"
-import { config } from 'config'
+import React from 'react';
+import Hero from '../Components/Hero';
+import Footer from '../Components/Footer';
+import Speakers from '../Components/Speakers';
 
-import Hero from '../Components/Hero'
-import Footer from '../Components/Footer'
+import '../css/Components/Index';
 
-export default class Index extends React.Component {
-  render () {
-    return (
-      <div>
-        <Helmet
-          title={config.siteTitle}
-          meta={[
-            {"name": "description", "content": "Sample"},
-            {"name": "keywords", "content": "sample, something"},
-          ]}
-        />
+const Index = () => (
+  <div className="Index">
+    <Hero />
+    <div className="Index-section">
+      <Speakers />
+    </div>
+    <div className="Index-section">
+      <Footer />
+    </div>
+  </div>
+);
 
-        <Hero/>
-        <Footer />
-      </div>
-    )
-  }
-}
+export default Index;

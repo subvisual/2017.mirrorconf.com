@@ -1,0 +1,8 @@
+$Section-max-width: 1206px;
+
+.Section .Section-content {
+  width: 100%;
+  max-width: $Section-max-width;
+
+  margin: 0 auto;
+}

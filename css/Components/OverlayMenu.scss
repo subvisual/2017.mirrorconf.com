@@ -12,16 +12,18 @@
 
   background-color: $Color-deep-cove;
 
-  opacity: 0.5;
   border-radius: 50%;
+  opacity: 0.5;
+
   transform: translate(-100%, 0);
 
   transition: all 0.3s ease-in-out;
 }
 
 .OverlayMenu.is-open {
-  opacity: 1;
   border-radius: 0%;
+  opacity: 1;
+
   transform: translate(0, 0);
 }
 
