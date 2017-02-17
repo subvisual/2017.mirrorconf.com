@@ -1,0 +1,82 @@
+@import "../Theme/Breakpoint";
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+
+$Footer-gradient-start: rgba(0, 0, 0, 0);
+$Footer-gradient-end: rgba(0, 0, 0, 0.3);
+$Footer-separator-height: 1px;
+
+.Footer {
+  background: linear-gradient(to bottom, $Footer-gradient-start, $Footer-gradient-end);
+  padding: 0 $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0 $Spacing-small;
+  }
+}
+
+.Footer-content {
+  max-width: 1206px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer-upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include Breakpoint-desktopOnly {
+    flex-direction: row;
+  }
+}
+
+.Footer-lower {
+  margin-bottom: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: $Spacing-large;
+  }
+}
+
+.Footer-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Footer-logo {
+  margin-bottom: $Spacing-xSmall;
+}
+
+.Footer-sectionTitle {
+  margin-bottom: $Spacing-xxSmall;
+}
+
+.Footer-link:not(:last-child) {
+  margin-bottom: $Spacing-xxSmall;
+}
+
+.Footer-socialLink:not(:last-child) {
+  margin-right: $Spacing-xxSmall;
+}
+
+.Footer-separator {
+  width: 100%;
+  height: $Footer-separator-height;
+  background-color: $Color-white;
+  margin: $Spacing-xSmall 0;
+}
+
+.Footer-mobileSeparator {
+  width: 100%;
+  height: $Footer-separator-height;
+  background-color: $Color-white;
+  margin: $Spacing-xSmall 0;
+
+  @include Breakpoint-desktopOnly {
+    display: none;
+  }
+}

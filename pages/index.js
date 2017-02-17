@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 import { config } from 'config'
 
 import Hero from '../Components/Hero'
+import Footer from '../Components/Footer'
 
 export default class Index extends React.Component {
   render () {
@@ -19,6 +20,7 @@ export default class Index extends React.Component {
         />
 
         <Hero/>
+        <Footer />
       </div>
     )
   }

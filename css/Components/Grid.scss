@@ -1,0 +1,29 @@
+@import "../Theme/Breakpoint";
+@import "../Theme/Spacing";
+
+$Grid-col-width: 86px;
+$Grid-col-spacing: 26px;
+
+.Grid {
+  width: 100%;
+}
+
+@for $col from 1 through 4 {
+  .Grid--#{$col}offset {
+    padding: 0;
+
+    @include Breakpoint-desktopOnly {
+      padding: 0 calc((#{$Grid-col-width} + #{$Grid-col-spacing}) * #{$col});
+    }
+  }
+
+  .Grid-#{$col}column {
+    width: 100%;
+    max-width: calc(#{$Grid-col-width} * #{$col});
+    margin-right: calc(#{$Grid-col-spacing} * #{$col});
+  }
+
+  .Grid-#{$col}column:last-child {
+    margin-right: 0;
+  }
+}

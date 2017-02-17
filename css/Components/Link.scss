@@ -1,0 +1,19 @@
+@import "../Theme/Color";
+
+$Link-font-family: "proxima-nova";
+$Link-font-size: 18px;
+$Link-font-size-small: 13px;
+$Link-line-height: 26px;
+
+.Link {
+  color: $Color-white;
+  text-decoration: none;
+  font-size: $Link-font-size;
+  font-family: $Link-font-family;
+  line-height: $Link-line-height;
+}
+
+.Link.Link--uppercase {
+  text-transform: uppercase;
+  font-size: $Link-font-size-small;
+}
