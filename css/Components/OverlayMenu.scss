@@ -1,0 +1,33 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+
+.OverlayMenu {
+  position: fixed;
+
+  top: $Spacing-base;
+  left: 0;
+
+  width: 100%;
+  height: calc(100vh - #{$Spacing-base});
+
+  background-color: $Color-deep-cove;
+
+  opacity: 0.5;
+  border-radius: 50%;
+  transform: translate(-100%, 0);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.OverlayMenu.is-open {
+  opacity: 1;
+  border-radius: 0%;
+  transform: translate(0, 0);
+}
+
+.OverlayMenu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

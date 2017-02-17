@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import '../css/Components/Hero'
 
-import Title from './Title';
 import SubSectionTitle from './SubSectionTitle';
 
 import PlayIcon from '../images/play.svg';

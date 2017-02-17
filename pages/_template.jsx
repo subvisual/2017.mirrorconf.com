@@ -7,6 +7,8 @@ import '../css/reset';
 import '../css/markdown-styles';
 import '../css/Components/Layout';
 
+import Navbar from '../Components/Navbar';
+
 export default class Template extends Component {
   static propTypes = {
     children: PropTypes.any
@@ -15,7 +17,9 @@ export default class Template extends Component {
   render() {
     return <div className="Layout">
       <Headroom>
-        <nav className="Layout-navbar"></nav>
+        <nav className="Layout-navbar">
+          <Navbar/>
+        </nav>
       </Headroom>
 
       <div className="Layout-content">
