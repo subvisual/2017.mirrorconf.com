@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-  <defs>
-    <linearGradient id="a" x1="0%" y1="0%" y2="100%">
-      <stop stop-color="#FD7D57" offset="0%"/>
-      <stop stop-color="#FA2471" offset="100%"/>
-    </linearGradient>
-  </defs>
-  <path fill="url(#a)" fill-rule="evenodd" d="M30.00625 511h-16.0125c-.549 0-.99375.44475-.99375.99375V528.007c0 .54825.44475.993.99375.993H22.615v-6.9705h-2.346v-2.7165h2.346v-2.00325c0-2.325 1.41975-3.591 3.49425-3.591.99375 0 1.84725.07425 2.09625.10725v2.43l-1.4385.00075c-1.128 0-1.34625.53625-1.34625 1.32225v1.73475H28.111l-.35025 2.7165h-2.34V529h4.587c.5475 0 .99225-.44475.99225-.99375v-16.0125c0-.549-.44475-.99375-.99375-.99375z" transform="translate(-13 -511)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><defs><linearGradient id="a" x1="0%" y1="0%" y2="100%"><stop stop-color="#FD7D57" offset="0%"/><stop stop-color="#FA2471" offset="100%"/></linearGradient></defs><path fill="url(#a)" fill-rule="evenodd" d="M30.006 511H13.994a.994.994 0 0 0-.994.994v16.013c0 .548.445.993.994.993h8.621v-6.97h-2.346v-2.717h2.346v-2.003c0-2.325 1.42-3.591 3.494-3.591.994 0 1.847.074 2.096.107v2.43h-1.438c-1.128 0-1.346.537-1.346 1.323v1.735h2.69l-.35 2.716h-2.34V529h4.587a.993.993 0 0 0 .992-.994v-16.012a.994.994 0 0 0-.994-.994z" transform="translate(-13 -511)"/></svg>
