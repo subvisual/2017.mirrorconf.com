@@ -7,7 +7,6 @@ export default class Mirror extends Component {
     document.
       querySelectorAll('.Mirror-original [data-mirror-hover]').
       forEach(this.mirrorEventsOn);
-    })
   }
 
   mirrorEventsOn = el => {
