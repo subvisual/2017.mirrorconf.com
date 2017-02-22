@@ -28,7 +28,7 @@ export default class Hero extends Component {
             </h3>
           </div>
           <div className="Hero-actions">
-            <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton">
+            <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" data-mirror-id="button" data-mirror-hover>
               <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage"/>
               <div className="Hero-playButtonLabel">
                 <SubSectionTitle>

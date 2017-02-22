@@ -137,7 +137,8 @@ $Hero-font-weight: bold;
     text-align: left;
   }
 
-  &:hover {
+  &:hover,
+  &.hover {
     .Hero-playButtonImage {
       transform: translateX(-4px) scale(0.95, 0.95);
     }

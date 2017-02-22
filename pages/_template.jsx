@@ -8,6 +8,7 @@ import '../css/markdown-styles';
 import '../css/Components/Layout';
 
 import Navbar from '../Components/Navbar';
+import Mirror from '../Components/Mirror'
 
 export default class Template extends Component {
   static propTypes = {
@@ -16,6 +17,7 @@ export default class Template extends Component {
 
   render() {
     return <div className="Layout">
+      <Mirror>
       <Headroom>
         <nav className="Layout-navbar">
           <Navbar/>
@@ -25,6 +27,7 @@ export default class Template extends Component {
       <div className="Layout-content">
         {this.props.children}
       </div>
+      </Mirror>
     </div>;
   }
 }

@@ -1,0 +1,17 @@
+.Mirror {
+  position: relative;
+}
+
+.Mirror-original,
+.Mirror-reflection {
+  width: 100%;
+}
+
+.Mirror-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(-1);
+  filter: opacity(0.5) blur(10px);
+  pointer-events: none;
+}
