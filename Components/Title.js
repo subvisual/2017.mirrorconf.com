@@ -1,20 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import classNames from 'classnames';
+import React, { PropTypes } from 'react';
 
 import '../css/Components/Title';
 
-export default class Title extends Component {
-  static propTypes = {
-    children: PropTypes.any
-  }
+const Title = ({ children }) => (
+  <h1 className="Title">
+    {children}
+  </h1>
+);
 
-  render() {
-    const className = classNames({
-      'Title': true
-    });
+Title.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
-    return <h1 className={className}>
-      {this.props.children}
-    </h1>;
-  }
-}
+export default Title;

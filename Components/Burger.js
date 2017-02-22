@@ -7,7 +7,7 @@ export default class Burger extends Component {
   static propTypes = {
     onClick: PropTypes.func.isRequired,
     openLabel: PropTypes.string.isRequired,
-    closeLabel: PropTypes.string.isRequired
+    closeLabel: PropTypes.string.isRequired,
   }
 
   constructor(props) {
@@ -18,31 +18,33 @@ export default class Burger extends Component {
   onClick = () => {
     this.setState({ isOpen: !this.state.isOpen });
 
-    if (this.props.onClick)
+    if (this.props.onClick) {
       this.props.onClick();
+    }
   }
 
   renderLabel = () => {
     const { isOpen } = this.state;
 
-    if (isOpen)
-      return <label className="Burger-closeLabel">{this.props.closeLabel}</label>;
+    if (isOpen) { return <span className="Burger-closeLabel">{this.props.closeLabel}</span>; }
 
-    return <label className="Burger-openLabel">{this.props.openLabel}</label>;
+    return <span className="Burger-openLabel">{this.props.openLabel}</span>;
   }
 
   render() {
     const { isOpen } = this.state;
     const className = classNames({
-      'Burger': true,
-      'is-open': isOpen
+      Burger: true,
+      'is-open': isOpen,
     });
 
-    return <a onClick={this.onClick} className={className}>
-      <div className="Burger-line"/>
-      <div className="Burger-line"/>
-      <div className="Burger-line"/>
-      {this.renderLabel()}
-    </a>;
+    return (
+      <button onClick={this.onClick} className={className} >
+        <div className="Burger-line" />
+        <div className="Burger-line" />
+        <div className="Burger-line" />
+        {this.renderLabel()}
+      </button>
+    );
   }
 }

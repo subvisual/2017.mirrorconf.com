@@ -6,38 +6,36 @@ import OverlayMenu from './OverlayMenu';
 import '../css/Components/Navbar';
 import MirrorLogo from '../images/logo.svg';
 
+const LINKS = [
+  <a key="1" className="Navbar-link"><Caption>Venue</Caption></a>,
+  <a key="2" className="Navbar-link"><Caption>Speakers</Caption></a>,
+  <a key="3" className="Navbar-link"><Caption>Workshops</Caption></a>,
+  <a key="4" className="Navbar-link"><Caption>Sponsor Us</Caption></a>,
+  <a key="5" className="Navbar-cta">Buy Ticket</a>,
+];
+
 export default class Navbar extends Component {
   constructor() {
     super();
-    this.state = { overlayOpen: false };
+    this.state = { overlayOpen: false };
   }
 
   toggleOverlayMenu = () => {
     this.setState({ overlayOpen: !this.state.overlayOpen });
   }
 
-  renderLinks() {
-    return [
-      <a className="Navbar-link"><Caption>Venue</Caption></a>,
-      <a className="Navbar-link"><Caption>Speakers</Caption></a>,
-      <a className="Navbar-link"><Caption>Workshops</Caption></a>,
-      <a className="Navbar-link"><Caption>Sponsor Us</Caption></a>,
-      <a className="Navbar-cta">Buy Ticket</a>
-    ];
-  }
-
   render() {
     const { overlayOpen } = this.state;
 
-    return <div className="Navbar">
-      <img src={MirrorLogo} className="Navbar-logo"/>
+    return (<div className="Navbar">
+      <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
 
       <div className="Navbar-links">
-        {this.renderLinks()}
+        {LINKS}
       </div>
 
       <OverlayMenu isOpen={overlayOpen}>
-        {this.renderLinks()}
+        {LINKS}
         <Caption>+351 916 748 994</Caption>
         <Caption>hello@mirrorconf.com</Caption>
       </OverlayMenu>
@@ -45,7 +43,8 @@ export default class Navbar extends Component {
       <Burger
         openLabel="Menu"
         closeLabel="Close"
-        onClick={this.toggleOverlayMenu}/>
-    </div>
+        onClick={this.toggleOverlayMenu}
+      />
+    </div>);
   }
 }

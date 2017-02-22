@@ -1,24 +1,26 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import '../css/Components/OverlayMenu';
 
-export default class OverlayMenu extends Component {
-  static PropTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    children: PropTypes.any
-  }
+const OverlayMenu = ({ children, isOpen }) => {
+  const className = classNames({
+    OverlayMenu: true,
+    'is-open': isOpen,
+  });
 
-  render() {
-    const className = classNames({
-      'OverlayMenu': true,
-      'is-open': this.props.isOpen
-    });
-
-    return <div className={className}>
+  return (
+    <div className={className}>
       <div className="OverlayMenu-content">
-        {this.props.children}
+        {children}
       </div>
     </div>
-  }
-}
+  );
+};
+
+OverlayMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+export default OverlayMenu;

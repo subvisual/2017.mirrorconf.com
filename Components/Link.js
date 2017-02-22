@@ -1,25 +1,28 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import '../css/Components/Link';
 
-export default class Link extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-    href: PropTypes.string,
-    uppercase: PropTypes.bool,
-  };
+const Link = ({ children, href, uppercase }) => {
+  const className = classNames('Link', {
+    'Link--uppercase': uppercase,
+  });
 
-  static defaultProps = {
-    href: '#',
-    uppercase: false,
-  };
+  return (
+    <a className={className} href={href}>
+      {children}
+    </a>
+  );
+};
 
-  render() {
-    const className = classNames('Link', {
-      'Link--uppercase': this.props.uppercase,
-    });
+Link.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+  uppercase: PropTypes.bool,
+};
 
-    return <a className={className} href={this.props.href}>{this.props.children}</a>
-  }
-}
+Link.defaultProps = {
+  uppercase: false,
+};
+
+export default Link;

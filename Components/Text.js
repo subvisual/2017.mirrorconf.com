@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 import '../css/Components/Text';
 
-export default class Text extends Component {
-  static propTypes = {
-    children: PropTypes.any
-  }
+const Text = ({ children }) => (
+  <p className="Text">
+    {children}
+  </p>
+);
 
-  render() {
-    return <p className="Text">
-      {this.props.children}
-    </p>;
-  }
-}
+Text.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Text;

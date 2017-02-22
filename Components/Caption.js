@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 import '../css/Components/Caption';
 
-export default class Caption extends Component {
-  static propTypes = {
-    children: PropTypes.any
-  }
+const Caption = ({ children }) => (
+  <p className="Caption">
+    {children}
+  </p>
+);
 
-  render() {
-    return <p className="Caption">
-      {this.props.children}
-    </p>;
-  }
-}
+Caption.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Caption;

@@ -1,24 +1,31 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import '../css/Components/SubSectionTitle';
 
-export default class SubSectionTitle extends Component {
-  static propTypes = {
-    children: PropTypes.any,
-    italic: PropTypes.bool,
-    alternate: PropTypes.bool
-  }
+const SubSectionTitle = ({ children, italic, alternate }) => {
+  const className = classNames({
+    SubSectionTitle: true,
+    'SubSectionTitle--italic': italic,
+    'SubSectionTitle--alternate': alternate,
+  });
 
-  render() {
-    const className = classNames({
-      'SubSectionTitle': true,
-      'SubSectionTitle--italic': this.props.italic,
-      'SubSectionTitle--alternate': this.props.alternate
-    });
+  return (
+    <h3 className={className}>
+      {children}
+    </h3>
+  );
+};
 
-    return <h3 className={className}>
-      {this.props.children}
-    </h3>;
-  }
-}
+SubSectionTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+  italic: PropTypes.bool,
+  alternate: PropTypes.bool,
+};
+
+SubSectionTitle.defaultProps = {
+  italic: false,
+  alternate: false,
+};
+
+export default SubSectionTitle;

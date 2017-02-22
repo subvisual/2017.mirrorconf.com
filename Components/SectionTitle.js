@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 import '../css/Components/SectionTitle';
 
-export default class SectionTitle extends Component {
-  static propTypes = {
-    children: PropTypes.any
-  }
+const SectionTitle = ({ children }) => (
+  <h2 className="SectionTitle">
+    {children}
+  </h2>
+);
 
-  render() {
-    return <h2 className="SectionTitle">
-      {this.props.children}
-    </h2>;
-  }
-}
+SectionTitle.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default SectionTitle;
