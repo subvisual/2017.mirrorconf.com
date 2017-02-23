@@ -1,3 +1,5 @@
+/* global document */
+
 import React, { Component, PropTypes } from 'react';
 
 import '../css/Components/Mirror';
@@ -14,7 +16,7 @@ export default class Mirror extends Component {
   }
 
   mirrorEventsOn = (el) => {
-    const reflection = document.querySelector(`.Mirror-reflection [data-mirror-id=${el.dataset.mirrorId}`);
+    const reflection = document.querySelector(`.Mirror-reflection [data-mirror-id=${el.dataset.mirrorId}]`);
 
     el.addEventListener('mouseenter', () => reflection.classList.add('hover'));
     el.addEventListener('mouseleave', () => reflection.classList.remove('hover'));

@@ -4,6 +4,7 @@ import '../css/Components/Hero';
 
 import Section from './Section';
 import SubSectionTitle from './SubSectionTitle';
+import Mirrored from './Mirrored';
 
 import PlayIcon from '../images/play.svg';
 import TwitterLogo from '../images/twitter.svg';
@@ -29,15 +30,17 @@ const Hero = () => (
           </div>
 
           <div className="Hero-actions">
-            <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" data-mirror-id="button" data-mirror-hover>
-              <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
-              <div className="Hero-playButtonLabel">
-                <SubSectionTitle>
-                  1st edition<br />
-                  best of
-                </SubSectionTitle>
-              </div>
-            </a>
+            <Mirrored id="button" hover>
+              <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton">
+                <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
+                <div className="Hero-playButtonLabel">
+                  <SubSectionTitle>
+                    1st edition<br />
+                    best of
+                  </SubSectionTitle>
+                </div>
+              </a>
+            </Mirrored>
           </div>
         </div>
 
