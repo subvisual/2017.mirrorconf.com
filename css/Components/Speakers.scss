@@ -1,14 +1,38 @@
 @import "../Theme/Spacing";
 @import "../Theme/Global";
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
 
 $Speakers-2-column-size: $Global-speaker-width * 2 + $Spacing-xSmall;
 $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
+
+.Speakers {
+  padding: 0 $Spacing-xxSmall;
+}
 
 .Speakers-list {
   display: flex;
   flex-wrap: wrap;
 
-  margin: $Spacing-base auto 0;
+  margin: $Spacing-xSmall auto 0;
+
+  @include Breakpoint-desktopOnly {
+    margin: $Spacing-base auto 0;
+  };
+}
+
+@include Breakpoint-mobileOnly {
+  .Speakers-item {
+    width: 100%;
+    max-width: 100%;
+
+    margin: $Spacing-xSmall 0;
+    padding: 0 $Spacing-xxSmall;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 @media (max-width: $Speakers-2-column-size) {

@@ -14,3 +14,7 @@ $Text-font-weight: normal;
   font-weight: $Text-font-weight;
   line-height: $Text-line-height;
 }
+
+.Text.Text--alternative {
+  color: $Color-madison;
+}

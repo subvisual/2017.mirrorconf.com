@@ -18,7 +18,9 @@ const renderSpeaker = speaker => (
 const Speakers = () => (
   <div className="Speakers">
     <Section>
-      <SectionTitle>Speakers</SectionTitle>
+      <div className="Speakers-header">
+        <SectionTitle>Speakers</SectionTitle>
+      </div>
       <ul className="Speakers-list">
         {SpeakersData.map(renderSpeaker)}
       </ul>

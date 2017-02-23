@@ -47,61 +47,10 @@ $Navbar-logo-height-desktop: 39px;
 }
 
 .Navbar-cta {
-  position: relative;
-  z-index: 1;
-
-  padding: $Spacing-xxSmall $Spacing-xSmall;
   margin-bottom: $Spacing-xSmall;
-
-  color: $Color-white;
-  cursor: pointer;
-
-  font-family: "proxima-nova";
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 0.7px;
-  line-height: 13px;
-  text-transform: uppercase;
 
   @include Breakpoint-desktopOnly {
     margin-bottom: 0;
     margin-left: $Spacing-xSmall;
   };
-
-  &::after,
-  &::before {
-    content: "";
-
-    position: absolute;
-
-    box-sizing: border-box;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  &::before {
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    background-image: linear-gradient(107deg, $Color-coral, $Color-razzmatazz);
-  }
-
-  &::after {
-    top: 3px;
-    left: 3px;
-    z-index: -2;
-
-    border: 2px solid $Color-white;
-
-    transition: all 0.2s ease-in-out;
-  }
-
-  &:hover {
-    &::after {
-      top: 0;
-      left: 0;
-    }
-  }
 }

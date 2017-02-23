@@ -1,0 +1,51 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+
+$CFP-max-width: 763px;
+$CFP-title-font-size: 26px;
+$CFP-title-line-height: 39px;
+$CFP-title-font-size-mobile: 18px;
+$CFP-title-line-height-mobile: 26px;
+$CFP-title-font-family: "matrix-ii";
+$CFP-title-font-weight: bold;
+$CFP-title-spacing: 104px;
+$CFP-title-left-spacing: 130px;
+
+.CFP {
+  max-width: $CFP-max-width;
+
+  margin-top: $Spacing-xSmall;
+  margin-right: $Spacing-xxSmall;
+  padding: $Spacing-small $Spacing-xxSmall;
+
+  background-color: $Color-white;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-base;
+    margin-right: 0;
+    padding: $Spacing-base $CFP-title-spacing;
+    padding-right: $CFP-title-left-spacing;
+  };
+}
+
+.CFP-title {
+  margin-bottom: $Spacing-xSmall;
+
+  color: $Color-madison;
+
+  font-family: $CFP-title-font-family;
+  font-size: $CFP-title-font-size-mobile;
+  font-weight: $CFP-title-font-weight;
+  line-height: $CFP-title-line-height-mobile;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $CFP-title-font-size;
+    line-height: $CFP-title-line-height;
+  }
+}
+
+.CFP-actions {
+  margin-top: $Spacing-xSmall;
+}

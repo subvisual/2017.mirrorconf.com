@@ -3,6 +3,7 @@ import Burger from './Burger';
 import Caption from './Caption';
 import OverlayMenu from './OverlayMenu';
 
+import Button from './Button';
 import Section from './Section';
 import '../css/Components/Navbar';
 import MirrorLogo from '../images/logo.svg';
@@ -12,7 +13,7 @@ const LINKS = [
   <a key="2" className="Navbar-link"><Caption>Speakers</Caption></a>,
   <a key="3" className="Navbar-link"><Caption>Workshops</Caption></a>,
   <a key="4" className="Navbar-link"><Caption>Sponsor Us</Caption></a>,
-  <a key="5" className="Navbar-cta">Buy Ticket</a>,
+  <span className="Navbar-cta"><Button>Buy Ticket</Button></span>,
 ];
 
 export default class Navbar extends Component {
