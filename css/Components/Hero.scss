@@ -52,7 +52,7 @@ $Hero-font-weight: bold;
     display: flex;
     align-items: center;
 
-    padding: 0 $Spacing-large;
+    padding: 0 $Spacing-xLarge;
   };
 }
 
@@ -60,7 +60,7 @@ $Hero-font-weight: bold;
   @include Breakpoint-desktopOnly {
     flex: 2;
 
-    padding-left: $Spacing-small;
+    margin-left: -$Spacing-small;
   };
 }
 
@@ -124,6 +124,8 @@ $Hero-font-weight: bold;
   padding-left: $Spacing-xxSmall;
 
   text-decoration: none;
+
+  transform: translateX($Spacing-xSmall);
 
   @include Breakpoint-desktopOnly {
     display: inline-block;

@@ -4,6 +4,8 @@ import React, { Component, PropTypes } from 'react';
 
 import '../css/Components/Mirror';
 
+import Section from './Section';
+
 export default class Mirror extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -28,8 +30,10 @@ export default class Mirror extends Component {
         <div className="Mirror-original">
           {this.props.children}
         </div>
-        <div className="Mirror-reflection">
-          {this.props.children}
+        <div className="Mirror-container">
+          <div className="Mirror-reflection">
+            {this.props.children}
+          </div>
         </div>
       </div>
     );
