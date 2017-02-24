@@ -79,9 +79,9 @@ const Footer = () => (
           <SubSectionTitle>MirrorConf is powered by</SubSectionTitle>
         </div>
 
-        <div>
+        <a href="https://subvisual.co" target="_blank">
           <img alt="Subvisual logo" src={SubvisualLogo} />
-        </div>
+        </a>
       </div>
     </div>
   </footer>
