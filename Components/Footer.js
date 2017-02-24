@@ -34,7 +34,7 @@ const Footer = () => (
           </div>
 
           <span className="Footer-link">
-            <Link uppercase href="#">Sponsor Us</Link>
+            <Link uppercase href="/sponsoring.pdf" target="_blank">Sponsor Us</Link>
           </span>
           <span className="Footer-link">
             <Link uppercase href="#">Buy Ticket</Link>

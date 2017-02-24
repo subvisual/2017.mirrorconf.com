@@ -12,7 +12,7 @@ const LINKS = [
   <a href="#" key="1" className="Navbar-link"><Caption>Venue</Caption></a>,
   <a href="#" key="2" className="Navbar-link"><Caption>Speakers</Caption></a>,
   <a href="#" key="3" className="Navbar-link"><Caption>Workshops</Caption></a>,
-  <a href="#" key="4" className="Navbar-link"><Caption>Sponsor Us</Caption></a>,
+  <a href="#" key="4" href="/sponsoring.pdf" target="_blank" className="Navbar-link"><Caption>Sponsor Us</Caption></a>,
   <span className="Navbar-cta"><Button>Buy Ticket</Button></span>,
 ];
 
