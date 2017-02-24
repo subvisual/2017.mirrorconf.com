@@ -46,3 +46,7 @@ $Mirror-reflection-transform: 138px;
 
   filter: opacity(0.3) blur(10px);
 }
+
+.Mirror-reflection [data-mirror-disabled] {
+  visibility: hidden;
+}

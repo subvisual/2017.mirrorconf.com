@@ -30,7 +30,7 @@ const Hero = () => (
           </div>
 
           <div className="Hero-actions">
-            <Mirrored id="button" hover>
+            <Mirrored hover="button">
               <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton">
                 <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
                 <div className="Hero-playButtonLabel">

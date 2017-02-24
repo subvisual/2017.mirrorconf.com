@@ -6,13 +6,16 @@ import '../css/Components/Layout';
 
 import Navbar from '../Components/Navbar';
 import Mirror from '../Components/Mirror';
+import Mirrored from '../Components/Mirrored';
 
 const Template = ({ children }) => (
   <div className="Layout">
     <Mirror>
-      <nav className="Layout-navbar">
-        <Navbar />
-      </nav>
+      <Mirrored disbled>
+        <nav className="Layout-navbar">
+          <Navbar />
+        </nav>
+      </Mirrored>
 
       <div className="Layout-content">
         {children}
