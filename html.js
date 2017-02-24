@@ -24,6 +24,7 @@ const Html = ({ body }) => {
         />
         {head.title.toComponent()}
         {head.meta.toComponent()}
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         {css}
       </head>
       <body>
