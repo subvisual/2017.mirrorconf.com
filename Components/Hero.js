@@ -31,7 +31,7 @@ const Hero = () => (
 
           <div className="Hero-actions">
             <Mirrored id="button" hover>
-              <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton">
+              <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" target="blank">
                 <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
                 <div className="Hero-playButtonLabel">
                   <SubSectionTitle>
