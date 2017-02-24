@@ -137,10 +137,11 @@ $Hero-font-weight: bold;
   &.hover {
     .Hero-playButtonImage {
       transform: translateX(-4px) scale(0.95, 0.95);
+      filter: blur(3px);
     }
 
     .Hero-playButtonLabel {
-      transform: translateX(8px);
+      transform: translateX(4px);
     }
   }
 }
@@ -152,14 +153,15 @@ $Hero-font-weight: bold;
   left: 0;
 
   height: 100%;
-
-  transition: all 0.3s ease-in-out;
 }
 
 .Hero-playButtonLabel {
   position: relative;
+}
 
-  transition: all 0.3s cubic-bezier(.03, 1.14, .33, .66);
+.Hero-playButtonImage,
+.Hero-playButtonLabel {
+  transition: all 0.2s ease-out;
 }
 
 .Hero-footer {
