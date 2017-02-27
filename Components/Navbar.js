@@ -1,60 +1,35 @@
-import React, { Component } from 'react';
-import Link from './Link';
+import React, { PropTypes } from 'react';
 import Burger from './Burger';
-import Button from './Button';
 import Section from './Section';
-import OverlayMenu from './OverlayMenu';
 
+import Links from '../data/links';
 import '../css/Components/Navbar';
 import MirrorLogo from '../images/logo.svg';
 
-const LINKS = [
-  <Link uppercase key="1" href="/sponsoring.pdf" target="_blank">Sponsor Us</Link>,
-  <span key="2" className="Navbar-cta">
-    <Link target="_blank" href="https://ti.to/subvisual/mirror-conf-2017">
-      <Button>Buy Ticket</Button>
-    </Link>
-  </span>,
-];
-
 const renderLink = link => <span className="Navbar-link">{link}</span>;
 
-export default class Navbar extends Component {
-  constructor() {
-    super();
-    this.state = { overlayOpen: false };
-  }
+const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
+  <Section>
+    <div className="Navbar">
+      <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
 
-  toggleOverlayMenu = () => {
-    this.setState({ overlayOpen: !this.state.overlayOpen });
-  }
+      <div className="Navbar-links">
+        {Links.map(renderLink)}
+      </div>
 
-  render() {
-    const { overlayOpen } = this.state;
+      <Burger
+        openLabel="Menu"
+        closeLabel="Close"
+        isOpen={overlayOpen}
+        onClick={toggleOverlayMenu}
+      />
+    </div>
+  </Section>
+);
 
-    return (
-      <Section>
-        <div className="Navbar">
-          <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+Navbar.propTypes = {
+  overlayOpen: PropTypes.bool.isRequired,
+  toggleOverlayMenu: PropTypes.func.isRequired,
+};
 
-          <div className="Navbar-links">
-            {LINKS.map(renderLink)}
-          </div>
-
-          <OverlayMenu isOpen={overlayOpen} onClose={this.toggleOverlayMenu}>
-            {LINKS.map(renderLink)}
-            <Link href="tel:+351 916 748 994">+351 916 748 994</Link>
-            <Link href="mailto:hello@mirrorconf.com">hello@mirrorconf.com</Link>
-          </OverlayMenu>
-
-          <Burger
-            openLabel="Menu"
-            closeLabel="Close"
-            isOpen={overlayOpen}
-            onClick={this.toggleOverlayMenu}
-          />
-        </div>
-      </Section>
-    );
-  }
-}
+export default Navbar;

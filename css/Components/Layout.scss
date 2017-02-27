@@ -11,3 +11,11 @@
 
   z-index: 1;
 }
+
+.Layout.Layout--overlayOpen {
+  position: absolute;
+
+  height: 100%;
+
+  overflow: hidden;
+}

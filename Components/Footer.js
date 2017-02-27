@@ -13,7 +13,7 @@ import TwitterLogo from '../images/twitter.svg';
 import YoutubeLogo from '../images/youtube.svg';
 
 const renderSocialLink = (href, alt, img) => (
-  <a href={href} className="Footer-socialLink">
+  <a href={href} target="_blank" className="Footer-socialLink">
     <img alt={alt} src={img} />
   </a>
 );
@@ -37,7 +37,7 @@ const Footer = () => (
             <Link uppercase href="/sponsoring.pdf" target="_blank">Sponsor Us</Link>
           </span>
           <span className="Footer-link">
-            <Link uppercase href="#">Buy Ticket</Link>
+            <Link uppercase target="_blank" href="https://ti.to/subvisual/mirror-conf-2017">Buy Ticket</Link>
           </span>
         </div>
 
