@@ -18,6 +18,8 @@ $Speaker-name-font-weight: bold;
   width: 100%;
   height: $Speaker-height;
 
+  background-repeat: no-repeat;
+
   @include Breakpoint-desktopOnly {
     width: $Global-speaker-width;
   };

@@ -16,6 +16,7 @@ $Burger-label-letter-spacing: 0.5px;
 
   background: none;
   border: none;
+  outline: none;
 
   @include Breakpoint-desktopOnly {
     display: none;

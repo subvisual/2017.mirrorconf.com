@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Mirrored = (props) => {
+const Mirrored = ({ children, id, hover, hide }) => {
   const finalProps = {
-    'data-mirror-id': props.id,
-    'data-mirror-hover': props.hover,
+    'data-mirror-id': id,
+    'data-mirror-hide': hide,
+    'data-mirror-hover': hover,
   };
 
-  return React.cloneElement(props.children, finalProps);
+  return React.cloneElement(children, finalProps);
 };
 
 export default Mirrored;

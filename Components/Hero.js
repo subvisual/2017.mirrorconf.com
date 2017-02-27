@@ -6,6 +6,9 @@ import Section from './Section';
 import SubSectionTitle from './SubSectionTitle';
 import Mirrored from './Mirrored';
 
+import HeroVideo from '../pages/hero.mp4';
+import HeroPoster from '../pages/hero-cover.jpg';
+import HeroFallback from '../pages/hero.jpg';
 import PlayIcon from '../images/play.svg';
 import TwitterLogo from '../images/twitter.svg';
 import YoutubeLogo from '../images/youtube.svg';
@@ -13,7 +16,25 @@ import FacebookLogo from '../images/facebook.svg';
 
 const Hero = () => (
   <section className="Hero">
-    <div className="Hero-background" />
+    <div className="Hero-background">
+      <Mirrored id="video" hide>
+        <video
+          loop
+          muted
+          autoPlay
+          playsInline
+          preload="auto"
+          type="video/mp4"
+          poster={HeroPoster}
+          className="Hero-video"
+          ref={video => video.play}
+        >
+          <source src={HeroVideo} />
+          <source src={HeroFallback} />
+        </video>
+      </Mirrored>
+      <div className="Hero-backgroundOverlay" />
+    </div>
 
     <Section>
       <div className="Hero-foreground">
@@ -60,5 +81,9 @@ const Hero = () => (
     </Section>
   </section>
 );
+
+Hero.componentDidMount = () => {
+
+};
 
 export default Hero;

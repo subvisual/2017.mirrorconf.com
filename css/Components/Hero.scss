@@ -3,7 +3,7 @@
 @import "../Theme/Breakpoint";
 
 $Hero-uvp-max-width: 523px;
-$Hero-z-index-background: 0;
+$Hero-z-index-background: -1;
 $Hero-z-index-foreground: 1;
 $Hero-font-size: 26px;
 $Hero-line-height: 39px;
@@ -27,12 +27,36 @@ $Hero-font-weight: bold;
 .Hero-background {
   position: absolute;
 
-  top: 0;
+  top: -65px;
   left: 0;
   z-index: $Hero-z-index-background;
 
   width: 100%;
-  height: 100;
+  height: calc(100% + 65px);
+
+  overflow-y: hidden;
+}
+
+.Hero-backgroundOverlay {
+  position: absolute;
+
+  top: -65px;
+  left: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: calc(100% + 65px);
+
+  background: linear-gradient(to bottom, rgba(8, 19, 64, 0.7) 20%, $Color-deep-cove 100%);
+}
+
+.Hero-video {
+  height: 100%;
+
+  @include Breakpoint-desktopOnly {
+    width: 100%;
+    height: auto;
+  };
 }
 
 .Hero-foreground {

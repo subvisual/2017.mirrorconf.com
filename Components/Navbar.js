@@ -38,7 +38,7 @@ export default class Navbar extends Component {
             {LINKS}
           </div>
 
-          <OverlayMenu isOpen={overlayOpen}>
+          <OverlayMenu isOpen={overlayOpen} onClose={this.toggleOverlayMenu}>
             {LINKS}
             <Caption>+351 916 748 994</Caption>
             <Caption>hello@mirrorconf.com</Caption>
@@ -47,6 +47,7 @@ export default class Navbar extends Component {
           <Burger
             openLabel="Menu"
             closeLabel="Close"
+            isOpen={overlayOpen}
             onClick={this.toggleOverlayMenu}
           />
         </div>

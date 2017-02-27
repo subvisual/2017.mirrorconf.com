@@ -4,6 +4,7 @@
 
 $Navbar-logo-height-mobile: 26px;
 $Navbar-logo-height-desktop: 39px;
+$Navbar-cta-z-index: 20;
 
 .Navbar {
   display: flex;
@@ -72,6 +73,8 @@ $Navbar-logo-height-desktop: 39px;
 
 .Navbar-cta {
   margin-bottom: $Spacing-xSmall;
+
+  z-index: $Navbar-cta-z-index;
 
   @include Breakpoint-desktopOnly {
     margin-bottom: 0;

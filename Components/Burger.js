@@ -5,26 +5,14 @@ import '../css/Components/Burger';
 
 export default class Burger extends Component {
   static propTypes = {
+    isOpen: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     openLabel: PropTypes.string.isRequired,
     closeLabel: PropTypes.string.isRequired,
   }
 
-  constructor(props) {
-    super(props);
-    this.state = { isOpen: false };
-  }
-
-  onClick = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-
-    if (this.props.onClick) {
-      this.props.onClick();
-    }
-  }
-
   renderLabel = () => {
-    const { isOpen } = this.state;
+    const { isOpen } = this.props;
 
     if (isOpen) { return <span className="Burger-closeLabel">{this.props.closeLabel}</span>; }
 
@@ -32,14 +20,14 @@ export default class Burger extends Component {
   }
 
   render() {
-    const { isOpen } = this.state;
+    const { isOpen, onClick } = this.props;
     const className = classNames({
       Burger: true,
       'is-open': isOpen,
     });
 
     return (
-      <button onClick={this.onClick} className={className} >
+      <button onClick={onClick} className={className} >
         <div className="Burger-line" />
         <div className="Burger-line" />
         <div className="Burger-line" />
