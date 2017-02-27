@@ -6,12 +6,36 @@ $Link-font-size-small: 13px;
 $Link-line-height: 26px;
 
 .Link {
+  position: relative;
+
   color: $Color-white;
 
   font-family: $Link-font-family;
   font-size: $Link-font-size;
   line-height: $Link-line-height;
   text-decoration: none;
+
+  &:after {
+    content: '';
+
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    background-color: $Color-white;
+    transform: scaleX(0);
+    transform-origin: center left;
+
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .Link.Link--uppercase {

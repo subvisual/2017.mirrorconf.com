@@ -3,6 +3,7 @@ import React from 'react';
 import '../css/Components/CFP';
 
 import Text from './Text';
+import Link from './Link';
 import Button from './Button';
 import Section from './Section';
 import Mirrored from './Mirrored';
@@ -19,7 +20,9 @@ const CFP = () => (
           know better the beautiful north of Portugal.
         </Text>
         <div className="CFP-actions">
-          <Button alternative>SUBMIT A TALK</Button>
+          <Link href="https://www.papercall.io/mirrorconf2017" target="_blank">
+            <Button alternative>SUBMIT A TALK</Button>
+          </Link>
         </div>
       </div>
     </Mirrored>

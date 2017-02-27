@@ -47,28 +47,6 @@ $Navbar-cta-z-index: 20;
     margin-right: $Spacing-xSmall;
     margin-bottom: 0;
   }
-
-  &:after {
-    content: '';
-
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-
-    background-color: $Color-white;
-    transform: scaleX(0);
-    transform-origin: center left;
-
-    transition: transform 0.3s ease-out;
-  }
-
-  &:hover {
-    &:after {
-      transform: scaleX(1);
-    }
-  }
 }
 
 .Navbar-cta {

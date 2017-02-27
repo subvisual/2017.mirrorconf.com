@@ -24,7 +24,7 @@ Link.propTypes = {
 
 Link.defaultProps = {
   uppercase: false,
-  target: "",
+  target: '',
 };
 
 export default Link;
