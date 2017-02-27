@@ -1,5 +1,8 @@
 @import "../Theme/Spacing";
 
 .Index-section {
+  position: relative;
+  z-index: 1;
+
   margin-top: $Spacing-xLarge;
 }

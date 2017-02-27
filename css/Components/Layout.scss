@@ -5,3 +5,9 @@
 .Layout {
   background-color: $Color-deep-cove;
 }
+
+.Layout-navbar {
+  position: relative;
+
+  z-index: 1;
+}
