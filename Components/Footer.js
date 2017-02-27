@@ -4,6 +4,7 @@ import '../css/Components/Footer';
 import '../css/Components/Grid';
 
 import Link from './Link';
+import Mirrored from './Mirrored';
 import SubSectionTitle from './SubSectionTitle';
 
 import FacebookLogo from '../images/facebook.svg';
@@ -79,9 +80,11 @@ const Footer = () => (
           <SubSectionTitle>MirrorConf is powered by</SubSectionTitle>
         </div>
 
-        <a href="https://subvisual.co" target="_blank">
-          <img alt="Subvisual logo" src={SubvisualLogo} />
-        </a>
+        <Mirrored id="subvisual-logo" hide>
+          <a href="https://subvisual.co" target="_blank">
+            <img alt="Subvisual logo" src={SubvisualLogo} />
+          </a>
+        </Mirrored>
       </div>
     </div>
   </footer>
