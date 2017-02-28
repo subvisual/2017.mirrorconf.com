@@ -22,8 +22,6 @@ const Html = ({ body }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         />
-        {head.title.toComponent()}
-        {head.meta.toComponent()}
 
         <title>Mirror Conf 2.0</title>
         <meta name="description" content="Mirror Conf 2.0" />
