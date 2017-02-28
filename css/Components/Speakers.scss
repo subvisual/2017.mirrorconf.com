@@ -13,6 +13,7 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
 .Speakers-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   margin: $Spacing-xSmall auto 0;
 

@@ -4,6 +4,7 @@
 @import "../Theme/Breakpoint";
 
 $Speaker-height: 416px;
+$Speaker-width: 268px;
 $Speaker-name-font-size: 26px;
 $Speaker-name-line-height: 39px;
 $Speaker-name-font-size-mobile: 18px;
@@ -15,8 +16,8 @@ $Speaker-name-font-weight: bold;
   display: flex;
   align-items: flex-end;
 
-  width: 100%;
   height: $Speaker-height;
+  width: $Speaker-width;
 
   background-repeat: no-repeat;
 

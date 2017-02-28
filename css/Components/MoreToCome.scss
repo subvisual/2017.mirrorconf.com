@@ -4,6 +4,7 @@
 @import "../Theme/Breakpoint";
 
 $MoreToCome-height: 416px;
+$MoreToCome-width: 268px;
 $MoreToCome-name-font-size: 26px;
 $MoreToCome-name-line-height: 39px;
 $MoreToCome-name-font-size-mobile: 18px;
@@ -16,7 +17,7 @@ $MoreToCome-name-border-width: 4px;
   display: flex;
   align-items: flex-end;
 
-  width: 100%;
+  width: $MoreToCome-width;
   height: $MoreToCome-height;
 
   border: $MoreToCome-name-border-width solid $Color-coral;
