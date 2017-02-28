@@ -1,13 +1,10 @@
 import React, { PropTypes } from 'react';
-import Helmet from 'react-helmet';
 
 import { prefixLink } from 'gatsby-helpers';
 
 const BUILD_TIME = new Date().getTime();
 
 const Html = ({ body }) => {
-  const head = Helmet.rewind();
-
   let css;
   if (process.env.NODE_ENV === 'production') {
     css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />;
