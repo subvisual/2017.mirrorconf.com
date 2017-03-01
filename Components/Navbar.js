@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Link from './Link';
 import Burger from './Burger';
 import Section from './Section';
 import Mirrored from './Mirrored';
@@ -13,7 +14,9 @@ const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
   <Section>
     <Mirrored id="navbar" hide>
       <div className="Navbar">
-        <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+        <Link href="/">
+          <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+        </Link>
 
         <div className="Navbar-links">
           {Links.map(renderLink)}
