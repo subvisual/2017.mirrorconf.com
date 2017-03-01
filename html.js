@@ -20,8 +20,8 @@ const Html = ({ body }) => {
           content="width=device-width, initial-scale=1.0"
         />
 
-        <title>Mirror Conf 2.0</title>
-        <meta name="description" content="Mirror Conf 2.0" />
+        <title>Mirror Conf 2017: a design and front-end development conference</title>
+        <meta name="description" content="A conference that aims to blur the differences and point towards a collaborative future between designers and front-end developers. Get your early bird ticket!" />
         <meta name="robots" content="index,follow" />
 
         <meta name="twitter:card" content="summary_large_image" />
