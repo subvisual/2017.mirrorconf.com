@@ -40,7 +40,7 @@ const Hero = () => (
       <div className="Hero-foreground">
         <div className="Hero-content">
           <div className="Hero-title">
-            <h1 className="Hero-headline">Mirror Conf 2.0</h1>
+            <h1 className="Hero-headline">Mirror Conf 2017</h1>
             <h2 className="Hero-uvp">
               For designers and front-end developers.
             </h2>

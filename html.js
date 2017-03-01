@@ -26,23 +26,23 @@ const Html = ({ body }) => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@mirrorconf" />
-        <meta name="twitter:title" content="Mirror Conf 2.0" />
-        <meta name="twitter:description" content="Mirror Conf 2.0 is the conference for all web enthusiasts, held in beautiful Braga, Portugal on October 12th and 13th" />
+        <meta name="twitter:title" content="Mirror Conf 2017" />
+        <meta name="twitter:description" content="A conference that aims to blur the differences and point towards a collaborative future between designers and front-end developers. Get your early bird ticket!" />
         <meta name="twitter:creator" content="@mirrorconf" />
 
         <meta name="twitter:image" content="/banner.png" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Mirror Conf 2.0" />
+        <meta property="og:title" content="Mirror Conf 2017" />
         <meta property="og:url" content="http://mirrorconf.com/" />
         <meta property="og:image" content="/banner.png" />
 
-        <meta property="og:description" content="Mirror Conf 2.0 is the conference for all web enthusiasts, held in beautiful Braga, Portugal on October 12th and 13th" />
-        <meta property="og:site_name" content="Mirror Conf 2.0" />
+        <meta property="og:description" content="A conference that aims to blur the differences and point towards a collaborative future between designers and front-end developers. Get your early bird ticket!" />
+        <meta property="og:site_name" content="Mirror Conf 2017" />
         <meta property="fb:admins" content="100000633932565,1448175923,707387762,1187622729" />
 
-        <meta itemProp="name" content="Mirror Conf 2.0" />
-        <meta itemProp="description" content="Mirror Conf 2.0 is the conference for all web enthusiasts, held in beautiful Braga, Portugal on October 12th and 13th" />
+        <meta itemProp="name" content="Mirror Conf 2017" />
+        <meta itemProp="description" content="A conference that aims to blur the differences and point towards a collaborative future between designers and front-end developers. Get your early bird ticket!" />
         <meta itemProp="image" content="/banner.png" />
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
