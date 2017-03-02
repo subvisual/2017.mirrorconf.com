@@ -13,10 +13,6 @@ export default class Mirror extends Component {
     document
       .querySelectorAll('.Mirror-original [data-mirror-hover]')
       .forEach(this.mirrorEventsOn);
-
-    document
-      .querySelectorAll('.Mirror-original [data-mirror-hide]')
-      .forEach(this.hideElementOnMirror);
   }
 
   findReflectedElement = (el) => {
@@ -29,12 +25,6 @@ export default class Mirror extends Component {
 
     el.addEventListener('mouseenter', () => reflection.classList.add('hover'));
     el.addEventListener('mouseleave', () => reflection.classList.remove('hover'));
-  }
-
-  hideElementOnMirror = (el) => {
-    const reflection = this.findReflectedElement(el);
-
-    reflection.style.visibility = 'hidden';
   }
 
   render() {

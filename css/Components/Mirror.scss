@@ -41,6 +41,10 @@ $Mirror-reflection-transform: 129px;
   };
 }
 
+.Mirror-reflection [data-mirror-hide] {
+  visibility: hidden;
+}
+
 .Mirror-reflection {
   position: absolute;
 
