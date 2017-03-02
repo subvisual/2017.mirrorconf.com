@@ -1,6 +1,7 @@
 /* global document */
 
 import React, { Component, PropTypes } from 'react';
+import _ from 'lodash';
 
 import '../css/Components/Mirror';
 
@@ -10,9 +11,7 @@ export default class Mirror extends Component {
   }
 
   componentDidMount = () => {
-    document
-      .querySelectorAll('.Mirror-original [data-mirror-hover]')
-      .forEach(this.mirrorEventsOn);
+    _.each(document.querySelectorAll('.Mirror-original [data-mirror-hover]'), this.mirrorEventsOn);
   }
 
   findReflectedElement = (el) => {

@@ -2,8 +2,8 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 
-$Navbar-logo-height-mobile: 26px;
-$Navbar-logo-height-desktop: 39px;
+$Navbar-logo-size-mobile: 26px;
+$Navbar-logo-size-desktop: 39px;
 $Navbar-cta-z-index: 20;
 
 .Navbar {
@@ -19,10 +19,12 @@ $Navbar-cta-z-index: 20;
 }
 
 .Navbar-logo {
-  height: $Navbar-logo-height-mobile;
+  width: $Navbar-logo-size-mobile;
+  height: $Navbar-logo-size-mobile;
 
   @include Breakpoint-desktopOnly {
-    height: $Navbar-logo-height-desktop;
+    width: $Navbar-logo-size-desktop;
+    height: $Navbar-logo-size-desktop;
   }
 }
 

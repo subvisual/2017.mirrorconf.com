@@ -22,6 +22,10 @@ $OverlayMenu-logo-height: 26px;
   pointer-events: none;
 
   transition: all 0.4s ease-in-out;
+
+  @include Breakpoint-desktopOnly {
+    display: none;
+  }
 }
 
 .OverlayMenu.is-open {

@@ -1,0 +1,17 @@
+@mixin chromeOnly {
+  @supports (-webkit-appearance: none) {
+    @content;
+  }
+}
+
+@mixin firefoxOnly {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+@mixin mirrorSupported {
+  @supports (filter: blur(1px)) {
+    @content;
+  }
+}

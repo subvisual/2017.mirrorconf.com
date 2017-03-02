@@ -1,6 +1,7 @@
 @import "../Theme/Global";
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
+@import "../Theme/Browsers";
 
 $Mirror-reflection-max-width: 946px;
 $Mirror-reflection-transform: 129px;
@@ -60,3 +61,12 @@ $Mirror-reflection-transform: 129px;
 
   filter: opacity(0.3) blur(7px);
 }
+
+.Mirror-container {
+  display: none;
+
+  @include mirrorSupported {
+    display: block;
+  }
+}
+
