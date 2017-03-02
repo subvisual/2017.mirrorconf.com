@@ -10,9 +10,9 @@ const Button = ({ children, alternative }) => {
   });
 
   return (
-    <span className={className}>
+    <div className={className}>
       {children}
-    </span>
+    </div>
   );
 };
 
