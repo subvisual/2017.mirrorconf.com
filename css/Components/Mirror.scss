@@ -40,13 +40,14 @@ $Mirror-reflection-transform: 129px;
   @include Breakpoint-mobileOnly {
     display: none;
   };
-}
 
-.Mirror-reflection [data-mirror-hide] {
-  visibility: hidden;
+  perspective: 300px;
 }
 
 .Mirror-reflection {
+  --mirror-rotation-x: 0deg;
+  --mirror-rotation-y: 0deg;
+
   position: absolute;
 
   left: 50%;
@@ -57,9 +58,13 @@ $Mirror-reflection-transform: 129px;
 
   pointer-events: none;
 
-  transform: scaleX(-1) translateX(50%);
+  transform: scaleX(-1) translateX(50%) rotateX(var(--mirror-rotation-x)) rotateY(var(--mirror-rotation-y));
 
   filter: opacity(0.3) blur(7px);
+}
+
+.Mirror-reflection [data-mirror-hide] {
+  visibility: hidden;
 }
 
 .Mirror-container {

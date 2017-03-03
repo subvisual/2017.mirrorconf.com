@@ -5,23 +5,39 @@ export default class MouseAnimator {
   }
 
   hook = () => {
-    const body = document.getElementsByClassName("Layout")[0];
+    const layout = document.getElementsByClassName("Layout")[0];
+    const reflection = document.getElementsByClassName("Mirror-reflection")[0];
 
     const callback = (event) => {
-      const mouseXRatio = event.clientX / body.clientWidth;
+      const mouseXRatio = event.clientX / window.innerWidth;
+      const mouseYRatio = event.clientY / window.innerHeight;
 
-      body.style.setProperty("--color-background", this.currentColor(mouseXRatio));
+      layout.style.setProperty("--color-background", this.currentColor(mouseXRatio));
+      reflection.style.setProperty("--mirror-rotation-y", this.currentXRotation(mouseXRatio));
+      reflection.style.setProperty("--mirror-rotation-x", this.currentYRotation(mouseYRatio));
     }
 
-    body.addEventListener('mousemove', _.throttle(callback, 50));
+    layout.addEventListener('mousemove', _.throttle(callback, 50));
   }
 
   currentColor(ratio) {
     const h = 227;
-    const s = this.lerp(78, 76, ratio);
-    const l = this.lerp(14, 22, ratio);
+    const s = 78;
+    const l = this.lerp(14, 18, ratio);
 
     return `hsl(${h}, ${s}%, ${l}%)`
+  }
+
+  currentXRotation(ratio) {
+    const degrees = this.lerp(-0.5, 0.5, ratio);
+
+    return `${degrees}deg`;
+  }
+
+  currentYRotation(ratio) {
+    const degrees = this.lerp(-0.3, 0.3, ratio);
+
+    return `${degrees}deg`;
   }
 
   lerp = (value1, value2, amount) => {
