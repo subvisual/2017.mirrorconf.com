@@ -3,7 +3,9 @@
 @import "../Theme/Breakpoint";
 
 .Layout {
-  background-color: $Color-deep-cove;
+  --color-background: $Color-deep-cove;
+
+  background-color: var(--color-background);
 }
 
 .Layout-navbar {

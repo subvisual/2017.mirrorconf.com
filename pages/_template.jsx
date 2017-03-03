@@ -11,6 +11,8 @@ import Navbar from '../Components/Navbar';
 import Mirror from '../Components/Mirror';
 import OverlayMenu from '../Components/OverlayMenu';
 
+import MouseAnimator from '../Components/MouseAnimator';
+
 const renderLink = link => <span className="OverlayMenu-link">{link}</span>;
 
 export default class Template extends Component {
@@ -21,6 +23,11 @@ export default class Template extends Component {
   constructor(props) {
     super(props);
     this.state = { overlayOpen: false };
+  }
+
+  componentDidMount() {
+    this.mouseAnimator = new MouseAnimator();
+    this.mouseAnimator.hook();
   }
 
   toggleOverlayMenu = () =>
