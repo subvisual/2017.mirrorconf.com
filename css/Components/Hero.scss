@@ -44,7 +44,12 @@ $Hero-font-weight: bold;
   width: 100%;
   height: calc(100% + 65px);
 
-  background: linear-gradient(to bottom, rgba(8, 19, 64, 0.7) 20%, var(--color-background) 100%);
+  background: linear-gradient(to bottom, rgba(8, 19, 64, 0.7) 20%, $Color-deep-cove 100%);
+
+  @include variablesSupported {
+    background: linear-gradient(to bottom, rgba(8, 19, 64, 0.7) 20%, var(--color-background) 100%);
+  }
+
 }
 
 .Hero-video {

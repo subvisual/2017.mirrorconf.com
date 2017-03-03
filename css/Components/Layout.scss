@@ -1,11 +1,17 @@
 @import "../Theme/Color";
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
+@import "../Theme/Browsers";
 
 .Layout {
-  --color-background: $Color-deep-cove;
 
-  background-color: var(--color-background);
+  background-color: $Color-deep-cove;
+
+  @include variablesSupported {
+    --color-background: $Color-deep-cove;
+
+    background-color: var(--color-background);
+  }
 }
 
 .Layout-navbar {

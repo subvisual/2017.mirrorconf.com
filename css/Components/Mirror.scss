@@ -45,8 +45,6 @@ $Mirror-reflection-transform: 129px;
 }
 
 .Mirror-reflection {
-  --mirror-rotation-x: 0deg;
-  --mirror-rotation-y: 0deg;
 
   position: absolute;
 
@@ -58,9 +56,17 @@ $Mirror-reflection-transform: 129px;
 
   pointer-events: none;
 
-  transform: scaleX(-1) translateX(50%) rotateX(var(--mirror-rotation-x)) rotateY(var(--mirror-rotation-y));
 
   filter: opacity(0.3) blur(7px);
+
+  transform: scaleX(-1) translateX(50%);
+
+  @include variablesSupported {
+    --mirror-rotation-x: 0deg;
+    --mirror-rotation-y: 0deg;
+
+    transform: scaleX(-1) translateX(50%) rotateX(var(--mirror-rotation-x)) rotateY(var(--mirror-rotation-y));
+  }
 }
 
 .Mirror-reflection [data-mirror-hide] {
