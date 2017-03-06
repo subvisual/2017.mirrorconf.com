@@ -16,8 +16,7 @@ const CFP = () => (
           Want to be part of this amazing lineup?
         </div>
         <Text alternative>
-          We have prepared a program with activities that will get you to
-          know better the beautiful north of Portugal.
+          Call for proposals is open until May 20th.
         </Text>
         <div className="CFP-actions">
           <Link href="https://www.papercall.io/mirrorconf2017" target="_blank">
