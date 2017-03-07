@@ -1,0 +1,24 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$WhiteBox-max-width: 763px;
+$WhiteBox-spacing: 104px;
+$WhiteBox-right-spacing: 130px;
+
+.WhiteBox {
+  max-width: $WhiteBox-max-width;
+
+  margin-top: $Spacing-xSmall;
+  margin-right: $Spacing-xxSmall;
+  padding: $Spacing-small $Spacing-xxSmall;
+
+  background-color: $Color-white;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-base;
+    margin-right: 0;
+    padding: $Spacing-base $WhiteBox-spacing;
+    padding-right: $WhiteBox-right-spacing;
+  };
+}

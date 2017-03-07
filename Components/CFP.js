@@ -6,12 +6,12 @@ import Text from './Text';
 import Link from './Link';
 import Button from './Button';
 import Section from './Section';
-import Mirrored from './Mirrored';
+import WhiteBox from './WhiteBox';
 
 const CFP = () => (
   <Section>
-    <Mirrored id="cfp" hide>
-      <div className="CFP">
+    <div className="CFP">
+      <WhiteBox id="cfp">
         <div className="CFP-title">
           Want to be part of this amazing lineup?
         </div>
@@ -23,8 +23,8 @@ const CFP = () => (
             <Button alternative>SUBMIT A TALK</Button>
           </Link>
         </div>
-      </div>
-    </Mirrored>
+      </WhiteBox>
+    </div>
   </Section>
 );
 
