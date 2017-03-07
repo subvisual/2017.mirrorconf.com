@@ -1,0 +1,23 @@
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
+
+$TextTitle-font-size: 18px;
+$TextTitle-line-height: 26px;
+$TextTitle-font-family: "matrix-ii";
+$TextTitle-font-weight: bold;
+
+.TextTitle {
+  color: $Color-white;
+
+  font-family: $TextTitle-font-family;
+  font-size: $TextTitle-font-size;
+
+  font-weight: $TextTitle-font-weight;
+  line-height: $TextTitle-line-height;
+}
+
+.TextTitle.TextTitle--alternate {
+  color: $Color-razzmatazz;
+
+  font-weight: normal;
+}

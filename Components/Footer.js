@@ -6,6 +6,7 @@ import '../css/Components/Grid';
 import Link from './Link';
 import Mirrored from './Mirrored';
 import SubSectionTitle from './SubSectionTitle';
+import TextTitle from './TextTitle';
 
 import FacebookLogo from '../images/facebook.svg';
 import MirrorLogo from '../images/logo.svg';
@@ -31,7 +32,7 @@ const Footer = () => (
 
         <div className="Footer-entry Grid-4column">
           <div className="Footer-sectionTitle">
-            <SubSectionTitle>Find Your Way</SubSectionTitle>
+            <SubSectionTitle alternate>Find Your Way</SubSectionTitle>
           </div>
 
           <span className="Footer-link">
@@ -46,7 +47,7 @@ const Footer = () => (
 
         <div className="Footer-entry Grid-2column">
           <div className="Footer-sectionTitle">
-            <SubSectionTitle>Contact us</SubSectionTitle>
+            <SubSectionTitle alternate>Contact us</SubSectionTitle>
           </div>
 
           <span className="Footer-link">
@@ -62,7 +63,7 @@ const Footer = () => (
 
         <div className="Footer-entry Grid-2column">
           <div className="Footer-sectionTitle">
-            <SubSectionTitle>Follow us</SubSectionTitle>
+            <SubSectionTitle alternate>Follow us</SubSectionTitle>
           </div>
 
           <div className="Footer-socialMedia">
@@ -77,7 +78,7 @@ const Footer = () => (
 
       <div className="Footer-lower">
         <div className="Footer-sectionTitle">
-          <SubSectionTitle>MirrorConf is powered by</SubSectionTitle>
+          <TextTitle>MirrorConf is powered by</TextTitle>
         </div>
 
         <Mirrored id="subvisual-logo" hide>

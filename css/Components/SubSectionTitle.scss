@@ -9,7 +9,7 @@ $SubSectionTitle-font-family: "matrix-ii";
 $SubSectionTitle-font-weight: bold;
 
 .SubSectionTitle {
-  color: $Color-white;
+  color: $Color-coral;
 
   font-family: $SubSectionTitle-font-family;
   font-size: $SubSectionTitle-font-size-mobile;
@@ -23,7 +23,5 @@ $SubSectionTitle-font-weight: bold;
 }
 
 .SubSectionTitle.SubSectionTitle--alternate {
-  color: $Color-razzmatazz;
-
-  font-weight: normal;
+  color: $Color-white;
 }

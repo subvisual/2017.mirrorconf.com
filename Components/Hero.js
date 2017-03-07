@@ -3,7 +3,7 @@ import React from 'react';
 import '../css/Components/Hero';
 
 import Section from './Section';
-import SubSectionTitle from './SubSectionTitle';
+import TextTitle from './TextTitle';
 import Mirrored from './Mirrored';
 
 import HeroVideo from '../pages/hero.mp4';
@@ -55,10 +55,10 @@ const Hero = () => (
               <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" target="blank">
                 <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
                 <div className="Hero-playButtonLabel">
-                  <SubSectionTitle>
+                  <TextTitle>
                     1st edition<br />
                     best of
-                  </SubSectionTitle>
+                  </TextTitle>
                 </div>
               </a>
             </Mirrored>
@@ -75,7 +75,7 @@ const Hero = () => (
           <a href="https://www.youtube.com/channel/UCDez53TT1_v3jr3lGv-QhKw" target="blank" className="Hero-socialLink">
             <img src={YoutubeLogo} alt="Youtube logo" />
           </a>
-          <SubSectionTitle alternate>Follow us</SubSectionTitle>
+          <TextTitle alternate>Follow us</TextTitle>
         </div>
       </div>
     </Section>

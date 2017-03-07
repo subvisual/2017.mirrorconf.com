@@ -1,12 +1,12 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-import '../css/Components/SubSectionTitle';
+import '../css/Components/TextTitle';
 
-const SubSectionTitle = ({ children, alternate }) => {
+const TextTitle = ({ children, alternate }) => {
   const className = classNames({
-    SubSectionTitle: true,
-    'SubSectionTitle--alternate': alternate,
+    TextTitle: true,
+    'TextTitle--alternate': alternate,
   });
 
   return (
@@ -16,13 +16,13 @@ const SubSectionTitle = ({ children, alternate }) => {
   );
 };
 
-SubSectionTitle.propTypes = {
+TextTitle.propTypes = {
   children: PropTypes.node.isRequired,
   alternate: PropTypes.bool,
 };
 
-SubSectionTitle.defaultProps = {
+TextTitle.defaultProps = {
   alternate: false,
 };
 
-export default SubSectionTitle;
+export default TextTitle;
