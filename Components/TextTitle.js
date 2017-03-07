@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import '../css/Components/TextTitle';
 
-const TextTitle = ({ children, alternate }) => {
+const TextTitle = ({ children, alternate, dark }) => {
   const className = classNames({
     TextTitle: true,
     'TextTitle--alternate': alternate,

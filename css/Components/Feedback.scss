@@ -1,0 +1,43 @@
+@import "../Theme/Breakpoint";
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+
+$Feedback-quote-top: 72px;
+$Feedback-text-font-size: 18px;
+$Feedback-text-line-height: 26px;
+$Feedback-text-font-family: "matrix-ii";
+$Feedback-text-font-weight: bold;
+
+.Feedback {
+  position: relative;
+
+  padding-bottom: $Spacing-xLarge;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: -$Spacing-large;
+  }
+}
+
+.Feedback-quote {
+  margin-bottom: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    position: absolute;
+    top: $Feedback-quote-top;
+    left: $Spacing-base;
+
+    margin-bottom: 0;
+  }
+}
+
+.Feedback-text {
+  margin-bottom: $Spacing-xSmall;
+
+  color: $Color-madison;
+
+  font-family: $Feedback-text-font-family;
+  font-size: $Feedback-text-font-size;
+
+  font-weight: $Feedback-text-font-weight;
+  line-height: $Feedback-text-line-height;
+}

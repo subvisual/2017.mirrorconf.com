@@ -1,0 +1,46 @@
+@import "../Theme/Breakpoint";
+@import "../Theme/Color";
+
+$CaptionedNumber-font-family: "matrix-ii";
+
+$CaptionedNumber-nr-font-size-desktop: 52px;
+$CaptionedNumber-nr-line-height-desktop: 78px;
+$CaptionedNumber-nr-font-size-mobile: 26px;
+$CaptionedNumber-nr-line-height-mobile: 39px;
+$CaptionedNumber-nr-font-weight: bold;
+
+$CaptionedNumber-caption-font-size: 18px;
+$CaptionedNumber-caption-line-height: 26px;
+
+.CaptionedNumber {
+  font-family: $CaptionedNumber-font-family;
+}
+
+.CaptionedNumber-nr {
+  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
+  color: transparent;
+
+  font-size: $CaptionedNumber-nr-font-size-mobile;
+  // scss-lint:disable PropertySpelling
+  font-variant-numeric: lining-nums;
+  // scss-lint:enable PropertySpelling
+  font-weight: $CaptionedNumber-nr-font-weight;
+  line-height: $CaptionedNumber-nr-line-height-mobile;
+
+  // scss-lint:disable VendorPrefix
+  -webkit-background-clip: text;
+  // scss-lint:enable VendorPrefix
+  background-clip: text;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $CaptionedNumber-nr-font-size-desktop;
+    line-height: $CaptionedNumber-nr-line-height-desktop;
+  }
+}
+
+.CaptionedNumber-caption {
+  color: $Color-white;
+
+  font-size: $CaptionedNumber-caption-font-size;
+  line-height: $CaptionedNumber-caption-line-height;
+}

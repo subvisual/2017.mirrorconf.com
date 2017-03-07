@@ -46,6 +46,7 @@ const Html = ({ body }) => {
         <meta itemProp="image" content="/banner.png" />
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
         {css}
         <script dangerouslySetInnerHTML={{ __html:
           `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

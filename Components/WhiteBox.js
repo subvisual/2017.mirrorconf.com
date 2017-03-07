@@ -14,7 +14,7 @@ const WhiteBox = ({ children, id }) => (
 
 WhiteBox.propTypes = {
   children: PropTypes.node.isRequired,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 };
 
 export default WhiteBox;

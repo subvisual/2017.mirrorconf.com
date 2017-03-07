@@ -1,0 +1,43 @@
+@import "../Theme/Color";
+
+$FeedbackSlider-dots-size: 9px;
+
+.FeedbackSlider-dots {
+  width: 100%;
+  margin: 0;
+
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin: 0;
+    margin-right: 13px;
+
+    cursor: pointer;
+
+    button {
+      width: $FeedbackSlider-dots-size;
+      height: $FeedbackSlider-dots-size;
+      padding: 0;
+      margin: 0;
+
+      background: 0 0;
+      border: 1px solid $Color-razzmatazz;
+      border-radius: 50%;
+
+      cursor: pointer;
+      outline: none;
+
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  // scss-lint:disable SelectorFormat
+  .slick-active {
+    button {
+      background-color: $Color-razzmatazz;
+    }
+  }
+  // scss-lint:enable SelectorFormat
+}

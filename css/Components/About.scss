@@ -1,0 +1,154 @@
+@import "../Theme/Breakpoint";
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+
+$About-content-max-width: 982px;
+
+$About-text-max-width: 534px;
+$About-text-first-letter-font-size: 57px;
+$About-text-first-letter-line-height: 52px;
+$About-text-first-letter-spacing-right: 6px;
+
+$About-currentEdition-max-width: 378px;
+
+$About-number-max-width: 110px;
+
+$About-attendancePhoto: "../../images/about/attendance@2x.jpg";
+$About-venuePhoto: "../../images/about/venue@2x.jpg";
+
+$About-photo-gradient: 133deg,
+  rgba($Color-deep-cove, 0.4),
+  rgba($Color-madison, 0.4);
+
+$About-photo-alternate-gradient: to right,
+  rgba($Color-deep-cove, 0.4),
+  rgba($Color-deep-cove, 1);
+
+$About-photo-mobile-gradient: to right,
+  rgba($Color-deep-cove, 1),
+  rgba($Color-deep-cove, 0.4);
+
+.About {
+  padding: 0 $Spacing-xxSmall;
+}
+
+.About-header {
+  margin-bottom: $Spacing-base;
+}
+
+.About-content {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: $About-content-max-width;
+  margin: 0 auto;
+}
+
+.About-text {
+  max-width: $About-text-max-width;
+  margin: $Spacing-xSmall 0 $Spacing-base;
+
+  &::first-letter {
+    float: left;
+    padding-right: $About-text-first-letter-spacing-right;
+
+    font-size: $About-text-first-letter-font-size;
+    line-height: $About-text-first-letter-line-height;
+  }
+}
+
+.About-info {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+  }
+}
+
+.About-attendancePhoto {
+  width: 310px;
+  height: 286px;
+
+  margin-right: $Spacing-xSmall;
+  margin-bottom: $Spacing-xSmall;
+
+  background-image: linear-gradient($About-photo-gradient),
+                    url($About-attendancePhoto);
+  background-size: cover;
+
+  @include Breakpoint-mobileOnly {
+    width: 294px;
+    height: 286px;
+
+    margin-top: $Spacing-large;
+    margin-right: 0;
+
+    background-image: linear-gradient($About-photo-mobile-gradient),
+                      url($About-attendancePhoto);
+  }
+}
+
+.About-venuePhoto {
+  z-index: 1;
+
+  width: 310px;
+  height: 390px;
+
+  background-image: linear-gradient($About-photo-alternate-gradient),
+                  url($About-venuePhoto);
+  background-size: cover;
+
+  @include Breakpoint-mobileOnly {
+    width: 294px;
+    height: 403px;
+
+    background-image: linear-gradient($About-photo-mobile-gradient),
+                      url($About-venuePhoto);
+  }
+}
+
+.About-currentEdition {
+  position: absolute;
+  top: 0;
+  right: $Spacing-small;
+  z-index: 1;
+
+  max-width: $About-currentEdition-max-width;
+
+  @include Breakpoint-mobileOnly {
+    right: initial;
+    left: 0;
+  }
+}
+
+.About-currentTitle {
+  @include Breakpoint-mobileOnly {
+    margin-bottom: $Spacing-xSmall;
+  }
+}
+
+.About-numbers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.About-number {
+  width: 100%;
+  max-width: $About-number-max-width;
+
+  @include Breakpoint-mobileOnly {
+    margin-bottom: $Spacing-xSmall;
+  }
+}

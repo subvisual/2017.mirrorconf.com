@@ -2,23 +2,22 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 
-$WhiteBox-max-width: 763px;
-$WhiteBox-spacing: 104px;
-$WhiteBox-right-spacing: 130px;
+$WhiteBox-max-width: 758px;
+$WhiteBox-spacing: 113px;
 
 .WhiteBox {
   max-width: $WhiteBox-max-width;
 
+  padding: $Spacing-small $Spacing-xxSmall;
+
   margin-top: $Spacing-xSmall;
   margin-right: $Spacing-xxSmall;
-  padding: $Spacing-small $Spacing-xxSmall;
 
   background-color: $Color-white;
 
   @include Breakpoint-desktopOnly {
+    padding: $Spacing-base $WhiteBox-spacing;
     margin-top: $Spacing-base;
     margin-right: 0;
-    padding: $Spacing-base $WhiteBox-spacing;
-    padding-right: $WhiteBox-right-spacing;
   };
 }
