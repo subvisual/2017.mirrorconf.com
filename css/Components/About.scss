@@ -127,9 +127,7 @@ $About-photo-mobile-gradient: to right,
 }
 
 .About-currentTitle {
-  @include Breakpoint-mobileOnly {
-    margin-bottom: $Spacing-xSmall;
-  }
+  margin-bottom: $Spacing-xSmall;
 }
 
 .About-numbers {
@@ -138,9 +136,13 @@ $About-photo-mobile-gradient: to right,
   flex-wrap: wrap;
   justify-content: flex-end;
 
+  margin-bottom: $Spacing-xSmall;
+
   @include Breakpoint-mobileOnly {
     flex-direction: column;
     justify-content: flex-start;
+
+    margin-bottom: 0;
   }
 }
 
