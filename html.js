@@ -34,7 +34,7 @@ const Html = ({ body }) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mirror Conf 2017" />
-        <meta property="og:url" content="http://mirrorconf.com/" />
+        <meta property="og:url" content="http://mirrorconf.com/?edition=2017" />
         <meta property="og:image" content="/banner.png" />
 
         <meta property="og:description" content="A conference that aims to blur the differences and point towards a collaborative future between designers and front-end developers. Get your early bird ticket!" />
