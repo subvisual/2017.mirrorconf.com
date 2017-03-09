@@ -5,9 +5,6 @@
 $About-content-max-width: 982px;
 
 $About-text-max-width: 534px;
-$About-text-first-letter-font-size: 57px;
-$About-text-first-letter-line-height: 52px;
-$About-text-first-letter-spacing-right: 6px;
 
 $About-currentEdition-max-width: 378px;
 
@@ -48,14 +45,6 @@ $About-photo-mobile-gradient: to right,
 .About-text {
   max-width: $About-text-max-width;
   margin: $Spacing-xSmall 0 $Spacing-base;
-
-  &::first-letter {
-    float: left;
-    padding-right: $About-text-first-letter-spacing-right;
-
-    font-size: $About-text-first-letter-font-size;
-    line-height: $About-text-first-letter-line-height;
-  }
 }
 
 .About-info {

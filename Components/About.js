@@ -1,10 +1,10 @@
 import React from 'react';
 
 import CaptionedNumber from './CaptionedNumber';
+import DropcapText from './DropcapText';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 import SubSectionTitle from './SubSectionTitle';
-import Text from './Text';
 
 import '../css/Components/About';
 
@@ -17,12 +17,12 @@ const About = () => (
       <div className="About-content">
         <SubSectionTitle>Empowering People</SubSectionTitle>
         <div className="About-text">
-          <Text>
+          <DropcapText>
             Mirror Conf is a conference designed to empower designers and front-end developers
             who have a thirst for knowledge and want to broaden their horizons.
             It aims to create the perfect set to blur the differences between these two worlds
             and point towards a more collaborative future.
-          </Text>
+          </DropcapText>
         </div>
         <div className="About-info">
           <div className="About-attendancePhoto" />

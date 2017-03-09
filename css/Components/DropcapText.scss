@@ -1,0 +1,13 @@
+$DropcapText-letter-font-size: 57px;
+$DropcapText-letter-line-height: 52px;
+$DropcapText-letter-spacing-right: 6px;
+
+.DropcapText {
+  &::first-letter {
+    float: left;
+    padding-right: $DropcapText-letter-spacing-right;
+
+    font-size: $DropcapText-letter-font-size;
+    line-height: $DropcapText-letter-line-height;
+  }
+}
