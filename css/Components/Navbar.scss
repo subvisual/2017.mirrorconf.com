@@ -52,9 +52,9 @@ $Navbar-cta-z-index: 20;
 }
 
 .Navbar-cta {
-  margin-bottom: $Spacing-xSmall;
-
   z-index: $Navbar-cta-z-index;
+
+  margin-bottom: $Spacing-xSmall;
 
   @include Breakpoint-desktopOnly {
     margin-bottom: 0;

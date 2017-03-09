@@ -12,10 +12,9 @@ $Burger-label-letter-spacing: 0.5px;
 .Burger {
   display: block;
 
-  cursor: pointer;
-
   background: none;
-  border: none;
+  border: 0;
+  cursor: pointer;
   outline: none;
 
   @include Breakpoint-desktopOnly {
@@ -50,8 +49,10 @@ $Burger-label-letter-spacing: 0.5px;
   line-height: $Burger-label-line-height;
   text-transform: uppercase;
 
-  -webkit-background-clip: text;
+  // scss-lint:disable VendorPrefix
   background-clip: text;
+  -webkit-background-clip: text;
+  // scss-lint:enable VendorPrefix
 }
 
 .Burger.is-open {

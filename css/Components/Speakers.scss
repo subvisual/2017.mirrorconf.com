@@ -27,8 +27,8 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
     width: 100%;
     max-width: 100%;
 
-    margin: $Spacing-xSmall 0;
     padding: 0 $Spacing-xxSmall;
+    margin: $Spacing-xSmall 0;
 
     &:first-child {
       margin-top: 0;

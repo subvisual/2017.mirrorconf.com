@@ -2,6 +2,7 @@
 @import "../Theme/Spacing";
 
 $Button-anim-offset: 3px;
+$Button-alternative-color: #190b5b;
 
 .Button {
   position: relative;
@@ -10,6 +11,9 @@ $Button-anim-offset: 3px;
   display: inline-block;
 
   padding: $Spacing-xxSmall $Spacing-xSmall;
+
+  background: none;
+  border: 0;
 
   color: $Color-white;
   cursor: pointer;
@@ -21,10 +25,8 @@ $Button-anim-offset: 3px;
   line-height: 13px;
   text-transform: uppercase;
 
-  border: none;
-  background: none;
-
   transform: translate(-$Button-anim-offset, -$Button-anim-offset);
+
   transition: transform 0.2s ease-out;
 
   &::after,
@@ -53,6 +55,7 @@ $Button-anim-offset: 3px;
     border: 2px solid $Color-white;
 
     transform: translate($Button-anim-offset, $Button-anim-offset);
+
     transition: transform 0.2s ease-out;
   }
 
@@ -65,6 +68,6 @@ $Button-anim-offset: 3px;
 
 .Button.Button--alternative {
   &::after {
-    border: 2px solid #190b5b;
+    border: 2px solid $Button-alternative-color;
   }
 }

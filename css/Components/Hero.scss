@@ -15,6 +15,8 @@ $Hero-uvp-line-height-mobile: 52px;
 $Hero-font-family: "matrix-ii";
 $Hero-font-weight: bold;
 
+$Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
+
 .Hero {
   position: relative;
 
@@ -44,10 +46,10 @@ $Hero-font-weight: bold;
   width: 100%;
   height: calc(100% + 65px);
 
-  background: linear-gradient(to bottom, rgba(8, 19, 64, 0.7) 20%, $Color-deep-cove 100%);
+  background: linear-gradient(to bottom, $Hero-backgroundOverlay-color 20%, $Color-deep-cove 100%);
 
   @include variablesSupported {
-    background: linear-gradient(to bottom, rgba(8, 19, 64, 0.7) 20%, var(--color-background) 100%);
+    background: linear-gradient(to bottom, $Hero-backgroundOverlay-color 20%, var(--color-background) 100%);
   }
 
 }
@@ -98,14 +100,15 @@ $Hero-font-weight: bold;
   background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
   color: transparent;
 
-  background-clip: text;
-  -webkit-background-clip: text;
-
   font-family: $Hero-font-family;
   font-size: $Hero-uvp-font-size-mobile;
   font-weight: $Hero-font-weight;
   line-height: $Hero-uvp-line-height-mobile;
 
+  background-clip: text;
+  // scss-lint:disable VendorPrefix
+  -webkit-background-clip: text;
+  // scss-lint:enable VendorPrefix
 
   @include Breakpoint-desktopOnly {
     max-width: $Hero-uvp-max-width;
@@ -161,10 +164,12 @@ $Hero-font-weight: bold;
     text-align: left;
   }
 
+  // scss-lint:disable SelectorFormat
   &:hover,
   &.hover {
     .Hero-playButtonImage {
       transform: translateX(-4px) scale(0.95, 0.95);
+
       filter: blur(3px);
     }
 
@@ -172,6 +177,7 @@ $Hero-font-weight: bold;
       transform: translateX(4px);
     }
   }
+  // scss-lint:enable SelectorFormat
 }
 
 .Hero-playButtonImage {

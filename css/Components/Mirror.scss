@@ -1,7 +1,8 @@
-@import "../Theme/Global";
-@import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 @import "../Theme/Browsers";
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
 
 $Mirror-reflection-max-width: 946px;
 $Mirror-reflection-transform: 129px;
@@ -23,7 +24,6 @@ $Mirror-reflection-transform: 129px;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
 
   width: 100%;
   height: 100%;
@@ -32,40 +32,39 @@ $Mirror-reflection-transform: 129px;
   overflow-x: hidden;
 
   background: linear-gradient(
-    to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 70%
+    to bottom, rgba($Color-white, 0) 0%, rgba($Color-white, 0.05) 70%
   );
 
   pointer-events: none;
 
+  perspective: 300px;
+  transform: translateX(-50%);
+
   @include Breakpoint-mobileOnly {
     display: none;
   };
-
-  perspective: 300px;
 }
 
 .Mirror-reflection {
-
   position: absolute;
 
-  left: 50%;
   top: 0;
+  left: 50%;
 
   width: 100vw;
   max-width: $Global-content-max-width;
 
   pointer-events: none;
 
+  transform: scaleX(-1) translateX(50%);
 
   filter: opacity(0.3) blur(7px);
 
-  transform: scaleX(-1) translateX(50%);
-
   @include variablesSupported {
+    transform: scaleX(-1) translateX(50%) rotateX(var(--mirror-rotation-x)) rotateY(var(--mirror-rotation-y));
+
     --mirror-rotation-x: 0deg;
     --mirror-rotation-y: 0deg;
-
-    transform: scaleX(-1) translateX(50%) rotateX(var(--mirror-rotation-x)) rotateY(var(--mirror-rotation-y));
   }
 }
 

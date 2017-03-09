@@ -8,9 +8,9 @@
   background-color: $Color-deep-cove;
 
   @include variablesSupported {
-    --color-background: $Color-deep-cove;
-
     background-color: var(--color-background);
+
+    --color-background: $Color-deep-cove;
   }
 }
 

@@ -15,16 +15,18 @@ $Link-line-height: 26px;
   line-height: $Link-line-height;
   text-decoration: none;
 
-  &:after {
-    content: '';
+  &::after {
+    content: "";
 
     position: absolute;
     bottom: -10px;
     left: 0;
+
     width: 100%;
     height: 2px;
 
     background-color: $Color-white;
+
     transform: scaleX(0);
     transform-origin: center left;
 
@@ -32,7 +34,7 @@ $Link-line-height: 26px;
   }
 
   &:hover {
-    &:after {
+    &::after {
       transform: scaleX(1);
     }
   }
