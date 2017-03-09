@@ -15,7 +15,7 @@ import TwitterLogo from '../images/twitter.svg';
 import YoutubeLogo from '../images/youtube.svg';
 
 const renderSocialLink = (href, alt, img) => (
-  <a href={href} target="_blank" className="Footer-socialLink">
+  <a href={href} target="_blank" rel="noopener noreferrer" className="Footer-socialLink">
     <img alt={alt} src={img} />
   </a>
 );
@@ -82,7 +82,7 @@ const Footer = () => (
         </div>
 
         <Mirrored id="subvisual-logo" hide>
-          <a href="https://subvisual.co" target="_blank">
+          <a href="https://subvisual.co" rel="noopener noreferrer" target="_blank">
             <img alt="Subvisual logo" src={SubvisualLogo} />
           </a>
         </Mirrored>

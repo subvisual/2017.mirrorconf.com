@@ -5,7 +5,7 @@ import '../css/Components/Text';
 
 const Text = ({ children, alternative }) => {
   const className = classNames({
-    'Text': true,
+    Text: true,
     'Text--alternative': alternative,
   });
 

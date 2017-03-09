@@ -5,7 +5,7 @@ import '../css/Components/Button';
 
 const Button = ({ children, alternative }) => {
   const className = classNames({
-    'Button': true,
+    Button: true,
     'Button--alternative': alternative,
   });
 
