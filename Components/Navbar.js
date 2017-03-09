@@ -7,7 +7,7 @@ import Links from '../data/links';
 import '../css/Components/Navbar';
 import MirrorLogo from '../images/logo.svg';
 
-const renderLink = link => <span className="Navbar-link">{link}</span>;
+const renderLink = (link, index) => <span key={index} className="Navbar-link">{link}</span>;
 
 const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
   <Section>

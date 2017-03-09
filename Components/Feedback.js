@@ -10,8 +10,8 @@ import Section from './Section';
 import TextTitle from './TextTitle';
 import WhiteBox from './WhiteBox';
 
-const feedbackFrom = author => (
-  <div>
+const feedbackFrom = (author, index) => (
+  <div key={index}>
     <div className="Feedback-text">
       {author.text}
     </div>
