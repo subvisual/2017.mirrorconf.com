@@ -45,7 +45,7 @@ const Hero = () => (
               For designers and front-end developers.
             </h2>
             <h3 className="Hero-date">
-              October 12 & 13, 2017<br />
+              October 10 — 13, 2017<br />
               Braga, Portugal
             </h3>
           </div>
