@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../css/Components/Hero';
+import '../css/Components/Grid';
 
 import Section from './Section';
 import TextTitle from './TextTitle';
@@ -38,7 +39,7 @@ const Hero = () => (
 
     <Section>
       <div className="Hero-foreground">
-        <div className="Hero-content">
+        <div className="Hero-content Grid Grid--1offset">
           <div className="Hero-title">
             <h1 className="Hero-headline">Mirror Conf 2017</h1>
             <h2 className="Hero-uvp">
@@ -48,6 +49,11 @@ const Hero = () => (
               October 10 — 13, 2017<br />
               Braga, Portugal
             </h3>
+
+            <h4 className="Hero-fullDate">
+              Oct. 10 & 11 — workshops,<br />
+              12 & 13 — main conference
+            </h4>
           </div>
 
           <div className="Hero-actions">

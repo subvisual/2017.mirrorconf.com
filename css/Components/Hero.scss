@@ -12,6 +12,10 @@ $Hero-uvp-font-size-desktop: 72px;
 $Hero-uvp-line-height-desktop: 91px;
 $Hero-uvp-font-size-mobile: 39px;
 $Hero-uvp-line-height-mobile: 52px;
+$Hero-fullDate-font-size: 18px;
+$Hero-fullDate-line-height: 26px;
+$Hero-fullDate-bottom-alignment: 20px;
+$Hero-fullDate-right-alignment: 112px;
 $Hero-font-family: "matrix-ii";
 $Hero-font-weight: bold;
 
@@ -20,9 +24,7 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 .Hero {
   position: relative;
 
-  @include Breakpoint-desktopOnly {
-    padding: 0 $Spacing-small;
-  }
+  padding: 0 $Spacing-xxSmall;
 }
 
 .Hero-background {
@@ -75,6 +77,8 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 }
 
 .Hero-content {
+  position: relative;
+
   padding: 0 $Spacing-xSmall;
 
   @include Breakpoint-desktopOnly {
@@ -88,8 +92,6 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 .Hero-title {
   @include Breakpoint-desktopOnly {
     flex: 2;
-
-    margin-left: -$Spacing-small;
   };
 }
 
@@ -134,11 +136,40 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 }
 
 .Hero-date {
+  margin-bottom: $Spacing-xSmall;
+
   font-style: italic;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: 0;
+  }
+}
+
+.Hero-fullDate {
+  position: static;
+
+  color: $Color-white;
+
+  font-family: $Hero-font-family;
+  font-size: $Hero-fullDate-font-size;
+  font-style: italic;
+  line-height: $Hero-fullDate-line-height;
+  text-align: right;
+
+  @include Breakpoint-desktopOnly {
+    position: absolute;
+    right: $Hero-fullDate-right-alignment;
+    bottom: $Hero-fullDate-bottom-alignment;
+
+    font-weight: $Hero-font-weight;
+  }
 }
 
 .Hero-actions {
-  margin-top: $Spacing-base;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: $Spacing-small;
 
   @include Breakpoint-desktopOnly {
     flex: 1;
@@ -152,16 +183,15 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 .Hero-playButton {
   position: relative;
 
+  display: inline-block;
+
   padding-left: $Spacing-xxSmall;
 
+  text-align: left;
   text-decoration: none;
 
-  transform: translateX($Spacing-xSmall);
-
   @include Breakpoint-desktopOnly {
-    display: inline-block;
-
-    text-align: left;
+    font-weight: $Hero-font-weight;
   }
 
   // scss-lint:disable SelectorFormat
