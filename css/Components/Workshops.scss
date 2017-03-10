@@ -1,0 +1,78 @@
+@import "../Theme/Spacing";
+@import "../Theme/Global";
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
+
+$Workshops-item-offset: 65px;
+$Workshops-item-odd-height: 468px;
+$Workshops-item-even-height: 416px;
+$Workshops-item-mobile-height: 286px;
+
+.Workshops {
+  padding: 0 $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  };
+}
+
+.Workshops-header {
+  margin-bottom: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    margin-left: $Spacing-xxSmall;
+    margin-bottom: $Spacing-base;
+  };
+}
+
+.Workshops-description {
+  margin-bottom: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: $Spacing-base;
+  };
+}
+
+.Workshops-subHeader {
+  margin-bottom: $Spacing-xSmall;
+}
+
+.Workshops-list {
+  margin-bottom: -$Spacing-xSmall;
+}
+
+.Workshops-item {
+  height: $Workshops-item-mobile-height;
+
+  margin-bottom: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    height: $Workshops-item-even-height;
+
+    margin-bottom: $Spacing-small;
+
+    &.odd {
+      height: $Workshops-item-odd-height;
+
+      transform: translateY($Workshops-item-offset);
+    }
+  }
+}
+
+.Workshops-row {
+  @include Breakpoint-desktopOnly {
+    &:nth-child(even) {
+      .Workshops-item {
+        height: $Workshops-item-odd-height;
+
+        transform: translateY(-$Workshops-item-offset);
+      }
+
+      .Workshops-item.odd {
+        height: $Workshops-item-even-height;
+
+        transform: translateY($Workshops-item-offset);
+      }
+    }
+  };
+}

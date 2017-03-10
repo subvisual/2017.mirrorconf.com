@@ -1,3 +1,4 @@
+@import "../Theme/Global";
 @import "../Theme/Breakpoint";
 @import "../Theme/Color";
 @import "../Theme/Spacing";
@@ -7,46 +8,19 @@ $Footer-gradient-end: rgba(0, 0, 0, 0.3);
 $Footer-separator-height: 1px;
 
 .Footer {
-  padding: 0 $Spacing-xxSmall;
+  padding: 0 $Spacing-xxSmall $Spacing-small;
 
   background: linear-gradient(to bottom, $Footer-gradient-start, $Footer-gradient-end);
 
   @include Breakpoint-desktopOnly {
-    padding: 0 $Spacing-small;
+    padding: 0 0 $Spacing-small;
   }
 }
 
 .Footer-content {
-  display: flex;
-  flex-direction: column;
-
   width: 100%;
-  max-width: 1206px;
+  max-width: $Global-content-max-width;
   margin: 0 auto;
-}
-
-.Footer-upper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @include Breakpoint-desktopOnly {
-    flex-direction: row;
-  }
-}
-
-.Footer-lower {
-  margin-bottom: $Spacing-small;
-
-  @include Breakpoint-desktopOnly {
-    margin-bottom: $Spacing-large;
-  }
-}
-
-.Footer-entry {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .Footer-logo {
@@ -57,8 +31,12 @@ $Footer-separator-height: 1px;
   margin-bottom: $Spacing-xxSmall;
 }
 
-.Footer-link:not(:last-child) {
-  margin-bottom: $Spacing-xxSmall;
+.Footer-link {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: $Spacing-xxSmall;
+  }
 }
 
 .Footer-socialLink:not(:last-child) {

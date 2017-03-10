@@ -1,24 +1,24 @@
 import React, { PropTypes } from 'react';
 
-import '../css/Components/Speaker';
+import '../css/Components/Workshop';
 
 import Text from './Text';
 import ImageGradient from './ImageGradient';
 import SubSectionTitle from './SubSectionTitle';
 
-const Speaker = ({ name, bio, image }) => (
-  <div className="Speaker" style={ImageGradient(image)}>
-    <div className="Speaker-details">
+const Workshop = ({ name, instructor, image }) => (
+  <div className="Workshop" style={ImageGradient(image)}>
+    <div className="Workshop-details">
       <SubSectionTitle>{name}</SubSectionTitle>
-      <Text>{bio}</Text>
+      <Text>{instructor}</Text>
     </div>
   </div>
 );
 
-Speaker.propTypes = {
-  bio: PropTypes.string.isRequired,
+Workshop.propTypes = {
+  instructor: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
 
-export default Speaker;
+export default Workshop;

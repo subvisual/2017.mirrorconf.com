@@ -4,6 +4,8 @@
 @import "../Theme/Browsers";
 
 .Layout {
+  width: 100%;
+  max-width: 100%;
 
   background-color: $Color-deep-cove;
 
@@ -24,7 +26,6 @@
   position: absolute;
 
   height: 100%;
-  max-width: 100%;
 
   overflow: hidden;
 }

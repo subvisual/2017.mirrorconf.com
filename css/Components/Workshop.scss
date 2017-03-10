@@ -1,0 +1,44 @@
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Workshop-name-font-size: 26px;
+$Workshop-name-line-height: 39px;
+$Workshop-name-font-size-mobile: 18px;
+$Workshop-name-line-height-mobile: 26px;
+$Workshop-name-font-family: "matrix-ii";
+$Workshop-name-font-weight: bold;
+
+.Workshop {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Workshop-details {
+  transform: translateX($Spacing-xxSmall);
+
+  @include Breakpoint-desktopOnly {
+    transform: translateX(- $Spacing-xxSmall);
+  }
+}
+
+.Workshop-name {
+  color: $Color-coral;
+
+  font-family: $Workshop-name-font-family;
+  font-size: $Workshop-name-font-size-mobile;
+  font-weight: $Workshop-name-font-weight;
+  line-height: $Workshop-name-line-height-mobile;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $Workshop-name-font-size;
+    line-height: $Workshop-name-line-height;
+  }
+}
