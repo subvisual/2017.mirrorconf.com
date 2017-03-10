@@ -7,6 +7,7 @@ import Link from './Link';
 import Mirrored from './Mirrored';
 import SubSectionTitle from './SubSectionTitle';
 import TextTitle from './TextTitle';
+import SocialLinks from './SocialLinks';
 
 import FacebookLogo from '../images/facebook.svg';
 import MirrorLogo from '../images/logo.svg';
@@ -74,9 +75,7 @@ const Footer = () => (
               </div>
 
               <div className="Footer-socialMedia">
-                {renderSocialLink('https://www.facebook.com/Mirror-Conf-578187519024917/', 'Facebook Logo', FacebookLogo)}
-                {renderSocialLink('https://twitter.com/MirrorConf', 'Twitter Logo', TwitterLogo)}
-                {renderSocialLink('https://www.youtube.com/channel/UCDez53TT1_v3jr3lGv-QhKw', 'Youtube Logo', YoutubeLogo)}
+                <SocialLinks />
               </div>
             </div>
           </div>

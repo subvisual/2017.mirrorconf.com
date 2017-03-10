@@ -6,14 +6,12 @@ import '../css/Components/Grid';
 import Section from './Section';
 import TextTitle from './TextTitle';
 import Mirrored from './Mirrored';
+import SocialLinks from './SocialLinks';
 
 import HeroVideo from '../pages/hero.mp4';
 import HeroPoster from '../pages/hero-cover.jpg';
 import HeroFallback from '../pages/hero.jpg';
 import PlayIcon from '../images/play.svg';
-import TwitterLogo from '../images/twitter.svg';
-import YoutubeLogo from '../images/youtube.svg';
-import FacebookLogo from '../images/facebook.svg';
 
 const Hero = () => (
   <section className="Hero">
@@ -72,15 +70,8 @@ const Hero = () => (
         </div>
 
         <div className="Hero-footer">
-          <a href="https://www.facebook.com/Mirror-Conf-578187519024917/" target="blank" className="Hero-socialLink">
-            <img src={FacebookLogo} alt="Facebook logo" />
-          </a>
-          <a href="https://twitter.com/MirrorConf" target="blank" className="Hero-socialLink">
-            <img src={TwitterLogo} alt="Twitter logo" />
-          </a>
-          <a href="https://www.youtube.com/channel/UCDez53TT1_v3jr3lGv-QhKw" target="blank" className="Hero-socialLink">
-            <img src={YoutubeLogo} alt="Youtube logo" />
-          </a>
+          <SocialLinks />
+          <div className="Hero-footerSpace" />
           <TextTitle alternate>Follow us</TextTitle>
         </div>
       </div>
