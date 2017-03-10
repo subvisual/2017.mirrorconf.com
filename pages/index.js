@@ -7,6 +7,7 @@ import Feedback from '../Components/Feedback';
 import Footer from '../Components/Footer';
 import Speakers from '../Components/Speakers';
 import Workshops from '../Components/Workshops';
+import Sponsors from '../Components/Sponsors';
 
 import '../css/Components/Index';
 
@@ -23,6 +24,9 @@ const Index = () => (
     </div>
     <div className="Index-section">
       <Workshops />
+    </div>
+    <div className="Index-section">
+      <Sponsors />
     </div>
     <div className="Index-section">
       <Footer />

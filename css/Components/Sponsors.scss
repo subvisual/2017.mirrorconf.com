@@ -1,0 +1,80 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+.Sponsors {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    background-color: $Color-white;
+  }
+}
+
+.Sponsors-wrapper {
+  padding: $Spacing-small $Spacing-xxSmall;
+  margin-right: $Spacing-xxSmall;
+  background-color: $Color-white;
+
+  @include Breakpoint-desktopOnly {
+    padding: $Spacing-large 0;
+    margin-right: 0;
+  };
+}
+
+.Sponsors-title {
+  margin-bottom: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: $Spacing-base;
+  }
+}
+
+.Sponsors-levelsTitle {
+  margin-bottom: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: $Spacing-base;
+  }
+}
+
+.Sponsors-level {
+  padding-bottom: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    padding-bottom: $Spacing-base;
+  }
+}
+
+.Sponsors-levelTitle {
+  margin-bottom: $Spacing-xSmall;
+}
+
+.Sponsors-levelLogos {
+  display: flex;
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.Sponsors-levelLogo:not(:last-child) {
+  margin-bottom: $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-right: $Spacing-small;
+    margin-bottom: 0;
+  }
+}
+
+.Sponsors-actions {
+  margin-top: $Spacing-xSmall;
+}

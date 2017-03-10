@@ -33,7 +33,7 @@ const About = () => (
 
           <div className="About-currentEdition">
             <div className="About-currentTitle">
-              <SubSectionTitle alternate italic>
+              <SubSectionTitle edge italic>
                 2017 - Refraction: technology that changes
               </SubSectionTitle>
             </div>

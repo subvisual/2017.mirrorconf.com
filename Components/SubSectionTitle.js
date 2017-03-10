@@ -3,10 +3,11 @@ import classNames from 'classnames';
 
 import '../css/Components/SubSectionTitle';
 
-const SubSectionTitle = ({ children, alternate, italic }) => {
+const SubSectionTitle = ({ children, alternate, edge, italic }) => {
   const className = classNames({
     SubSectionTitle: true,
     'SubSectionTitle--alternate': alternate,
+    'SubSectionTitle--edge': edge,
     'SubSectionTitle--italic': italic,
   });
 
@@ -20,11 +21,13 @@ const SubSectionTitle = ({ children, alternate, italic }) => {
 SubSectionTitle.propTypes = {
   children: PropTypes.node.isRequired,
   alternate: PropTypes.bool,
+  edge: PropTypes.bool,
   italic: PropTypes.bool,
 };
 
 SubSectionTitle.defaultProps = {
   alternate: false,
+  edge: false,
   italic: false,
 };
 

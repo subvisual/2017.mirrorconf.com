@@ -23,9 +23,7 @@ $Grid-number-of-columns: 11;
     vertical-align: top;
 
     width: 100%;
-    max-width: calc((#{$Grid-col-width} * #{$col}) +
-                    (#{$Grid-col-spacing} * #{$col - 1}));
-
+    max-width: calc((#{$Grid-col-width} * #{$col}) + (#{$Grid-col-spacing} * (#{$col} - 1)));
     margin-right: $Grid-col-spacing;
 
     @include Breakpoint-mobileOnly {

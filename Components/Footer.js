@@ -33,7 +33,7 @@ const Footer = () => (
             </div>
             <div className="Grid-4column">
               <div className="Footer-sectionTitle">
-                <SubSectionTitle alternate>Find Your Way</SubSectionTitle>
+                <SubSectionTitle edge>Find Your Way</SubSectionTitle>
               </div>
 
               <span className="Footer-link">
@@ -54,7 +54,7 @@ const Footer = () => (
 
             <div className="Grid-2column">
               <div className="Footer-sectionTitle">
-                <SubSectionTitle alternate>Contact us</SubSectionTitle>
+                <SubSectionTitle edge>Contact us</SubSectionTitle>
               </div>
 
               <span className="Footer-link">
@@ -70,7 +70,7 @@ const Footer = () => (
 
             <div className="Grid-2column">
               <div className="Footer-sectionTitle">
-                <SubSectionTitle alternate>Follow us</SubSectionTitle>
+                <SubSectionTitle edge>Follow us</SubSectionTitle>
               </div>
 
               <div className="Footer-socialMedia">

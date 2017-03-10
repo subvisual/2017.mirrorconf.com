@@ -10,14 +10,12 @@ $WhiteBox-spacing: 113px;
 
   padding: $Spacing-small $Spacing-xxSmall;
 
-  margin-top: $Spacing-xSmall;
   margin-right: $Spacing-xxSmall;
 
   background-color: $Color-white;
 
   @include Breakpoint-desktopOnly {
     padding: $Spacing-base $WhiteBox-spacing;
-    margin-top: $Spacing-base;
     margin-right: 0;
   };
 }
