@@ -2,6 +2,7 @@ import React from 'react';
 
 import CaptionedNumber from './CaptionedNumber';
 import DropcapText from './DropcapText';
+import Mirrored from './Mirrored';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 import SubSectionTitle from './SubSectionTitle';
@@ -26,7 +27,9 @@ const About = () => (
         </div>
         <div className="About-info">
           <div className="About-attendancePhoto" />
-          <div className="About-venuePhoto" />
+          <Mirrored hide>
+            <div className="About-venuePhoto" />
+          </Mirrored>
 
           <div className="About-currentEdition">
             <div className="About-currentTitle">
