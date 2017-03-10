@@ -37,47 +37,49 @@ const Hero = () => (
     </div>
 
     <Section>
-      <div className="Hero-foreground">
-        <div className="Hero-content">
-          <div className="Hero-title">
-            <h1 className="Hero-headline">Mirror Conf 2017</h1>
-            <h2 className="Hero-uvp">
-              For designers and front-end developers.
-            </h2>
-            <h3 className="Hero-date">
-              October 10 — 13, 2017<br />
-              Braga, Portugal
-            </h3>
+      <Mirrored desktopOnly>
+        <div className="Hero-foreground">
+          <div className="Hero-content">
+            <div className="Hero-title">
+              <h1 className="Hero-headline">Mirror Conf 2017</h1>
+              <h2 className="Hero-uvp">
+                For designers and front-end developers.
+              </h2>
+              <h3 className="Hero-date">
+                October 10 — 13, 2017<br />
+                Braga, Portugal
+              </h3>
+            </div>
+
+            <div className="Hero-actions">
+              <Mirrored id="button" hover>
+                <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" target="blank">
+                  <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
+                  <div className="Hero-playButtonLabel">
+                    <TextTitle>
+                      1st edition<br />
+                      best of
+                    </TextTitle>
+                  </div>
+                </a>
+              </Mirrored>
+            </div>
           </div>
 
-          <div className="Hero-actions">
-            <Mirrored id="button" hover>
-              <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" target="blank">
-                <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
-                <div className="Hero-playButtonLabel">
-                  <TextTitle>
-                    1st edition<br />
-                    best of
-                  </TextTitle>
-                </div>
-              </a>
-            </Mirrored>
+          <div className="Hero-footer">
+            <a href="https://www.facebook.com/Mirror-Conf-578187519024917/" target="blank" className="Hero-socialLink">
+              <img src={FacebookLogo} alt="Facebook logo" />
+            </a>
+            <a href="https://twitter.com/MirrorConf" target="blank" className="Hero-socialLink">
+              <img src={TwitterLogo} alt="Twitter logo" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCDez53TT1_v3jr3lGv-QhKw" target="blank" className="Hero-socialLink">
+              <img src={YoutubeLogo} alt="Youtube logo" />
+            </a>
+            <TextTitle alternate>Follow us</TextTitle>
           </div>
         </div>
-
-        <div className="Hero-footer">
-          <a href="https://www.facebook.com/Mirror-Conf-578187519024917/" target="blank" className="Hero-socialLink">
-            <img src={FacebookLogo} alt="Facebook logo" />
-          </a>
-          <a href="https://twitter.com/MirrorConf" target="blank" className="Hero-socialLink">
-            <img src={TwitterLogo} alt="Twitter logo" />
-          </a>
-          <a href="https://www.youtube.com/channel/UCDez53TT1_v3jr3lGv-QhKw" target="blank" className="Hero-socialLink">
-            <img src={YoutubeLogo} alt="Youtube logo" />
-          </a>
-          <TextTitle alternate>Follow us</TextTitle>
-        </div>
-      </div>
+      </Mirrored>
     </Section>
   </section>
 );

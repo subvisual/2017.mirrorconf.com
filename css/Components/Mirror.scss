@@ -72,6 +72,14 @@ $Mirror-reflection-transform: 129px;
   visibility: hidden;
 }
 
+.Mirror-reflection [data-mirror-desktopOnly] {
+  visibility: hidden;
+
+  @include Breakpoint-desktopOnly {
+    visibility: inherit;
+  }
+}
+
 .Mirror-container {
   display: none;
 
