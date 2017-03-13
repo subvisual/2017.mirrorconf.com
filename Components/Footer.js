@@ -39,7 +39,13 @@ const Footer = () => (
             <Link uppercase href="/sponsoring.pdf" target="_blank">Sponsor Us</Link>
           </span>
           <span className="Footer-link">
-            <Link uppercase target="_blank" href="https://ti.to/subvisual/mirror-conf-2017">Buy Your Early Bird</Link>
+            <Link
+              uppercase
+              target="_blank"
+              href="https://ti.to/subvisual/mirror-conf-2017"
+            >
+              Buy Your Ticket
+            </Link>
           </span>
         </div>
 
