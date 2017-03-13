@@ -1,29 +1,66 @@
 @import "../Theme/Breakpoint";
 @import "../Theme/Spacing";
 
-$Grid-col-width: 86px;
-$Grid-col-spacing: 26px;
+$Grid-base-col-width: 86px;
+$Grid-base-col-spacing: 26px;
+$Grid-base-number-of-columns: 11;
+
+$Grid-max-width: ($Grid-base-col-width * $Grid-base-number-of-columns) +
+                 ($Grid-base-col-spacing * ($Grid-base-number-of-columns - 1));
+
+$Grid-number-of-breakpoints: $Grid-max-width % $Grid-base-number-of-columns;
 
 .Grid {
   width: 100%;
-}
 
-@for $col from 1 through 4 {
-  .Grid--#{$col}offset {
-    padding: 0;
+  $breakpoint: 1;
+  @while $breakpoint <= $Grid-number-of-breakpoints {
+    $Grid-number-of-columns: $Grid-base-number-of-columns - ($breakpoint * 2);
+    $Grid-col-width: ($breakpoint * $Grid-base-col-width) / $Grid-number-of-breakpoints;
+    $Grid-col-spacing: ($breakpoint * $Grid-base-col-spacing) / $Grid-number-of-breakpoints;
 
-    @include Breakpoint-desktopOnly {
-      padding: 0 calc((#{$Grid-col-width} + #{$Grid-col-spacing}) * #{$col});
+    $Grid-width: ($Grid-col-width * $Grid-number-of-columns) +
+                 ($Grid-col-spacing * ($Grid-number-of-columns - 1));
+
+    @error "Error: #{$Grid-width}.";
+
+    @media screen and (min-width: $Grid-width) {
+      $col: 1;
+      @while $col <= $Grid-number-of-columns {
+        $Grid-col-max-width: ($Grid-col-width * $col) +
+                             ($Grid-col-spacing * ($col - 1));
+
+        &.Grid--#{$col}offset {
+          padding: 0;
+
+          @include Breakpoint-desktopOnly {
+            padding: 0 calc((#{$Grid-col-width} + #{$Grid-col-spacing}) * #{$col});
+          }
+        }
+
+        .Grid-#{$col}column {
+          display: inline-block;
+          vertical-align: top;
+
+          width: 100%;
+
+          @if ($Grid-col-max-width <= $Grid-max-width) and ($col >= $Grid-number-of-breakpoints) {
+            max-width: 100%;
+          } @else {
+            max-width: $Grid-col-max-width;
+          }
+
+          margin-right: $Grid-col-spacing;
+        }
+
+        .Grid-#{$col}column:last-child {
+          margin-right: 0;
+        }
+
+        $col: $col + 1;
+      }
     }
-  }
 
-  .Grid-#{$col}column {
-    width: 100%;
-    max-width: calc(#{$Grid-col-width} * #{$col});
-    margin-right: calc(#{$Grid-col-spacing} * #{$col});
-  }
-
-  .Grid-#{$col}column:last-child {
-    margin-right: 0;
+    $breakpoint: $breakpoint + 1;
   }
 }
