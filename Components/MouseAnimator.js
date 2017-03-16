@@ -40,8 +40,6 @@ export default class MouseAnimator {
   }
 
   lerp = (value1, value2, amount) => {
-    const lo = amount < 0 ? 0 : amount;
-    const hi = amount > 1 ? 1 : amount;
-    return value1 + ((hi - lo) * amount);
+    return value1 + ((value2 - value1) * amount);
   }
 }
