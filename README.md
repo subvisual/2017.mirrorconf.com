@@ -45,7 +45,27 @@ npm run develop
 Deployment
 ----------
 
-To deploy the app run `npm run deploy`
+Semaphore handles all deploys (automatically to staging, manually to
+production).
+
+As a fallback, you can deploy manually. First, get the .env variables from the
+dev team:
+
+```
+# .env
+AWS_ACCESS_SECRET="XXX"
+AWS_ACCESS_KEY="XXX"
+```
+
+Then, deploy:
+
+```
+# To staging
+bin/deploy
+
+# To production
+bin/deploy production
+```
 
 Contribution Guidelines
 -----------------------

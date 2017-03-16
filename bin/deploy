@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 LOCAL_NODE_VERSION=$(node -v)
 EXPECTED_NODE_VERSION=$(cat .nvmrc)
 
@@ -10,4 +11,10 @@ then
   exit 1
 fi
 
-yarn install && yarn run build && s3_website push
+env=${1:-staging}
+
+echo "#"
+echo "# Deploying to ${env}"
+echo "#"
+
+yarn install && yarn run build && s3_website push --config-dir deploy/${env}
