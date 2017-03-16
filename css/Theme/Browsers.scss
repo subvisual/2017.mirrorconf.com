@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin clipTextSupported {
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    @content;
+  }
+}

@@ -1,6 +1,7 @@
 @import "../Theme/Color";
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
+@import "../Theme/Mixins";
 
 $Burger-line-height: 2px;
 $Burger-label-font-size: 8px;
@@ -39,9 +40,6 @@ $Burger-label-letter-spacing: 0.5px;
 .Burger-closeLabel {
   display: block;
 
-  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
-  color: transparent;
-
   font-family: $Burger-label-font-family;
   font-size: $Burger-label-font-size;
   font-weight: $Burger-label-font-weight;
@@ -49,10 +47,7 @@ $Burger-label-letter-spacing: 0.5px;
   line-height: $Burger-label-line-height;
   text-transform: uppercase;
 
-  // scss-lint:disable VendorPrefix
-  background-clip: text;
-  -webkit-background-clip: text;
-  // scss-lint:enable VendorPrefix
+  @include textGradient(linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
 }
 
 .Burger.is-open {

@@ -1,0 +1,15 @@
+@import "./Browsers";
+
+@mixin textGradient($gradient, $fallback) {
+  color: $fallback;
+
+  @include clipTextSupported {
+    background-image: $gradient;
+    color: transparent;
+
+    background-clip: text;
+    // scss-lint:disable VendorPrefix
+    -webkit-background-clip: text;
+    // scss-lint:enable VendorPrefix
+  }
+}

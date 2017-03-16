@@ -2,6 +2,7 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 @import "../Theme/Browsers";
+@import "../Theme/Mixins";
 
 $Hero-uvp-max-width: 523px;
 $Hero-font-size: 26px;
@@ -99,18 +100,12 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
   margin-top: $Spacing-xxSmall;
   margin-bottom: $Spacing-xxSmall;
 
-  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
-  color: transparent;
-
   font-family: $Hero-font-family;
   font-size: $Hero-uvp-font-size-mobile;
   font-weight: $Hero-font-weight;
   line-height: $Hero-uvp-line-height-mobile;
 
-  background-clip: text;
-  // scss-lint:disable VendorPrefix
-  -webkit-background-clip: text;
-  // scss-lint:enable VendorPrefix
+  @include textGradient($gradient: linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
 
   @include Breakpoint-desktopOnly {
     max-width: $Hero-uvp-max-width;

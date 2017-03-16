@@ -1,5 +1,6 @@
 @import "../Theme/Breakpoint";
 @import "../Theme/Color";
+@import "../Theme/Mixins";
 
 $CaptionedNumber-font-family: "matrix-ii";
 
@@ -17,9 +18,6 @@ $CaptionedNumber-caption-line-height: 26px;
 }
 
 .CaptionedNumber-nr {
-  background-image: linear-gradient(118deg, $Color-coral, $Color-razzmatazz);
-  color: transparent;
-
   font-size: $CaptionedNumber-nr-font-size-mobile;
   // scss-lint:disable PropertySpelling
   font-variant-numeric: lining-nums;
@@ -27,10 +25,7 @@ $CaptionedNumber-caption-line-height: 26px;
   font-weight: $CaptionedNumber-nr-font-weight;
   line-height: $CaptionedNumber-nr-line-height-mobile;
 
-  // scss-lint:disable VendorPrefix
-  -webkit-background-clip: text;
-  // scss-lint:enable VendorPrefix
-  background-clip: text;
+  @include textGradient(linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
 
   @include Breakpoint-desktopOnly {
     font-size: $CaptionedNumber-nr-font-size-desktop;
