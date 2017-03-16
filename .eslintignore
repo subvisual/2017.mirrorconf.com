@@ -8,3 +8,4 @@ loaders
 wrappers
 node_modules
 html.js
+gatsby-node.js

@@ -1,3 +1,5 @@
+/* global document:false, window: false */
+
 import _ from 'lodash';
 
 export default class MouseAnimator {
@@ -38,8 +40,8 @@ export default class MouseAnimator {
   }
 
   lerp = (value1, value2, amount) => {
-    amount = amount < 0 ? 0 : amount;
-    amount = amount > 1 ? 1 : amount;
-    return value1 + (value2 - value1) * amount;
+    const lo = amount < 0 ? 0 : amount;
+    const hi = amount > 1 ? 1 : amount;
+    return value1 + ((hi - lo) * amount);
   }
 }

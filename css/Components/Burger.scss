@@ -38,6 +38,8 @@ $Burger-label-letter-spacing: 0.5px;
 
 .Burger-openLabel,
 .Burger-closeLabel {
+  @include textGradient(linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
+
   display: block;
 
   font-family: $Burger-label-font-family;
@@ -46,8 +48,6 @@ $Burger-label-letter-spacing: 0.5px;
   letter-spacing: $Burger-label-letter-spacing;
   line-height: $Burger-label-line-height;
   text-transform: uppercase;
-
-  @include textGradient(linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
 }
 
 .Burger.is-open {

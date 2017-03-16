@@ -18,14 +18,14 @@ $CaptionedNumber-caption-line-height: 26px;
 }
 
 .CaptionedNumber-nr {
+  @include textGradient(linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
+
   font-size: $CaptionedNumber-nr-font-size-mobile;
   // scss-lint:disable PropertySpelling
   font-variant-numeric: lining-nums;
   // scss-lint:enable PropertySpelling
   font-weight: $CaptionedNumber-nr-font-weight;
   line-height: $CaptionedNumber-nr-line-height-mobile;
-
-  @include textGradient(linear-gradient(118deg, $Color-coral, $Color-razzmatazz), $fallback: $Color-razzmatazz);
 
   @include Breakpoint-desktopOnly {
     font-size: $CaptionedNumber-nr-font-size-desktop;

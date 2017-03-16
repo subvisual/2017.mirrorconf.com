@@ -10,7 +10,7 @@
   @include variablesSupported {
     background-color: var(--color-background);
 
-    --color-background: $Color-deep-cove;
+    --color-background: #{$Color-deep-cove};
   }
 }
 

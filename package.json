@@ -22,6 +22,7 @@
     "react-headroom": "^2.1.2",
     "react-helmet": "^4.0.0",
     "react-slick": "^0.14.6",
+    "scss-lint": "^0.0.0",
     "slick-carousel": "^1.6.0",
     "toml-js": "0.0.8"
   },
