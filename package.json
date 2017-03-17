@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.16.0",
+    "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
@@ -43,6 +43,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "lint": "eslint .",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
