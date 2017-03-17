@@ -1,4 +1,5 @@
 var cssnext = require("postcss-cssnext");
+var CompressionPlugin = require("compression-webpack-plugin");
 
 exports.modifyWebpackConfig = function (config, env) {
   config.merge({
@@ -12,7 +13,16 @@ exports.modifyWebpackConfig = function (config, env) {
         "react": "preact-compat",
         "react-dom": "preact-compat",
       }
-    }
+    },
+    plugins: [
+      new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.(js|html|jpg|css)$/,
+            threshold: 10240,
+            minRatio: 0.8
+        })
+    ]
   });
 
   return config;
