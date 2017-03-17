@@ -39,7 +39,5 @@ export default class MouseAnimator {
     return `${degrees}deg`;
   }
 
-  lerp = (value1, value2, amount) => {
-    return value1 + ((value2 - value1) * amount);
-  }
+  lerp = (value1, value2, amount) => value1 + ((value2 - value1) * amount);
 }
