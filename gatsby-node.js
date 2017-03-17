@@ -7,6 +7,12 @@ exports.modifyWebpackConfig = function (config, env) {
         browsers: ['>1%', 'last 2 versions'],
       }),
     ],
+    resolve: {
+      "alias": {
+        "react": "preact-compat",
+        "react-dom": "preact-compat",
+      }
+    }
   });
 
   return config;
