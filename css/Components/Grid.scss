@@ -4,9 +4,19 @@
 $Grid-col-width: 86px;
 $Grid-col-spacing: 26px;
 $Grid-number-of-columns: 11;
+$Grid-base-max-width: 1206px;
 
 .Grid {
   width: 100%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) and (max-width: 982px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 982px) and (max-width: $Grid-base-max-width) {
+    max-width: 982px;
+  }
 }
 
 @for $col from 1 through $Grid-number-of-columns {
@@ -16,6 +26,10 @@ $Grid-number-of-columns: 11;
     @include Breakpoint-desktopOnly {
       padding: 0 calc((#{$Grid-col-width} + #{$Grid-col-spacing}) * #{$col});
     }
+
+    @media screen and (max-width: $Grid-base-max-width) {
+      padding: 0;
+    }
   }
 
   .Grid-#{$col}column {
@@ -23,7 +37,17 @@ $Grid-number-of-columns: 11;
     vertical-align: top;
 
     width: 100%;
-    max-width: calc((#{$Grid-col-width} * #{$col}) + (#{$Grid-col-spacing} * (#{$col} - 1)));
+    max-width: calc((#{$Grid-col-width} * #{$col}) +
+                    (#{$Grid-col-spacing} * #{$col - 1}));
+
+
+    @media screen and (min-width: 768px) and (max-width: 982px) {
+      @if $col > 3 {
+        max-width: calc((#{$Grid-col-width} * #{$col - 2}) +
+                        (#{$Grid-col-spacing} * #{$col - 3}));
+      }
+    }
+
     margin-right: $Grid-col-spacing;
 
     @include Breakpoint-mobileOnly {

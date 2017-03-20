@@ -52,13 +52,14 @@ $Footer-separator-height: 1px;
 }
 
 .Footer-mobileSeparator {
+  display: none;
   width: 100%;
   height: $Footer-separator-height;
   margin: $Spacing-xSmall 0;
 
   background-color: $Color-white;
 
-  @include Breakpoint-desktopOnly {
-    display: none;
+  @include Breakpoint-mobileOnly {
+    display: block;
   }
 }
