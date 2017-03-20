@@ -9,17 +9,8 @@ import SubSectionTitle from './SubSectionTitle';
 import TextTitle from './TextTitle';
 import SocialLinks from './SocialLinks';
 
-import FacebookLogo from '../images/facebook.svg';
 import MirrorLogo from '../images/logo.svg';
 import SubvisualLogo from '../images/subvisual.svg';
-import TwitterLogo from '../images/twitter.svg';
-import YoutubeLogo from '../images/youtube.svg';
-
-const renderSocialLink = (href, alt, img) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" className="Footer-socialLink">
-    <img alt={alt} src={img} />
-  </a>
-);
 
 const Footer = () => (
   <footer className="Footer">
