@@ -12,7 +12,7 @@ $Feedback-text-font-weight: bold;
   position: relative;
 
   @include Breakpoint-desktopOnly {
-    margin-top: -$Spacing-large;
+    margin-top: -$Spacing-xSmall;
   }
 }
 
