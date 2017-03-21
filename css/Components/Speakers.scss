@@ -8,6 +8,11 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
 
 .Speakers {
   padding: 0 $Spacing-xxSmall;
+  padding-bottom: $Spacing-base;
+
+  @include Breakpoint-mobileOnly {
+    padding-bottom: $Spacing-xSmall;
+  }
 }
 
 .Speakers-list {
