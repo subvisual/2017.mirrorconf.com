@@ -34,7 +34,7 @@ export default class MouseAnimator {
   }
 
   currentYRotation(ratio) {
-    const degrees = this.lerp(-0.3, 0.3, ratio);
+    const degrees = this.lerp(-0.2, 0.2, ratio);
 
     return `${degrees}deg`;
   }

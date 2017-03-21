@@ -33,6 +33,7 @@ export default class Mirror extends Component {
           {this.props.children}
         </div>
         <div className="Mirror-container">
+          <div className="Mirror-cut" />
           <div className="Mirror-reflection">
             {this.props.children}
           </div>

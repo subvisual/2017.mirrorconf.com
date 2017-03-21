@@ -27,13 +27,8 @@ $Mirror-reflection-transform: 129px;
 
   width: 100%;
   height: 100%;
-  max-width: $Mirror-reflection-max-width;
 
   overflow-x: hidden;
-
-  background: linear-gradient(
-    to bottom, rgba($Color-white, 0) 0%, rgba($Color-white, 0.05) 70%
-  );
 
   pointer-events: none;
 
@@ -43,6 +38,20 @@ $Mirror-reflection-transform: 129px;
   @include Breakpoint-mobileOnly {
     display: none;
   };
+}
+
+.Mirror-cut {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 100%;
+  max-width: $Mirror-reflection-max-width;
+  background: linear-gradient(
+    to bottom, rgba($Color-white, 0) 0%, rgba($Color-white, 0.05) 70%
+  );
 }
 
 .Mirror-reflection {

@@ -32,7 +32,9 @@ const Hero = () => (
           <source src={HeroFallback} />
         </video>
       </Mirrored>
-      <div className="Hero-backgroundOverlay" />
+      <Mirrored id="video" hide>
+        <div className="Hero-backgroundOverlay" />
+      </Mirrored>
     </div>
 
     <Section>
