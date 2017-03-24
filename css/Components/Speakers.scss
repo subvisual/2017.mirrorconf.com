@@ -18,7 +18,6 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
 .Speakers-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   margin: $Spacing-xSmall auto 0;
 
@@ -38,12 +37,6 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
     &:first-child {
       margin-top: 0;
     }
-  }
-}
-
-@media (max-width: $Speakers-2-column-size) {
-  .Speakers-list {
-    justify-content: center;
   }
 }
 
