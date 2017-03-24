@@ -16,7 +16,7 @@ const Speaker = ({ name, bio, image }) => (
 );
 
 Speaker.propTypes = {
-  bio: PropTypes.string.isRequired,
+  bio: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };

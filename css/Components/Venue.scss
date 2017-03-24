@@ -1,0 +1,33 @@
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Venue-image-height: 403px;
+
+.Venue {
+  padding: $Spacing-xLarge $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: $Spacing-xLarge 0;
+  }
+}
+
+.Venue-title {
+  margin-bottom: $Spacing-base;
+}
+
+.Venue-subtitle {
+  margin-bottom: $Spacing-xSmall;
+}
+
+.Venue-description {
+  margin-bottom: $Spacing-base;
+}
+
+.Venue-image {
+  position: relative;
+
+  width: 100%;
+  height: $Venue-image-height;
+
+  z-index: 1;
+}

@@ -1,0 +1,14 @@
+@import "../Theme/Spacing";
+
+.NumberedBlock {
+  position: relative;
+}
+
+.NumberedBlock-number {
+  position: absolute;
+
+  top: 50%;
+  left: -$Spacing-xSmall;
+
+  transform: translateY(-50%);
+}

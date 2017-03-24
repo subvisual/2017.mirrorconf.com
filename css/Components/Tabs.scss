@@ -1,0 +1,59 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Tabs-link-height: 4px;
+
+.Tabs-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  max-width: 100%;
+
+  transform: translateY(-2px);
+}
+
+.Tabs-link {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: $Tabs-link-height;
+  max-height: $Tabs-link-height;
+
+  margin: 0 $Spacing-xxSmall;
+  padding: 0;
+
+  border: none;
+
+  background-color: $Color-white;
+
+  opacity: .5;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.Tabs-link.is-active {
+  opacity: 1;
+}
+
+.Tabs-linkLabel {
+  position: absolute;
+
+  left: 0;
+  bottom: 100%;
+
+  width: 100%;
+
+  padding-bottom: $Spacing-xxSmall;
+
+  text-align: center;
+}
+
+.Tabs-content {
+  padding-top: $Spacing-large;
+}

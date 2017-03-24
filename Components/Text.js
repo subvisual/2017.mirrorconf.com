@@ -1,4 +1,4 @@
-import React, { Children, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 import '../css/Components/Text';
@@ -9,17 +9,7 @@ const Text = ({ children, alternative }) => {
     'Text--alternative': alternative,
   });
 
-  /* eslint-disable */
-  const text = Children.map(children, child =>
-    <span dangerouslySetInnerHTML={{ __html: child }} />
-  );
-  /* eslint-enable */
-
-  return (
-    <p className={className}>
-      {text}
-    </p>
-  );
+  return <p className={className}>{children}</p>;
 };
 
 Text.propTypes = {

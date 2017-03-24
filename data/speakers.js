@@ -6,7 +6,11 @@ import vitaly from '../images/speakers/vitaly.jpg';
 import rachel from '../images/speakers/rachel.jpg';
 
 export default [
-  { name: 'Brad Frost', bio: 'Author of Atomic Design', image: brad },
+  {
+    name: 'Brad Frost',
+    bio: 'Author of Atomic Design',
+    image: brad,
+  },
   {
     name: 'C Todd Lombardo',
     bio: 'Chief Design Strategist at Fresh&nbsp;Tilled&nbsp;Soil',

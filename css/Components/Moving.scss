@@ -1,0 +1,94 @@
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Moving-image-height: 286px;
+$Moving-z-index-background: 1;
+$Moving-z-index-foreground: 2;
+
+$Moving-gradient-end-color: rgba(13, 29, 97, 1);
+$Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
+
+.Moving {
+  padding: 0 $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  }
+}
+
+.Moving-title {
+  margin-bottom: $Spacing-base;
+}
+
+.Moving-subtitle {
+  position: relative;
+
+  margin: $Spacing-xSmall 0;
+
+  z-index: $Moving-z-index-foreground;
+}
+
+.Moving-section {
+  position: relative;
+
+  margin-bottom: $Spacing-base;
+
+  @include Breakpoint-desktopOnly {
+    height: $Moving-image-height;
+  }
+}
+
+.Moving-portoImage,
+.Moving-lisbonImage {
+  position: relative;
+
+  width: 100%;
+  height: $Moving-image-height;
+
+  margin-bottom: -$Spacing-small;
+
+  transform: translateY(-$Spacing-small);
+
+  z-index: $Moving-z-index-background;
+
+  @include Breakpoint-desktopOnly {
+    transform: none;
+  }
+}
+
+.Moving-portoImage {
+  background-image: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+
+  @include Breakpoint-desktopOnly {
+    background-image: linear-gradient(to right, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+  }
+}
+
+.Moving-lisbonImage {
+  background-image: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+
+  @include Breakpoint-desktopOnly {
+    background-image: linear-gradient(to left, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+  }
+}
+
+.Moving-imageWrapper {
+  width: 100%;
+  @include Breakpoint-desktopOnly {
+    position: absolute;
+
+    top: 0;
+  }
+}
+
+.Moving-description {
+  position: relative;
+
+  padding-left: $Spacing-xSmall;
+
+  z-index: $Moving-z-index-foreground;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  }
+}

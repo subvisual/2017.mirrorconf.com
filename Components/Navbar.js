@@ -13,7 +13,9 @@ const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
   <Section>
     <Mirrored id="navbar" hide>
       <div className="Navbar">
-        <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+        <a href="/">
+          <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+        </a>
 
         <div className="Navbar-links">
           {Links.map(renderLink)}
