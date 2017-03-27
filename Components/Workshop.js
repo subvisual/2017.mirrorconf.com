@@ -5,14 +5,17 @@ import '../css/Components/Workshop';
 import Text from './Text';
 import ImageGradient from './ImageGradient';
 import SubSectionTitle from './SubSectionTitle';
+import Mirrored from './Mirrored';
 
 const Workshop = ({ name, instructor, image }) => (
-  <div className="Workshop" style={ImageGradient(image)}>
-    <div className="Workshop-details">
-      <SubSectionTitle>{name}</SubSectionTitle>
-      <Text>{instructor}</Text>
+  <Mirrored hide>
+    <div className="Workshop" style={ImageGradient(image)}>
+      <div className="Workshop-details">
+        <SubSectionTitle>{name}</SubSectionTitle>
+        <Text>{instructor}</Text>
+      </div>
     </div>
-  </div>
+  </Mirrored>
 );
 
 Workshop.propTypes = {

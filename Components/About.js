@@ -25,40 +25,42 @@ const About = () => (
             and point towards a more collaborative future.
           </DropcapText>
         </div>
-        <div className="About-info">
-          <div className="About-attendancePhoto" />
-          <Mirrored hide>
-            <div className="About-venuePhoto" />
-          </Mirrored>
+        <Mirrored hide>
+          <div className="About-info">
+            <div className="About-attendancePhoto" />
+            <Mirrored hide>
+              <div className="About-venuePhoto" />
+            </Mirrored>
 
-          <div className="About-currentEdition">
-            <div className="About-currentTitle">
-              <SubSectionTitle edge italic>
-                2017 - Refraction: technology that changes
-              </SubSectionTitle>
-            </div>
+            <div className="About-currentEdition">
+              <div className="About-currentTitle">
+                <SubSectionTitle edge italic>
+                  2017 - Refraction: technology that changes
+                </SubSectionTitle>
+              </div>
 
-            <div className="About-numbers">
-              <div className="About-number">
-                <CaptionedNumber nr="4" caption="Days" />
+              <div className="About-numbers">
+                <div className="About-number">
+                  <CaptionedNumber nr="4" caption="Days" />
+                </div>
+                <div className="About-number">
+                  <CaptionedNumber nr="1" caption="Party" />
+                </div>
+                <div className="About-number">
+                  <CaptionedNumber nr="4" caption="Workshops" />
+                </div>
               </div>
-              <div className="About-number">
-                <CaptionedNumber nr="1" caption="Party" />
-              </div>
-              <div className="About-number">
-                <CaptionedNumber nr="4" caption="Workshops" />
-              </div>
-            </div>
-            <div className="About-numbers">
-              <div className="About-number">
-                <CaptionedNumber nr="12" caption="Speakers" />
-              </div>
-              <div className="About-number">
-                <CaptionedNumber nr="400+" caption="Attendees" />
+              <div className="About-numbers">
+                <div className="About-number">
+                  <CaptionedNumber nr="12" caption="Speakers" />
+                </div>
+                <div className="About-number">
+                  <CaptionedNumber nr="400+" caption="Attendees" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Mirrored>
       </div>
     </div>
   </Section>
