@@ -28,10 +28,12 @@ export default class Burger extends Component {
 
     return (
       <button onClick={onClick} className={className} >
-        <div className="Burger-line" />
-        <div className="Burger-line" />
-        <div className="Burger-line" />
-        {this.renderLabel()}
+        <div className="Burger-content">
+          <div className="Burger-line" />
+          <div className="Burger-line" />
+          <div className="Burger-line" />
+          {this.renderLabel()}
+        </div>
       </button>
     );
   }

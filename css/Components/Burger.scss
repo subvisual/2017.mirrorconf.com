@@ -3,6 +3,7 @@
 @import "../Theme/Breakpoint";
 @import "../Theme/Mixins";
 
+$Burger-outer-size: 48px;
 $Burger-line-height: 2px;
 $Burger-label-font-size: 8px;
 $Burger-label-line-height: 8px;
@@ -11,6 +12,8 @@ $Burger-label-font-weight: bold;
 $Burger-label-letter-spacing: 0.5px;
 
 .Burger {
+  width: $Burger-outer-size;
+  height: $Burger-outer-size;
   display: block;
 
   background: none;
@@ -21,6 +24,10 @@ $Burger-label-letter-spacing: 0.5px;
   @include Breakpoint-desktopOnly {
     display: none;
   }
+}
+
+.Burger-content {
+  display: inline-block;
 }
 
 .Burger-line {
