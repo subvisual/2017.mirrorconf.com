@@ -13,12 +13,18 @@ import SubSectionTitle from './SubSectionTitle';
 import SponsorsData from '../data/sponsors';
 
 const renderLogos = logos => logos.map(logo =>
-  <img
-    className="Sponsors-levelLogo"
-    alt={logo.alt}
-    key={logo.id}
-    src={logo.src}
-  />,
+  <span className="Sponsors-levelLogo">
+    <Link
+      target="_blank"
+      href={logo.href}
+    >
+      <img
+        alt={logo.alt}
+        key={logo.id}
+        src={logo.src}
+      />
+    </Link>
+  </span>,
 );
 
 const renderLevel = data => (

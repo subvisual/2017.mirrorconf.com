@@ -7,15 +7,15 @@ export default [
   {
     title: 'Gold',
     logos: [
-      { id: 1, alt: 'Seegno logo', src: SeegnoLogo },
+      { id: 1, alt: 'Seegno logo', src: SeegnoLogo, href: 'https://seegno.com/' },
     ],
   },
   {
     title: 'Stone',
     logos: [
-      { id: 2, alt: 'Kirby logo', src: KirbyLogo },
-      { id: 3, alt: 'Adorable logo', src: AdorableLogo },
-      { id: 4, alt: 'Pixelmatters logo', src: PixelMattersLogo },
+      { id: 2, alt: 'Kirby logo', src: KirbyLogo, href: 'https://getkirby.com/' },
+      { id: 3, alt: 'Adorable logo', src: AdorableLogo, href: 'http://adorable.io/' },
+      { id: 4, alt: 'Pixelmatters logo', src: PixelMattersLogo, href: 'http://pixelmatters.com/' },
     ],
   },
 ];
