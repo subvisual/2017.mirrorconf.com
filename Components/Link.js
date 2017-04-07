@@ -3,9 +3,10 @@ import classNames from 'classnames';
 
 import '../css/Components/Link';
 
-const Link = ({ children, href, uppercase, target }) => {
+const Link = ({ children, href, noHover, uppercase, target }) => {
   const className = classNames('Link', {
     'Link--uppercase': uppercase,
+    'Link--noHover': noHover,
   });
 
   return (
@@ -18,11 +19,13 @@ const Link = ({ children, href, uppercase, target }) => {
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
+  noHover: PropTypes.bool,
   uppercase: PropTypes.bool,
   target: PropTypes.string,
 };
 
 Link.defaultProps = {
+  noHover: false,
   uppercase: false,
   target: '',
 };

@@ -40,6 +40,14 @@ $Link-line-height: 26px;
   }
 }
 
+.Link.Link--noHover {
+  &:hover {
+    &::after {
+      transform: scaleX(0);
+    }
+  }
+}
+
 .Link.Link--uppercase {
   font-size: $Link-font-size-small;
   text-transform: uppercase;

@@ -52,7 +52,7 @@ const Sponsors = () => (
                 Want to be help us make the best conference?
               </SubSectionTitle>
               <div className="Sponsors-actions">
-                <Link href="/sponsoring.pdf" target="_blank">
+                <Link noHover href="/sponsoring.pdf" target="_blank">
                   <Button alternative>Sponsor us</Button>
                 </Link>
               </div>

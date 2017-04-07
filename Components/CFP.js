@@ -19,7 +19,7 @@ const CFP = () => (
           Call for proposals is open until May 20th.
         </Text>
         <div className="CFP-actions">
-          <Link href="https://www.papercall.io/mirrorconf2017" target="_blank">
+          <Link noHover href="https://www.papercall.io/mirrorconf2017" target="_blank">
             <Button alternative>SUBMIT A TALK</Button>
           </Link>
         </div>
