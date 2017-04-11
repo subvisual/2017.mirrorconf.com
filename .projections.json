@@ -1,0 +1,10 @@
+{
+  "Components/*.js": {
+    "alternate": "css/Components/{}.scss",
+    "skeleton": "rs"
+  },
+  "css/Components/*.scss": {
+    "alternate": "Components/{}.js",
+    "skeleton": "comp"
+  }
+}
