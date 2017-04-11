@@ -13,7 +13,7 @@ import SocialLinks from './SocialLinks';
 import HeroFallback from '../pages/hero.jpg';
 import PlayIcon from '../images/play.svg';
 
-const YoutubeVideoId = "B7bqAsxee4I"
+const YoutubeVideoId = 'B7bqAsxee4I';
 const youtubeOpts = {
   playerVars: {
     autoplay: 1,
