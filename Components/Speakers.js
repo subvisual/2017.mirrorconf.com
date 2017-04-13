@@ -8,6 +8,7 @@ import Section from './Section';
 import SectionTitle from './SectionTitle';
 import MoreToCome from './MoreToCome';
 import SpeakersData from '../data/speakers';
+import Mirrored from './Mirrored';
 
 const renderSpeaker = speaker => (
   <li key={speaker.name} className="Speakers-item">
@@ -21,12 +22,14 @@ const Speakers = () => (
       <div className="Speakers-header">
         <SectionTitle>Speakers</SectionTitle>
       </div>
-      <ul className="Speakers-list">
-        {SpeakersData.map(renderSpeaker)}
-        <div className="Speakers-item">
-          <MoreToCome />
-        </div>
-      </ul>
+      <Mirrored hide>
+        <ul className="Speakers-list">
+          {SpeakersData.map(renderSpeaker)}
+          <div className="Speakers-item">
+            <MoreToCome />
+          </div>
+        </ul>
+      </Mirrored>
     </Section>
   </div>
 );

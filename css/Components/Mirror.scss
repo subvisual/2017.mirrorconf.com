@@ -68,16 +68,11 @@ $Mirror-reflection-transform: 129px;
   transform: scaleX(-1) translateX(50%);
 
   filter: opacity(0.3) blur(7px);
-
-  @include variablesSupported {
-    transform: scaleX(-1) translateX(50%) rotateX(var(--mirror-rotation-x)) rotateY(var(--mirror-rotation-y));
-
-    --mirror-rotation-x: 0deg;
-    --mirror-rotation-y: 0deg;
-  }
 }
 
-.Mirror-reflection [data-mirror-hide] {
+.Mirror-reflection [data-mirror-hide],
+.Mirror-reflection .About-info,
+.Mirror-reflection img {
   visibility: hidden;
 }
 
