@@ -28,13 +28,13 @@ export default class MouseAnimator {
   }
 
   currentXRotation(ratio) {
-    const degrees = this.lerp(-0.5, 0.5, ratio);
+    const degrees = this.lerp(-0.2, 0.2, ratio);
 
     return `${degrees}deg`;
   }
 
   currentYRotation(ratio) {
-    const degrees = this.lerp(-0.2, 0.2, ratio);
+    const degrees = this.lerp(-0.02, 0.02, ratio);
 
     return `${degrees}deg`;
   }
