@@ -7,6 +7,10 @@
 $Mirror-reflection-max-width: 946px;
 $Mirror-reflection-transform: 129px;
 
+body.scrolling {
+  pointer-events: none;
+}
+
 .Mirror {
   position: relative;
 }

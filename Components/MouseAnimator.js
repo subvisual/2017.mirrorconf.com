@@ -3,20 +3,38 @@
 import _ from 'lodash';
 
 export default class MouseAnimator {
+  constructor() {
+    this.layout = document.getElementsByClassName('Layout')[0];
+    this.reflection = document.getElementsByClassName('Mirror-reflection')[0];
+    this.scrollTimer = 0;
+  }
+
   hook = () => {
-    const layout = document.getElementsByClassName('Layout')[0];
-    const reflection = document.getElementsByClassName('Mirror-reflection')[0];
+    this.layout.addEventListener('mousemove', _.throttle(this.callback, 50));
+    document.addEventListener('scroll', this.mouseEventsDisabler, false);
+  }
 
-    const callback = (event) => {
-      const mouseXRatio = event.clientX / window.innerWidth;
-      const mouseYRatio = event.clientY / window.innerHeight;
+  callback = (event) => {
+    const mouseXRatio = event.clientX / window.innerWidth;
+    const mouseYRatio = event.clientY / window.innerHeight;
 
-      layout.style.setProperty('--color-background', this.currentColor(mouseXRatio));
-      reflection.style.setProperty('--mirror-rotation-y', this.currentXRotation(mouseXRatio));
-      reflection.style.setProperty('--mirror-rotation-x', this.currentYRotation(mouseYRatio));
-    };
+    this.layout.style.setProperty('--color-background', this.currentColor(mouseXRatio));
+    this.reflection.style.setProperty('--mirror-rotation-y', this.currentXRotation(mouseXRatio));
+    this.reflection.style.setProperty('--mirror-rotation-x', this.currentYRotation(mouseYRatio));
+  };
 
-    layout.addEventListener('mousemove', _.throttle(callback, 50));
+  mouseEventsDisabler = () => {
+    clearTimeout(this.scrollTimer);
+    this.addHoverClass();
+    this.scrollTimer = setTimeout(this.removeHoverClass, 300);
+  }
+
+  addHoverClass = () => {
+    document.body.classList.add('scrolling');
+  }
+
+  removeHoverClass = () => {
+    document.body.classList.remove('scrolling');
   }
 
   currentColor(ratio) {
