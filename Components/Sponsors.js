@@ -55,7 +55,7 @@ const Sponsors = () => (
                 { SponsorsData.map(renderLevel) }
               </div>
               <SubSectionTitle alternate>
-                Want to be help us make the best conference?
+                Want to help us make the best conference?
               </SubSectionTitle>
               <div className="Sponsors-actions">
                 <Link noHover href="/sponsoring.pdf" target="_blank">
