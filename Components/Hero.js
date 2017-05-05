@@ -23,19 +23,17 @@ const youtubeOpts = {
   },
 };
 
-
 export default class Hero extends React.Component {
   constructor(props) {
     super(props);
     this.state = { playing: false };
   }
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   onYoutubePlay = () => {
     this.setState({ playing: true });
-  }
+  };
 
   classes() {
     return classNames({
@@ -49,7 +47,11 @@ export default class Hero extends React.Component {
       <section className={this.classes()}>
         <div className="Hero-background">
           <Mirrored id="video-fallback" hide>
-            <img className="Hero-videoFallback" src={HeroFallback} alt="MirrorConf 2016 video placeholder" />
+            <img
+              className="Hero-videoFallback"
+              src={HeroFallback}
+              alt="MirrorConf 2016 video placeholder"
+            />
           </Mirrored>
           <Mirrored id="video" disable>
             <div className="Hero-videoWrapper">
@@ -87,8 +89,16 @@ export default class Hero extends React.Component {
 
               <div className="Hero-actions">
                 <Mirrored id="button" hover>
-                  <a href="https://www.youtube.com/watch?v=JWa0PMXN7ZE" className="Hero-playButton" target="blank">
-                    <img src={PlayIcon} alt="Play icon" className="Hero-playButtonImage" />
+                  <a
+                    href="https://www.youtube.com/watch?v=JWa0PMXN7ZE"
+                    className="Hero-playButton"
+                    target="blank"
+                  >
+                    <img
+                      src={PlayIcon}
+                      alt="Play icon"
+                      className="Hero-playButtonImage"
+                    />
                     <div className="Hero-playButtonLabel">
                       <TextTitle>
                         1st edition<br />
