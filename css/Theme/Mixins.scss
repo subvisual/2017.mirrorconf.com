@@ -13,3 +13,27 @@
     // scss-lint:enable VendorPrefix
   }
 }
+
+@mixin responsive-background-image($path, $extension: 'png', $size: contain, $pre: false) {
+  $regular_url: "#{$path}.#{$extension}";
+  $retina_url: "#{$path}@2x.#{$extension}";
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @if not $pre {
+    background-image: url($regular_url);
+  } @else {
+    background-image: $pre, url($regular_url);
+  }
+
+  background-size: $size;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @if not $pre {
+      background-image: url("#{$retina_url}");
+    } @else {
+      background-image: $pre, url("#{$retina_url}");
+    }
+  }
+}

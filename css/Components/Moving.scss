@@ -1,5 +1,6 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
+@import "../Theme/Mixins";
 
 $Moving-image-height: 286px;
 $Moving-z-index-background: 1;
@@ -57,18 +58,22 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 }
 
 .Moving-portoImage {
-  background-image: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+  $pre: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color);
+  @include responsive-background-image("../../images/moving/porto", $pre: $pre);
 
   @include Breakpoint-desktopOnly {
-    background-image: linear-gradient(to right, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+    $pre: linear-gradient(to left, $Moving-gradient-start-color, $Moving-gradient-end-color);
+    @include responsive-background-image("../../images/moving/porto", $pre: $pre);
   }
 }
 
 .Moving-lisbonImage {
-  background-image: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+  $pre: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color);
+  @include responsive-background-image("../../images/moving/lisbon", $pre: $pre);
 
   @include Breakpoint-desktopOnly {
-    background-image: linear-gradient(to left, $Moving-gradient-start-color, $Moving-gradient-end-color), url("../../images/venue.jpg");
+    $pre: linear-gradient(to right, $Moving-gradient-start-color, $Moving-gradient-end-color);
+    @include responsive-background-image("../../images/moving/lisbon", $pre: $pre);
   }
 }
 

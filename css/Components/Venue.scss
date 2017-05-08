@@ -4,10 +4,10 @@
 $Venue-image-height: 403px;
 
 .Venue {
-  padding: $Spacing-xLarge $Spacing-xxSmall;
+  padding: $Spacing-xLarge $Spacing-xxSmall 0;
 
   @include Breakpoint-desktopOnly {
-    padding: $Spacing-xLarge 0;
+    padding: $Spacing-xLarge 0 0;
   }
 }
 

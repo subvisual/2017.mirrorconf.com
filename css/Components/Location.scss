@@ -1,13 +1,80 @@
+@import "../Theme/Color";
 @import "../Theme/Spacing";
 
-.Location-section {
-  position: relative;
+$Location-priceValue-font-family: "matrix-ii";
 
-  background-color: rgba(13, 29, 97, 1);
-
-  z-index: 3;
+.Location {
+  margin-bottom: $Spacing-base;
 }
 
-.Location-cta {
-  margin-bottom: $Spacing-xLarge;
+.Location-prices {
+  display: flex;
+}
+
+.Location-price {
+  margin-right: $Spacing-base;
+}
+
+.Location-priceValue {
+  color: $Color-coral;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: $Location-priceValue-font-family;
+}
+
+.Location-transparentText {
+  opacity: 0.6;
+}
+
+.Location-stars,
+.Location-prices,
+.Location-address,
+.Location-description,
+.Location-phone {
+  margin-bottom: $Spacing-xxSmall;
+}
+
+.Location-address,
+.Location-email,
+.Location-phone {
+  padding-left: 30px;
+  position: relative;
+}
+
+.Location-address:before,
+.Location-phone:before,
+.Location-email:before {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.Location-address:before {
+  background-image: url("../../images/sleeping/address.svg");
+}
+
+.Location-phone:before {
+  background-image: url("../../images/sleeping/phone.svg");
+}
+
+.Location-email:before {
+  background-image: url("../../images/sleeping/email.svg");
+}
+
+.Location-stars {
+  display: flex;
+}
+
+.Location-star {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../images/sleeping/star.svg");
 }
