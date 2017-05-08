@@ -12,31 +12,40 @@ import SectionTitle from './SectionTitle';
 import SubSectionTitle from './SubSectionTitle';
 import SponsorsData from '../data/sponsors';
 
-const renderLogos = logos => logos.map(logo =>
-  <span className="Sponsors-levelLogo">
-    <Link
-      target="_blank"
-      href={logo.href}
-    >
-      <img
-        alt={logo.alt}
-        key={logo.id}
-        src={logo.src}
-      />
-    </Link>
-  </span>,
-);
+const renderLogos = logos => logos.map((logo) => {
+  const classes = `Sponsors-logo Sponsors-${logo.alt.toLowerCase()}`;
 
-const renderLevel = data => (
-  <div key={data.title} className="Sponsors-level">
-    <div className="Sponsors-levelTitle">
-      <SubSectionTitle>{ data.title }</SubSectionTitle>
-    </div>
-    <div className="Sponsors-levelLogos">
-      { renderLogos(data.logos) }
-    </div>
-  </div>
+  return (
+    <span className="Sponsors-levelLogo">
+      <Link
+        target="_blank"
+        href={logo.href}
+      >
+        <img
+          className={classes}
+          alt={logo.alt}
+          key={logo.id}
+          src={logo.src}
+        />
+      </Link>
+    </span>
   );
+});
+
+const renderLevel = (data) => {
+  const classes = `Sponsors-level Sponsors-${data.title.toLowerCase()}`;
+
+  return (
+    <div key={data.title} className={classes}>
+      <div className="Sponsors-levelTitle">
+        <SubSectionTitle>{ data.title }</SubSectionTitle>
+      </div>
+      <div className="Sponsors-levelLogos">
+        { renderLogos(data.logos) }
+      </div>
+    </div>
+  );
+};
 
 const Sponsors = () => (
   <Mirrored hide>

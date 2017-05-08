@@ -78,3 +78,17 @@
 .Sponsors-actions {
   margin-top: $Spacing-xSmall;
 }
+
+.Sponsors-gold .Sponsors-logo,
+.Sponsors-wi-fi .Sponsors-logo {
+  max-height: 40px;
+}
+
+.Sponsors-logo.Sponsors-mindera {
+  max-height: 52px;
+}
+
+.Sponsors-stone .Sponsors-logo,
+.Sponsors-media .Sponsors-logo {
+  max-height: 26px;
+}
