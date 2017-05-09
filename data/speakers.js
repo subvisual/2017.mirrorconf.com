@@ -28,7 +28,7 @@ export default [
     image: vitaly,
   },
   {
-    name: 'Rachel Andrews',
+    name: 'Rachel Andrew',
     bio: 'Web Developer, Speaker and Author',
     image: rachel,
   },
