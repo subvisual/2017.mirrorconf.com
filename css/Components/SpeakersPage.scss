@@ -1,0 +1,18 @@
+@import "../Theme/Spacing";
+
+$SpeakersPage-content-max-width: 982px;
+
+.SpeakersPage {
+  margin-top: $Spacing-xLarge;
+}
+
+.SpeakersPage-speaker {
+  max-width: $SpeakersPage-content-max-width;
+}
+
+.SpeakersPage-section,
+.SpeakersPage-speaker {
+  margin: auto;
+  margin-top: $Spacing-large;
+  margin-bottom: $Spacing-large;
+}

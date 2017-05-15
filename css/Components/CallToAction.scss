@@ -1,0 +1,30 @@
+@import "../Theme/Color";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$CallToAction-title-font-size: 26px;
+$CallToAction-title-line-height: 39px;
+$CallToAction-title-font-size-mobile: 18px;
+$CallToAction-title-line-height-mobile: 26px;
+$CallToAction-title-font-family: "matrix-ii";
+$CallToAction-title-font-weight: bold;
+
+.CallToAction-title {
+  margin-bottom: $Spacing-xSmall;
+
+  color: $Color-madison;
+
+  font-family: $CallToAction-title-font-family;
+  font-size: $CallToAction-title-font-size-mobile;
+  font-weight: $CallToAction-title-font-weight;
+  line-height: $CallToAction-title-line-height-mobile;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $CallToAction-title-font-size;
+    line-height: $CallToAction-title-line-height;
+  }
+}
+
+.CallToAction-actions {
+  margin-top: $Spacing-xSmall;
+}

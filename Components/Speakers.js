@@ -5,12 +5,15 @@ import '../css/Components/Speakers';
 
 import Speaker from './Speaker';
 import Section from './Section';
+import Link from './Link';
 import SectionTitle from './SectionTitle';
 import SpeakersData from '../data/speakers';
 
 const renderSpeaker = speaker => (
   <li key={speaker.name} className="Speakers-item">
-    <Speaker {...speaker} />
+    <Link href={`/speakers/#${speaker.id}`} noHover>
+      <Speaker {...speaker} />
+    </Link>
   </li>
 );
 

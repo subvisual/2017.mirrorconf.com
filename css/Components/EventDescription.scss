@@ -1,0 +1,22 @@
+@import "../Theme/Spacing";
+@import "../Theme/Color";
+@import "../Theme/Breakpoint";
+
+.EventDescription {
+  max-width: 500px
+}
+
+.EventDescription-title {
+  margin-top: $Spacing-base;
+  margin-bottom: $Spacing-xSmall;
+}
+
+.EventDescription.EventDescription--noMarginTop .EventDescription-title:first-child {
+  margin-top: 0;
+}
+
+.EventDescription-placeholder {
+  @include Breakpoint-desktopOnly {
+    margin-top: 250px;
+  }
+}

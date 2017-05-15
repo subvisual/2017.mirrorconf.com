@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import Burger from './Burger';
 import Section from './Section';
+import Link from './Link';
 
 import Links from '../data/links';
 import '../css/Components/Navbar';
@@ -11,9 +12,9 @@ const renderLink = (link, index) => <span key={index} className="Navbar-link">{l
 const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
   <Section>
     <div className="Navbar">
-      <a href="/">
+      <Link noHover href="/">
         <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
-      </a>
+      </Link>
 
       <div className="Navbar-links">
         {Links.map(renderLink)}
