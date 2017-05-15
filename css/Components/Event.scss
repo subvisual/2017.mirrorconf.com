@@ -1,0 +1,164 @@
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$Event-name-font-size: 51px;
+$Event-name-line-height: 78px;
+$Event-name-font-size-mobile: 26px;
+$Event-name-line-height-mobile: 39px;
+$Event-name-font-family: "matrix-ii";
+$Event-name-font-weight: bold;
+
+.Event {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.Event-name,
+.Event-columns {
+  position: relative;
+
+  padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  }
+}
+
+.Event-columns {
+  margin-top: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    display: flex;
+  }
+}
+
+.Event-details,
+.Event-description {
+  flex-shrink: 0;
+  flex-basis: 50%;
+
+  margin-bottom: $Spacing-xSmall;
+}
+
+.Event-details {
+  margin-top: 250px;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: 0;
+  }
+}
+
+.Event-info {
+  color: $Color-white;
+  font-family: "matrix-ii";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  font-style: italic;
+}
+
+.Event-name,
+.Event-price {
+  max-width: 650px;
+
+  color: $Color-coral;
+
+  font-family: $Event-name-font-family;
+  font-size: $Event-name-font-size-mobile;
+  font-weight: $Event-name-font-weight;
+  line-height: $Event-name-line-height-mobile;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $Event-name-font-size;
+    line-height: $Event-name-line-height;
+  }
+}
+
+.Event-price {
+  font-size: $Event-name-font-size;
+  line-height: $Event-name-line-height;
+}
+
+.Event-price {
+  margin-bottom: $Spacing-xxSmall;
+}
+
+.Event-image {
+  width: 100%;
+  display: inline;
+  vertical-align: top;
+}
+
+.Event-imageContainer {
+  position: absolute;
+
+  width: 100%;
+  max-width: 550px;
+  max-height: 300px;
+
+  overflow: hidden;
+
+  top: $Spacing-base;
+
+  @include Breakpoint-desktopOnly {
+    edmax-height: none;
+    top: 0;
+    left: 100px;
+  }
+}
+
+.Event-imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline;
+  width: 100%;
+
+  background: linear-gradient(to bottom, $Color-deep-cove, rgba(8, 19, 64, 0.2) 49%, $Color-deep-cove);
+
+  @include Breakpoint-desktopOnly {
+    background: linear-gradient(to right, $Color-deep-cove, rgba(8, 19, 64, 0.2) 49%, $Color-deep-cove);
+  }
+}
+
+.Event-ticketsDesktop {
+  display: none;
+
+  @include Breakpoint-desktopOnly {
+    display: block;
+  }
+}
+
+.Event-ticketsMobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  max-width: 300px;
+
+  @include Breakpoint-desktopOnly {
+    display: none;
+  }
+}
+
+.Event-info {
+  display: flex;
+  align-items: center;
+}
+
+.Event-calendarIcon,
+.Event-locationIcon {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  margin-right: $Spacing-xxSmall;
+}

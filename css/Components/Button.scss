@@ -71,3 +71,16 @@ $Button-alternative-color: #190b5b;
     border: 2px solid $Button-alternative-color;
   }
 }
+
+.Button.Button--transparent {
+  color: $Color-razzmatazz;
+
+  &::before {
+    background: none;
+    border: solid 2px $Color-razzmatazz;
+  }
+
+  &::after {
+    border-color: $Color-white;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../Theme/Spacing";
+@import "../Theme/Color";
+
+.EventDescription {
+  max-width: 500px
+}
+
+.EventDescription-title {
+  margin-top: $Spacing-base;
+  margin-bottom: $Spacing-xSmall;
+}

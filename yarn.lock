@@ -61,6 +61,12 @@ ammo@1.x.x:
     boom "2.x.x"
     hoek "2.x.x"
 
+anchorate@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/anchorate/-/anchorate-1.1.0.tgz#2ef6fa48a43b989c31e7e6856e3618e14da5a28d"
+  dependencies:
+    css.escape "^1.5.0"
+
 ansi-escapes@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
@@ -1777,6 +1783,10 @@ css-selector-tokenizer@^0.6.0:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css.escape@^1.5.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/css.escape/-/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
 
 cssesc@^0.1.0:
   version "0.1.0"
@@ -5317,7 +5327,7 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
-pngquant-bin@^3.0.0:
+pngquant-bin@^3.0.0, pngquant-bin@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/pngquant-bin/-/pngquant-bin-3.1.1.tgz#d124d98a75a9487f40c1640b4dbfcbb2bd5a1fd1"
   dependencies:
