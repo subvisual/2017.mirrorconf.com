@@ -11,8 +11,30 @@
   margin-bottom: $Spacing-xSmall;
 }
 
+.EventDescription-text {
+  margin-bottom :$Spacing-xxSmall;
+}
+
 .EventDescription.EventDescription--noMarginTop .EventDescription-title:first-child {
   margin-top: 0;
+}
+
+.EventDescription-listItem {
+  position: relative;
+  margin-bottom: $Spacing-xxSmall;
+  padding-left: 20px;
+
+  &:before {
+    position: absolute;
+    content: '·';
+    left: 0;
+
+    width: 20px;
+    height: 26px;
+    line-height: 26px;
+
+    color: $Color-white;
+  }
 }
 
 .EventDescription-placeholder {

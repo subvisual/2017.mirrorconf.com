@@ -47,7 +47,9 @@ const renderWorkshop = isOddRow => (workshop, index) => {
   return (
     <div key={index} className={className}>
       <div className={`Workshops-item ${!isEvenWorkshop ? 'odd' : ''}`}>
-        <Workshop {...workshop} />
+        <Link href={`/workshops/#${workshop.id}`}>
+          <Workshop {...workshop} />
+        </Link>
       </div>
     </div>
   );

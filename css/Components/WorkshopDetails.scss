@@ -1,0 +1,195 @@
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$WorkshopDetails-name-font-size-mobile: 26px;
+$WorkshopDetails-name-font-size-desktop: 51px;
+$WorkshopDetails-name-line-height-mobile: 39px;
+$WorkshopDetails-name-line-height-desktop: 78px;
+$WorkshopDetails-name-font-family: "matrix-ii";
+$WorkshopDetails-name-font-weight: bold;
+
+.WorkshopDetails {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.WorkshopDetails-name,
+.WorkshopDetails-columns {
+  position: relative;
+
+  padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0;
+  }
+}
+
+.WorkshopDetails-columns {
+  margin-top: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    display: flex;
+  }
+}
+
+.WorkshopDetails-details,
+.WorkshopDetails-description {
+  flex-shrink: 0;
+  flex-basis: 50%;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: $Spacing-xSmall;
+  }
+}
+
+.WorkshopDetails-details {
+  margin-bottom: $Spacing-xSmall;
+}
+
+.WorkshopDetails-info {
+  color: $Color-white;
+  font-family: "matrix-ii";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  font-style: italic;
+}
+
+.WorkshopDetails-name {
+  margin-bottom: 182px;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: 0;
+  }
+}
+
+.WorkshopDetails-name,
+.WorkshopDetails-priceValue {
+  max-width: 650px;
+
+  color: $Color-coral;
+
+  font-family: $WorkshopDetails-name-font-family;
+  font-weight: $WorkshopDetails-name-font-weight;
+  font-size: $WorkshopDetails-name-font-size-mobile;
+  line-height: $WorkshopDetails-name-line-height-mobile;
+
+  @include Breakpoint-desktopOnly {
+    font-size: $WorkshopDetails-name-font-size-desktop;
+    line-height: $WorkshopDetails-name-line-height-desktop;
+  }
+}
+
+.WorkshopDetails-price {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-right: 0;
+    margin-bottom: $Spacing-xxSmall;
+  }
+}
+
+.WorkshopDetails-priceLabel {
+  color: $Color-white;
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.WorkshopDetails-cta {
+  margin-top: $Spacing-xSmall;
+}
+
+.WorkshopDetails-image {
+  width: 100%;
+  display: inline;
+  vertical-align: top;
+}
+
+.WorkshopDetails-imageContainer {
+  position: absolute;
+
+  width: 100%;
+  max-width: 550px;
+  max-height: 300px;
+
+  overflow: hidden;
+
+  top: $Spacing-base;
+
+  @include Breakpoint-desktopOnly {
+    max-height: none;
+    top: 0;
+    left: 100px;
+  }
+}
+
+.WorkshopDetails-imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline;
+  width: 100%;
+
+  background: linear-gradient(to bottom, var(--color-background) 0%, rgba(8, 19, 64, 0.2) 50%, var(--color-background) 100%);
+  // background: linear-gradient(to bottom, $Color-deep-cove, rgba(8, 19, 64, 0.2) 49%, $Color-deep-cove);
+
+  @include Breakpoint-desktopOnly {
+    background: linear-gradient(to right, var(--color-background) 0%, rgba(8, 19, 64, 0.2) 50%, var(--color-background) 100%);
+  }
+}
+
+.WorkshopDetails-ticketsDesktop {
+  display: none;
+
+  @include Breakpoint-desktopOnly {
+    display: block;
+  }
+}
+
+.WorkshopDetails-ticketsMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  padding: 0 $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    display: none;
+  }
+}
+
+.WorkshopDetails-info {
+  display: flex;
+  align-items: center;
+}
+
+.WorkshopDetails-calendarIcon,
+.WorkshopDetails-locationIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: $Spacing-xxSmall;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.WorkshopDetails-calendarIcon {
+  background-image: url("../../images/calendar.svg");
+}
+
+.WorkshopDetails-locationIcon {
+  background-image: url("../../images/location.svg");
+}

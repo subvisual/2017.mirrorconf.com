@@ -24,7 +24,6 @@ const Index = () => (
       <Mirror>
         <Speakers />
       </Mirror>
-
     </div>
     <div className="Index-section">
       <Mirror>

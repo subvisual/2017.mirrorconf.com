@@ -1,0 +1,18 @@
+@import "../Theme/Spacing";
+
+$WorkshopsPage-content-max-width: 982px;
+
+.WorkshopsPage {
+  margin-top: $Spacing-xLarge;
+}
+
+.WorkshopsPage-workshop {
+  max-width: $WorkshopsPage-content-max-width;
+}
+
+.WorkshopsPage-section,
+.WorkshopsPage-workshop {
+  margin: auto;
+  margin-top: $Spacing-large;
+  margin-bottom: $Spacing-large;
+}
