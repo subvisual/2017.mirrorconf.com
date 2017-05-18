@@ -8,7 +8,6 @@ import Moving from '../Components/Moving';
 import Sleeping from '../Components/Sleeping';
 // import Eating from '../Components/Eating';
 import Footer from '../Components/Footer';
-import ProgramCta from '../Components/ProgramCta';
 
 const tabs = [
   { id: 1, label: 'Moving', component: <Moving /> },
@@ -21,9 +20,7 @@ const LocationPage = () => (
     <Venue />
     <div className="LocationPage-section">
       <Tabs tabs={tabs} />
-      <div className="LocationPage-cta">
-        <ProgramCta />
-      </div>
+      <div className="LocationPage-cta" />
     </div>
     <div className="LocationPage-section">
       <Footer />
