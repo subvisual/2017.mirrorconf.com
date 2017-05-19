@@ -18,3 +18,8 @@ $Text-font-weight: normal;
 .Text.Text--alternative {
   color: $Color-madison;
 }
+
+.Text.Text--preLineBreak {
+  white-space: pre-line;
+}
+

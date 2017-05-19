@@ -13,7 +13,7 @@ export default [
   },
   {
     name: 'C Todd Lombardo',
-    bio: 'Chief Design Strategist at Fresh&nbsp;Tilled&nbsp;Soil',
+    bio: 'Chief Design Strategist at\nFresh Tilled Soil',
     image: todd,
   },
   {
@@ -23,12 +23,12 @@ export default [
   },
   {
     name: 'Jeremy Keith',
-    bio: 'Co-founder and technical lead&nbsp;at&nbsp;Clearleft',
+    bio: 'Co-founder and technical lead\nat Clearleft',
     image: jeremy,
   },
   {
     name: 'Vitaly Friedman',
-    bio: 'Editor-in-chief of Smashing Magazine',
+    bio: 'Editor-in-chief of\nSmashing Magazine',
     image: vitaly,
   },
   {

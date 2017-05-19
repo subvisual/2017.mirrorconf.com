@@ -10,7 +10,7 @@ const Speaker = ({ name, bio, image }) => (
   <div className="Speaker" style={ImageGradient(image)}>
     <div className="Speaker-details">
       <SubSectionTitle>{name}</SubSectionTitle>
-      <Text>{bio}</Text>
+      <Text preLineBreak>{bio}</Text>
     </div>
   </div>
 );
