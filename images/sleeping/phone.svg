@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>phone</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#FD7D57" offset="0%"></stop>
-            <stop stop-color="#FA2471" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Venue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Venue---Sleeping" transform="translate(-792.000000, -1941.000000)" stroke="url(#linearGradient-1)" fill-rule="nonzero">
-            <path d="M803.320776,1957.74238 C802.871827,1957.96268 802.249892,1958.2673 802.21026,1958.28532 C797.261036,1960.5473 789.136524,1944.7314 793.94832,1942.22261 L795.076229,1941.66625 L797.239777,1945.88867 L796.133229,1946.43371 C793.898282,1947.63147 797.762661,1955.17645 800.029038,1954.07766 C800.060525,1954.06342 800.691428,1953.75433 801.14017,1953.53414 L803.320776,1957.74238 L803.320776,1957.74238 Z" id="phone"></path>
-        </g>
-    </g>
-</svg>
+<svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg"><title>phone</title><defs><linearGradient x1="0%" y1="0%" y2="100%" id="a"><stop stop-color="#FD7D57" offset="0%"/><stop stop-color="#FA2471" offset="100%"/></linearGradient></defs><path d="M803.32 1957.742c-.448.22-1.07.525-1.11.543-4.949 2.262-13.073-13.554-8.262-16.062l1.128-.557 2.164 4.223-1.107.545c-2.235 1.197 1.63 8.742 3.896 7.644l1.111-.544 2.18 4.208z" transform="translate(-792 -1941)" stroke="url(#a)" fill="none"/></svg>

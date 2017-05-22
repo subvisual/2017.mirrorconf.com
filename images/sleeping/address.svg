@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="18px" viewBox="0 0 12 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>location</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#FD7D57" offset="0%"></stop>
-            <stop stop-color="#FA2471" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Venue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Venue---Sleeping" transform="translate(-792.000000, -2006.000000)" stroke="url(#linearGradient-1)" fill-rule="nonzero">
-            <path d="M798,2023.0619 C793.117129,2015.30442 792.5,2014.08701 792.5,2011.7015 C792.5,2008.88985 795.062927,2006.5 798,2006.5 C800.937556,2006.5 803.5,2008.8896 803.5,2011.7015 C803.5,2014.08701 802.882871,2015.30442 798,2023.0619 Z M798,2014.75 C799.518892,2014.75 800.75,2013.51889 800.75,2012 C800.75,2010.48111 799.518892,2009.25 798,2009.25 C796.481108,2009.25 795.25,2010.48111 795.25,2012 C795.25,2013.51889 796.481108,2014.75 798,2014.75 Z" id="location"></path>
-        </g>
-    </g>
-</svg>
+<svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg"><title>location</title><defs><linearGradient x1="0%" y1="0%" y2="100%" id="a"><stop stop-color="#FD7D57" offset="0%"/><stop stop-color="#FA2471" offset="100%"/></linearGradient></defs><path d="M798 2023.062c-4.883-7.758-5.5-8.975-5.5-11.36 0-2.812 2.563-5.202 5.5-5.202 2.938 0 5.5 2.39 5.5 5.201 0 2.386-.617 3.603-5.5 11.36zm0-8.312a2.75 2.75 0 1 0 0-5.5 2.75 2.75 0 0 0 0 5.5z" transform="translate(-792 -2006)" stroke="url(#a)" fill="none"/></svg>
