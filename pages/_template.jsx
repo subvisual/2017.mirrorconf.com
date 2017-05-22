@@ -13,12 +13,14 @@ import OverlayMenu from '../Components/OverlayMenu';
 
 import MouseAnimator from '../Components/MouseAnimator';
 
-const renderLink = (link, index) => <span key={index} className="OverlayMenu-link">{link}</span>;
+const renderLink = (link, index) => (
+  <span key={index} className="OverlayMenu-link">{link}</span>
+);
 
 export default class Template extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -38,7 +40,7 @@ export default class Template extends Component {
     const { overlayOpen } = this.state;
 
     const className = classNames({
-      'Layout': true,
+      Layout: true,
       'Layout--overlayOpen': overlayOpen,
     });
 

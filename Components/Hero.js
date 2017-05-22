@@ -53,16 +53,7 @@ export default class Hero extends React.Component {
               alt="MirrorConf 2016 video placeholder"
             />
           </Mirrored>
-          <Mirrored id="video" disable>
-            <div className="Hero-videoWrapper">
-              <Youtube
-                className="Hero-video"
-                videoId={YoutubeVideoId}
-                onPlay={this.onYoutubePlay}
-                opts={youtubeOpts}
-              />
-            </div>
-          </Mirrored>
+          <Mirrored id="video" disable />
           <Mirrored id="overlay" hide>
             <div className="Hero-backgroundOverlay" />
           </Mirrored>

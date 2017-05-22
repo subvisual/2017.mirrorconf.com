@@ -9,6 +9,7 @@
     "gatsby": "^0.12.6",
     "highlight.js": "^9.6.0",
     "history": "^2.0.2",
+    "html-gl": "^0.3.2",
     "js-yaml": "^3.6.0",
     "lodash": "^4.17.4",
     "markdown-it": "^7.0.1",

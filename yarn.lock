@@ -1566,7 +1566,7 @@ commander@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.3.0.tgz#fd430e889832ec353b9acd1de217c11cb3eef873"
 
-commander@2.9.0, commander@2.9.x, commander@^2.6.0, commander@^2.8.1, commander@^2.9.0:
+commander@2.9.0, commander@2.9.x, commander@^2.5.0, commander@^2.6.0, commander@^2.8.1, commander@^2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
@@ -2073,6 +2073,12 @@ dom-walk@^0.1.0:
 domain-browser@^1.1.1:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
+
+dot-object@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/dot-object/-/dot-object-0.6.0.tgz#2ad3cf75a714ed4fc819e4b63d349bec01c7a358"
+  dependencies:
+    commander "^2.5.0"
 
 download@^4.0.0, download@^4.1.2:
   version "4.4.3"
@@ -3186,6 +3192,15 @@ growl@1.9.2:
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.9.2.tgz#0ea7743715db8d8de2c5ede1775e1b45ac85c02f"
 
+gulp-bump@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/gulp-bump/-/gulp-bump-0.2.2.tgz#3a5db188e921a6c2c191fd4f22163615ff62a4b6"
+  dependencies:
+    dot-object "^0.6.0"
+    gulp-util "^3.0.3"
+    semver "^4.3.0"
+    through2 "^0.5.1"
+
 gulp-decompress@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gulp-decompress/-/gulp-decompress-1.2.0.tgz#8eeb65a5e015f8ed8532cafe28454960626f0dc7"
@@ -3209,7 +3224,7 @@ gulp-sourcemaps@1.6.0:
     through2 "^2.0.0"
     vinyl "^1.0.0"
 
-gulp-util@^3.0.1:
+gulp-util@^3.0.1, gulp-util@^3.0.3:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -3415,6 +3430,12 @@ html-frontmatter@^1.6.0:
   resolved "https://registry.yarnpkg.com/html-frontmatter/-/html-frontmatter-1.6.1.tgz#2da13f948fe1acfa055d9e683320e4f48ddd660d"
   dependencies:
     dateutil "^0.1.0"
+
+html-gl@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/html-gl/-/html-gl-0.3.2.tgz#226fd0fac1599f3159c558169834d91360cab4ab"
+  dependencies:
+    gulp-bump "^0.2.2"
 
 http-signature@~0.10.0:
   version "0.10.1"
@@ -6157,7 +6178,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-"readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@~1.0.26:
+"readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@~1.0.17, readable-stream@~1.0.26:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
   dependencies:
@@ -6533,7 +6554,7 @@ semver-truncate@^1.0.0:
   dependencies:
     semver "^5.3.0"
 
-"semver@2 || 3 || 4", semver@^4.0.3, semver@^4.2.2, semver@^4.3.3, semver@~4.3.6:
+"semver@2 || 3 || 4", semver@^4.0.3, semver@^4.2.2, semver@^4.3.0, semver@^4.3.3, semver@~4.3.6:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
 
@@ -7023,6 +7044,13 @@ through2-filter@^2.0.0:
   dependencies:
     through2 "~2.0.0"
     xtend "~4.0.0"
+
+through2@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-0.5.1.tgz#dfdd012eb9c700e2323fd334f38ac622ab372da7"
+  dependencies:
+    readable-stream "~1.0.17"
+    xtend "~3.0.0"
 
 through2@^0.6.0, through2@^0.6.1:
   version "0.6.5"
@@ -7597,6 +7625,10 @@ write@^0.2.1:
 "xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
+
+xtend@~3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/xtend/-/xtend-3.0.0.tgz#5cce7407baf642cba7becda568111c493f59665a"
 
 y18n@^3.2.1:
   version "3.2.1"
