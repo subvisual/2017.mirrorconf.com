@@ -9,6 +9,7 @@ import Section from './Section';
 import TextTitle from './TextTitle';
 import Mirrored from './Mirrored';
 import SocialLinks from './SocialLinks';
+import Video from './Video';
 
 import HeroFallback from '../pages/hero.jpg';
 import PlayIcon from '../images/play.svg';
@@ -47,20 +48,19 @@ export default class Hero extends React.Component {
       <section className={this.classes()}>
         <div className="Hero-background">
           <Mirrored id="video-fallback" hide>
-            <img
-              className="Hero-videoFallback"
-              src={HeroFallback}
-              alt="MirrorConf 2016 video placeholder"
-            />
           </Mirrored>
           <Mirrored id="video" disable>
             <div className="Hero-videoWrapper">
-              <Youtube
+              <Video
                 className="Hero-video"
-                videoId={YoutubeVideoId}
-                onPlay={this.onYoutubePlay}
-                opts={youtubeOpts}
-              />
+                src="https://fat.gfycat.com/BelatedOccasionalAmphibian.webm"
+              >
+                <img
+                  className="Hero-videoFallback"
+                  src={HeroFallback}
+                  alt="MirrorConf 2016 video placeholder"
+                />
+              </Video>
             </div>
           </Mirrored>
           <Mirrored id="overlay" hide>
