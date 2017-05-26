@@ -32,11 +32,13 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 .Moving-section {
   position: relative;
 
-  margin-bottom: $Spacing-base;
-
   @include Breakpoint-desktopOnly {
     height: $Moving-image-height;
   }
+}
+
+.Moving-section:not(:last-child) {
+  margin-bottom: $Spacing-base;
 }
 
 .Moving-portoImage,

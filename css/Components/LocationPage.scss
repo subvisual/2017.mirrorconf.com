@@ -1,5 +1,15 @@
 @import "../Theme/Spacing";
+@import "../Theme/Color";
 
-.LocationPage-section {
+.LocationPage-mainSection,
+.LocationPage-footerSection {
+  background-color: $Color-madison;
+}
+
+.LocationPage-mainSection {
   margin-top: $Spacing-xLarge;
+}
+
+.LocationPage-footerSection {
+  padding-top: $Spacing-xLarge;
 }

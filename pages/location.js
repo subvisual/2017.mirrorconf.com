@@ -18,11 +18,11 @@ const tabs = [
 const LocationPage = () => (
   <div className="LocationPage">
     <Venue />
-    <div className="LocationPage-section">
+    <div className="LocationPage-mainSection">
       <Tabs tabs={tabs} />
       <div className="LocationPage-cta" />
     </div>
-    <div className="LocationPage-section">
+    <div className="LocationPage-footerSection">
       <Footer />
     </div>
   </div>
