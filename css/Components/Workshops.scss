@@ -33,6 +33,18 @@ $Workshops-item-mobile-height: 286px;
   };
 }
 
+.Workshops-ticket {
+  margin: $Spacing-small 0;
+
+  @include Breakpoint-desktopOnly {
+    margin: $Spacing-large 0;
+  };
+}
+
+.Workshops-ticketLink {
+  margin-top: $Spacing-xSmall;
+}
+
 .Workshops-subHeader {
   margin-bottom: $Spacing-xSmall;
 }
