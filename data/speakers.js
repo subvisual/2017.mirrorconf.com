@@ -4,6 +4,7 @@ import claudio from '../images/speakers/claudio.jpg';
 import jeremy from '../images/speakers/jeremy.jpg';
 import vitaly from '../images/speakers/vitaly.jpg';
 import rachel from '../images/speakers/rachel.jpg';
+import sara from '../images/speakers/sara.jpg';
 
 export default [
   {
@@ -35,5 +36,10 @@ export default [
     name: 'Rachel Andrew',
     bio: 'Web Developer, Speaker and Author',
     image: rachel,
+  },
+  {
+    name: 'Sara Soueidan',
+    bio: 'Front-End Web Developer',
+    image: sara,
   },
 ];
