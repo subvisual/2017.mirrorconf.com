@@ -28,11 +28,6 @@ export default [
     image: jeremy,
   },
   {
-    name: 'Vitaly Friedman',
-    bio: 'Editor-in-chief of\nSmashing Magazine',
-    image: vitaly,
-  },
-  {
     name: 'Rachel Andrew',
     bio: 'Web Developer, Speaker and Author',
     image: rachel,
@@ -41,5 +36,10 @@ export default [
     name: 'Sara Soueidan',
     bio: 'Front-End Web Developer',
     image: sara,
+  },
+  {
+    name: 'Vitaly Friedman',
+    bio: 'Editor-in-chief of\nSmashing Magazine',
+    image: vitaly,
   },
 ];
