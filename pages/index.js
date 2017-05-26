@@ -1,7 +1,6 @@
 import React from 'react';
 
 import About from '../Components/About';
-import CFP from '../Components/CFP';
 import Hero from '../Components/Hero';
 import Feedback from '../Components/Feedback';
 import Footer from '../Components/Footer';
@@ -20,7 +19,6 @@ const Index = () => (
     </div>
     <div className="Index-section">
       <Speakers />
-      <CFP />
     </div>
     <div className="Index-section">
       <Workshops />
