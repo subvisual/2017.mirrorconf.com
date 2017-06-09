@@ -7,7 +7,6 @@ import Text from './Text';
 import Link from './Link';
 import Button from './Button';
 import Section from './Section';
-import Mirrored from './Mirrored';
 import SectionTitle from './SectionTitle';
 import SubSectionTitle from './SubSectionTitle';
 import SponsorsData from '../data/sponsors';
@@ -48,35 +47,33 @@ const renderLevel = (data) => {
 };
 
 const Sponsors = () => (
-  <Mirrored hide>
-    <div className="Sponsors">
-      <Section>
-        <div className="Grid">
-          <div className="Grid-10column">
-            <div className="Sponsors-wrapper">
-              <div className="Sponsors-title">
-                <SectionTitle alternate>Sponsors</SectionTitle>
+  <div className="Sponsors">
+    <Section>
+      <div className="Grid">
+        <div className="Grid-10column">
+          <div className="Sponsors-wrapper">
+            <div className="Sponsors-title">
+              <SectionTitle alternate>Sponsors</SectionTitle>
+            </div>
+            <div className="Grid Grid--1offset">
+              <div className="Sponsors-levelsTitle">
+                <Text alternative>A warm thank you to our amazing sponsors.</Text>
               </div>
-              <div className="Grid Grid--1offset">
-                <div className="Sponsors-levelsTitle">
-                  <Text alternative>A warm thank you to our amazing sponsors.</Text>
-                </div>
-                { SponsorsData.map(renderLevel) }
-              </div>
-              <SubSectionTitle alternate>
-                Want to help us make the best conference?
-              </SubSectionTitle>
-              <div className="Sponsors-actions">
-                <Link noHover href="/sponsoring.pdf" target="_blank">
-                  <Button alternative>Sponsor us</Button>
-                </Link>
-              </div>
+              { SponsorsData.map(renderLevel) }
+            </div>
+            <SubSectionTitle alternate>
+              Want to help us make the best conference?
+            </SubSectionTitle>
+            <div className="Sponsors-actions">
+              <Link noHover href="/sponsoring.pdf" target="_blank">
+                <Button alternative>Sponsor us</Button>
+              </Link>
             </div>
           </div>
         </div>
-      </Section>
-    </div>
-  </Mirrored>
+      </div>
+    </Section>
+  </div>
 );
 
 export default Sponsors;

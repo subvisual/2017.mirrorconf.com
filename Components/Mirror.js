@@ -7,11 +7,8 @@ const Mirror = ({ children }) => (
     <div className="Mirror-original">
       {children}
     </div>
-    <div className="Mirror-container">
-      <div className="Mirror-cut" />
-      <div className="Mirror-reflection">
-        {children}
-      </div>
+    <div className="Mirror-reflection">
+      {children}
     </div>
   </div>
 );

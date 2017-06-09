@@ -7,7 +7,7 @@ import '../css/Components/Grid';
 
 import Section from './Section';
 import TextTitle from './TextTitle';
-import Mirrored from './Mirrored';
+import Mirror from './Mirror';
 import SocialLinks from './SocialLinks';
 
 import HeroFallback from '../pages/hero.jpg';
@@ -46,49 +46,43 @@ export default class Hero extends React.Component {
     return (
       <section className={this.classes()}>
         <div className="Hero-background">
-          <Mirrored id="video-fallback" hide>
-            <img
-              className="Hero-videoFallback"
-              src={HeroFallback}
-              alt="MirrorConf 2016 video placeholder"
+          <img
+            className="Hero-videoFallback"
+            src={HeroFallback}
+            alt="MirrorConf 2016 video placeholder"
+          />
+          <div className="Hero-videoWrapper">
+            <Youtube
+              className="Hero-video"
+              videoId={YoutubeVideoId}
+              onPlay={this.onYoutubePlay}
+              opts={youtubeOpts}
             />
-          </Mirrored>
-          <Mirrored id="video" disable>
-            <div className="Hero-videoWrapper">
-              <Youtube
-                className="Hero-video"
-                videoId={YoutubeVideoId}
-                onPlay={this.onYoutubePlay}
-                opts={youtubeOpts}
-              />
-            </div>
-          </Mirrored>
-          <Mirrored id="overlay" hide>
-            <div className="Hero-backgroundOverlay" />
-          </Mirrored>
+          </div>
+          <div className="Hero-backgroundOverlay" />
         </div>
 
         <Section>
           <div className="Hero-foreground">
-            <div className="Hero-content Grid Grid--1offset">
-              <div className="Hero-title">
-                <h1 className="Hero-headline">Mirror Conf 2017</h1>
-                <h2 className="Hero-uvp">
-                  For designers and front-end developers.
-                </h2>
-                <h3 className="Hero-date">
-                  October 10 — 13, 2017<br />
-                  Braga, Portugal
-                </h3>
+            <Mirror>
+              <div className="Hero-content Grid Grid--1offset">
+                <div className="Hero-title">
+                  <h1 className="Hero-headline">Mirror Conf 2017</h1>
+                  <h2 className="Hero-uvp">
+                    For designers and front-end developers.
+                  </h2>
+                  <h3 className="Hero-date">
+                    October 10 — 13, 2017<br />
+                    Braga, Portugal
+                  </h3>
 
-                <h4 className="Hero-fullDate">
-                  Oct. 10 & 11 — workshops,<br />
-                  12 & 13 — main conference
-                </h4>
-              </div>
+                  <h4 className="Hero-fullDate">
+                    Oct. 10 & 11 — workshops,<br />
+                    12 & 13 — main conference
+                  </h4>
+                </div>
 
-              <div className="Hero-actions">
-                <Mirrored id="button" hover>
+                <div className="Hero-actions">
                   <a
                     href="https://www.youtube.com/watch?v=JWa0PMXN7ZE"
                     className="Hero-playButton"
@@ -106,9 +100,9 @@ export default class Hero extends React.Component {
                       </TextTitle>
                     </div>
                   </a>
-                </Mirrored>
+                </div>
               </div>
-            </div>
+            </Mirror>
 
             <div className="Hero-footer">
               <SocialLinks />

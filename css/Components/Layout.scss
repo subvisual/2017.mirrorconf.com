@@ -3,7 +3,10 @@
 @import "../Theme/Breakpoint";
 @import "../Theme/Browsers";
 
+$Layout-cut-max-width: 946px;
+
 .Layout {
+  position: relative;
   width: 100%;
   max-width: 100%;
 
@@ -28,4 +31,21 @@
   height: 100%;
 
   overflow: hidden;
+}
+
+.Layout-cut {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 100%;
+  max-width: $Layout-cut-max-width;
+
+  background: linear-gradient(
+    to bottom, rgba($Color-white, 0) 0%, rgba($Color-white, 0.05) 70%
+  );
+
+  z-index: 1;
 }

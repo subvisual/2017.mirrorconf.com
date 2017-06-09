@@ -8,7 +8,6 @@ import '../css/Components/Layout';
 import Links from '../data/links';
 import Link from '../Components/Link';
 import Navbar from '../Components/Navbar';
-import Mirror from '../Components/Mirror';
 import OverlayMenu from '../Components/OverlayMenu';
 
 import MouseAnimator from '../Components/MouseAnimator';
@@ -50,18 +49,17 @@ export default class Template extends Component {
           <Link href="mailto:hello@mirrorconf.com">hello@mirrorconf.com</Link>
         </OverlayMenu>
 
-        <Mirror>
-          <nav className="Layout-navbar">
-            <Navbar
-              overlayOpen={overlayOpen}
-              toggleOverlayMenu={this.toggleOverlayMenu}
-            />
-          </nav>
+        <div className="Layout-cut" />
+        <nav className="Layout-navbar">
+          <Navbar
+            overlayOpen={overlayOpen}
+            toggleOverlayMenu={this.toggleOverlayMenu}
+          />
+        </nav>
 
-          <div className="Layout-content">
-            {children}
-          </div>
-        </Mirror>
+        <div className="Layout-content">
+          {children}
+        </div>
       </div>
     );
   }

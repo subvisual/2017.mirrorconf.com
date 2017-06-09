@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import Burger from './Burger';
 import Section from './Section';
-import Mirrored from './Mirrored';
 
 import Links from '../data/links';
 import '../css/Components/Navbar';
@@ -11,24 +10,22 @@ const renderLink = (link, index) => <span key={index} className="Navbar-link">{l
 
 const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
   <Section>
-    <Mirrored id="navbar" hide>
-      <div className="Navbar">
-        <a href="/">
-          <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
-        </a>
+    <div className="Navbar">
+      <a href="/">
+        <img src={MirrorLogo} alt="Mirror Logo" className="Navbar-logo" />
+      </a>
 
-        <div className="Navbar-links">
-          {Links.map(renderLink)}
-        </div>
-
-        <Burger
-          openLabel="Menu"
-          closeLabel="Close"
-          isOpen={overlayOpen}
-          onClick={toggleOverlayMenu}
-        />
+      <div className="Navbar-links">
+        {Links.map(renderLink)}
       </div>
-    </Mirrored>
+
+      <Burger
+        openLabel="Menu"
+        closeLabel="Close"
+        isOpen={overlayOpen}
+        onClick={toggleOverlayMenu}
+      />
+    </div>
   </Section>
 );
 

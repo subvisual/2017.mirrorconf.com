@@ -4,7 +4,6 @@ import '../css/Components/Footer';
 import '../css/Components/Grid';
 
 import Link from './Link';
-import Mirrored from './Mirrored';
 import SubSectionTitle from './SubSectionTitle';
 import TextTitle from './TextTitle';
 import SocialLinks from './SocialLinks';
@@ -78,11 +77,9 @@ const Footer = () => (
             <TextTitle>MirrorConf is powered by</TextTitle>
           </div>
 
-          <Mirrored id="subvisual-logo" hide>
-            <a href="https://subvisual.co" rel="noopener noreferrer" target="_blank">
-              <img alt="Subvisual logo" src={SubvisualLogo} />
-            </a>
-          </Mirrored>
+          <a href="https://subvisual.co" rel="noopener noreferrer" target="_blank">
+            <img alt="Subvisual logo" src={SubvisualLogo} />
+          </a>
         </div>
       </div>
     </div>

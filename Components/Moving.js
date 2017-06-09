@@ -10,7 +10,6 @@ import SectionTitle from '../Components/SectionTitle';
 import TextHighlight from '../Components/TextHighlight';
 import NumberedBlock from '../Components/NumberedBlock';
 import SubSectionTitle from '../Components/SubSectionTitle';
-import Mirrored from '../Components/Mirrored';
 
 const Moving = () => (
   <div className="Moving">
@@ -55,16 +54,14 @@ const Moving = () => (
             </div>
           </div>
         </div>
-        <Mirrored hide>
-          <div className="Moving-imageWrapper">
-            <div className="Grid Grid--1offset">
-              <div className="Grid-4column" />
-              <div className="Grid-5column">
-                <div className="Moving-portoImage" />
-              </div>
+        <div className="Moving-imageWrapper">
+          <div className="Grid Grid--1offset">
+            <div className="Grid-4column" />
+            <div className="Grid-5column">
+              <div className="Moving-portoImage" />
             </div>
           </div>
-        </Mirrored>
+        </div>
       </div>
 
       <div className="Moving-section">
@@ -86,15 +83,13 @@ const Moving = () => (
             </div>
           </div>
         </div>
-        <Mirrored hide>
-          <div className="Moving-imageWrapper">
-            <div className="Grid Grid--1offset">
-              <div className="Grid-5column">
-                <div className="Moving-lisbonImage" />
-              </div>
+        <div className="Moving-imageWrapper">
+          <div className="Grid Grid--1offset">
+            <div className="Grid-5column">
+              <div className="Moving-lisbonImage" />
             </div>
           </div>
-        </Mirrored>
+        </div>
       </div>
     </Section>
   </div>

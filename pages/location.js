@@ -8,6 +8,7 @@ import Moving from '../Components/Moving';
 import Sleeping from '../Components/Sleeping';
 // import Eating from '../Components/Eating';
 import Footer from '../Components/Footer';
+import Mirror from '../Components/Mirror';
 
 const tabs = [
   { id: 1, label: 'Moving', component: <Moving /> },
@@ -17,7 +18,9 @@ const tabs = [
 
 const LocationPage = () => (
   <div className="LocationPage">
-    <Venue />
+    <Mirror>
+      <Venue />
+    </Mirror>
     <div className="LocationPage-mainSection">
       <Tabs tabs={tabs} />
       <div className="LocationPage-cta" />
