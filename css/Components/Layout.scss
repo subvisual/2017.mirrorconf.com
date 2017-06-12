@@ -34,6 +34,8 @@ $Layout-cut-max-width: 946px;
 }
 
 .Layout-cut {
+  pointer-events: none;
+
   position: absolute;
   top: 0;
   left: 50%;
