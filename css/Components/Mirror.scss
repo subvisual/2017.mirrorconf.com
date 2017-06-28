@@ -10,11 +10,13 @@
 }
 
 .Mirror-original {
-  position: relative; //hack to make this allways on top
+  position: relative;
+  z-index: 1;
 }
 
 .Mirror-reflection {
   position: absolute;
+  z-index: -1;
 
   top: 0;
   left: 50%;
@@ -27,17 +29,4 @@
   transform: scaleX(-1) translateX(50%);
 
   filter: opacity(0.3) blur(7px);
-}
-
-.Mirror-reflection [data-mirror-hide] {
-  visibility: hidden;
-}
-
-.Mirror-reflection [data-mirror-disable],
-.Mirror-reflection img,
-.Mirror-reflection [class*="Photo"],
-.Mirror-reflection [class="Speaker"],
-.Mirror-reflection [class="MoreToCome"],
-.Mirror-reflection .Workshop {
-  display: none;
 }

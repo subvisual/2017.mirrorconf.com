@@ -7,6 +7,7 @@ import Speaker from './Speaker';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 import MoreToCome from './MoreToCome';
+import Mirror from './Mirror';
 import SpeakersData from '../data/speakers';
 
 const renderSpeaker = speaker => (
@@ -17,17 +18,19 @@ const renderSpeaker = speaker => (
 
 const Speakers = () => (
   <div className="Speakers">
-    <Section>
-      <div className="Speakers-header">
-        <SectionTitle>Speakers</SectionTitle>
-      </div>
-      <ul className="Speakers-list">
-        {SpeakersData.map(renderSpeaker)}
-        <div className="Speakers-item">
-          <MoreToCome />
+    <Mirror>
+      <Section>
+        <div className="Speakers-header">
+          <SectionTitle>Speakers</SectionTitle>
         </div>
-      </ul>
-    </Section>
+        <ul className="Speakers-list">
+          {SpeakersData.map(renderSpeaker)}
+          <div className="Speakers-item">
+            <MoreToCome />
+          </div>
+        </ul>
+      </Section>
+    </Mirror>
   </div>
 );
 
