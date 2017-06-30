@@ -30,3 +30,10 @@
 
   filter: opacity(0.3) blur(7px);
 }
+
+.Mirror-reflection img,
+.Mirror-reflection [class*="Photo"],
+.Mirror-reflection [class="MoreToCome"],
+.Mirror-reflection .Workshop {
+  display: none;
+}
