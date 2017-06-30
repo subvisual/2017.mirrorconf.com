@@ -40,6 +40,13 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
   }
 }
 
+.Speakers-item {
+  transition: opacity 0.2s ease-in;
+}
+.Speakers-list:hover .Speakers-item:not(:hover) {
+  opacity: 0.2;
+}
+
 @media (min-width: $Speakers-2-column-size) and (max-width: $Speakers-3-column-size) {
   .Speakers-list {
     max-width: $Speakers-2-column-size;
