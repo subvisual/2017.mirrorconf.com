@@ -18,19 +18,17 @@ const renderSpeaker = speaker => (
 
 const Speakers = () => (
   <div className="Speakers">
-    <Mirror>
-      <Section>
-        <div className="Speakers-header">
-          <SectionTitle>Speakers</SectionTitle>
+    <Section>
+      <div className="Speakers-header">
+        <SectionTitle>Speakers</SectionTitle>
+      </div>
+      <ul className="Speakers-list">
+        {SpeakersData.map(renderSpeaker)}
+        <div className="Speakers-item">
+          <MoreToCome />
         </div>
-        <ul className="Speakers-list">
-          {SpeakersData.map(renderSpeaker)}
-          <div className="Speakers-item">
-            <MoreToCome />
-          </div>
-        </ul>
-      </Section>
-    </Mirror>
+      </ul>
+    </Section>
   </div>
 );
 
