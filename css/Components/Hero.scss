@@ -19,6 +19,7 @@ $Hero-fullDate-bottom-alignment: 20px;
 $Hero-fullDate-right-alignment: 112px;
 $Hero-font-family: "matrix-ii";
 $Hero-font-weight: bold;
+$Hero-navbar-height: 68px;
 
 $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 
@@ -31,11 +32,11 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 .Hero-background {
   position: absolute;
 
-  top: -65px;
+  top: -$Hero-navbar-height;
   left: 0;
 
   width: 100%;
-  height: calc(100% + 65px);
+  height: calc(100% + $Hero-navbar-height);
 
   overflow: hidden;
 }
@@ -43,11 +44,11 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 .Hero-backgroundOverlay {
   position: absolute;
 
-  top: -65px;
+  top: -$Hero-navbar-height;
   left: 0;
 
   width: 100%;
-  height: calc(100% + 65px);
+  height: calc(100% + $Hero-navbar-height);
 
   background: linear-gradient(to bottom, $Hero-backgroundOverlay-color 20%, $Color-deep-cove 100%);
 
