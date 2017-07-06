@@ -7,7 +7,6 @@ import Speaker from './Speaker';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
 import MoreToCome from './MoreToCome';
-import Mirror from './Mirror';
 import SpeakersData from '../data/speakers';
 
 const renderSpeaker = speaker => (
