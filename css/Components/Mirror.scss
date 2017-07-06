@@ -1,4 +1,5 @@
 @import "../Theme/Global";
+@import "../Theme/Browsers";
 
 .Mirror {
   position: relative;
@@ -15,20 +16,26 @@
 }
 
 .Mirror-reflection {
-  position: absolute;
-  z-index: -1;
+  display: none;
+}
 
-  top: 0;
-  left: 50%;
+@include mirrorSupported {
+  .Mirror-reflection {
+    position: absolute;
+    z-index: -1;
 
-  width: 100vw;
-  max-width: $Global-content-max-width;
+    top: 0;
+    left: 50%;
 
-  pointer-events: none;
+    width: 100vw;
+    max-width: $Global-content-max-width;
 
-  transform: scaleX(-1) translateX(50%);
+    pointer-events: none;
 
-  filter: opacity(0.3) blur(7px);
+    transform: scaleX(-1) translateX(50%);
+
+    filter: opacity(0.3) blur(7px);
+  }
 }
 
 .Mirror-reflection img,
