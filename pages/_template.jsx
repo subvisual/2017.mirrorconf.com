@@ -32,6 +32,14 @@ export default class Template extends Component {
   toggleOverlayMenu = () =>
     this.setState({ overlayOpen: !this.state.overlayOpen });
 
+  renderCut() {
+    if (['/', '/location/'].indexOf(this.props.location.pathname) == -1) {
+      return null;
+    }
+
+    return <div className="Layout-cut" />;
+  }
+
   render() {
     const { children } = this.props;
     const { overlayOpen } = this.state;
@@ -49,7 +57,7 @@ export default class Template extends Component {
           <Link href="mailto:hello@mirrorconf.com">hello@mirrorconf.com</Link>
         </OverlayMenu>
 
-        <div className="Layout-cut" />
+        {this.renderCut()}
         <nav className="Layout-navbar">
           <Navbar
             overlayOpen={overlayOpen}
