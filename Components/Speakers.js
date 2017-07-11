@@ -6,7 +6,6 @@ import '../css/Components/Speakers';
 import Speaker from './Speaker';
 import Section from './Section';
 import SectionTitle from './SectionTitle';
-import MoreToCome from './MoreToCome';
 import SpeakersData from '../data/speakers';
 
 const renderSpeaker = speaker => (
@@ -23,9 +22,6 @@ const Speakers = () => (
       </div>
       <ul className="Speakers-list">
         {SpeakersData.map(renderSpeaker)}
-        <div className="Speakers-item">
-          <MoreToCome />
-        </div>
       </ul>
     </Section>
   </div>

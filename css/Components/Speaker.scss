@@ -20,6 +20,7 @@ $Speaker-name-font-weight: bold;
   height: $Speaker-height;
 
   background-repeat: no-repeat;
+  background-size: contain;
 
   @include Breakpoint-desktopOnly {
     width: $Global-speaker-width;

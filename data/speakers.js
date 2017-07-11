@@ -1,14 +1,22 @@
-import todd from '../images/speakers/todd.jpg';
-import brad from '../images/speakers/brad.jpg';
-import claudio from '../images/speakers/claudio.jpg';
-import jeremy from '../images/speakers/jeremy.jpg';
-import vitaly from '../images/speakers/vitaly.jpg';
-import rachel from '../images/speakers/rachel.jpg';
-import sara from '../images/speakers/sara.jpg';
-import eduardo from '../images/speakers/eduardo.jpeg';
-import frank from '../images/speakers/frank.jpeg';
+import todd from '../images/speakers/todd@2x.jpg';
+import brad from '../images/speakers/brad@2x.jpg';
+import claudio from '../images/speakers/claudio@2x.jpg';
+import jeremy from '../images/speakers/jeremy@2x.jpg';
+import vitaly from '../images/speakers/vitaly@2x.jpg';
+import rachel from '../images/speakers/rachel@2x.jpg';
+import sara from '../images/speakers/sara@2x.jpg';
+import eduardo from '../images/speakers/eduardo@2x.jpeg';
+import frank from '../images/speakers/frank@2x.jpeg';
+import aras from '../images/speakers/aras@2x.jpeg';
+import gabriel from '../images/speakers/gabriel@2x.jpg';
+import henry from '../images/speakers/henry@2x.jpg';
 
 export default [
+  {
+    name: 'Aras Bilgen',
+    bio: 'Head of Design at Garanti',
+    image: aras,
+  },
   {
     name: 'Brad Frost',
     bio: 'Author of Atomic Design',
@@ -33,6 +41,16 @@ export default [
     name: 'Frank Chimero',
     bio: 'Designer, Writer\nand Illustrator',
     image: frank,
+  },
+  {
+    name: 'Gabriel Valdivia',
+    bio: 'Facebook VR Designer',
+    image: gabriel,
+  },
+  {
+    name: 'Henry Daubrez',
+    bio: 'Design Director at Dogstudio',
+    image: henry,
   },
   {
     name: 'Jeremy Keith',
