@@ -124,7 +124,7 @@ export default [
     bio: 'Facebook VR Designer',
     image: gabriel,
     description: <EventDescription noMargin>
-      <Title>TODO</Title>
+      <Title>Facebook VR Designer</Title>
       <Text>Gabriel is a Cuban Product Designer, based in San Francisco, currently exploring VR as a Lead Designer at Facebook. Most recently, he was part of the design team behind Facebook Spaces and Facebook 360 for the Oculus Rift and Gear VR, respectively. Prior to that, he spent a year in London building a product team and leading the design for Multi-Post Stories, a Facebook initiative focused around long form storytelling.</Text>
       <Title>Talk To Be Announced</Title>
       <Placeholder />
