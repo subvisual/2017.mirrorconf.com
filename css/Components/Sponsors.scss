@@ -59,6 +59,7 @@
 
 .Sponsors-levelLogos {
   display: flex;
+  flex-wrap: wrap;
 
   @include Breakpoint-mobileOnly {
     flex-direction: column;
@@ -67,11 +68,11 @@
 }
 
 .Sponsors-levelLogo:not(:last-child) {
-  margin-bottom: $Spacing-xxSmall;
+  margin-bottom: $Spacing-xSmall;
 
   @include Breakpoint-desktopOnly {
     margin-right: $Spacing-small;
-    margin-bottom: 0;
+    margin-bottom: $Spacing-small;
   }
 }
 

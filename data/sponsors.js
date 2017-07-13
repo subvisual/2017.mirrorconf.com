@@ -6,6 +6,8 @@ import UsersnapLogo from '../images/sponsors/usersnap.svg';
 import BuroLogo from '../images/sponsors/buro.png';
 import MinderaLogo from '../images/sponsors/mindera.png';
 import DesignerNewsLogo from '../images/sponsors/dn.svg';
+import StickermuleLogo from '../images/sponsors/sticker-mule-logo.svg';
+import UnixStickersLogo from '../images/sponsors/unixstickers-logo.svg';
 
 export default [
   {
@@ -27,6 +29,8 @@ export default [
       { id: 3, alt: 'Adorable logo', src: AdorableLogo, href: 'http://adorable.io/' },
       { id: 4, alt: 'Pixelmatters logo', src: PixelMattersLogo, href: 'http://pixelmatters.com/' },
       { id: 6, alt: 'Bürocratik', src: BuroLogo, href: 'http://www.burocratik.com/' },
+      { id: 7, alt: 'Stickermule', src: StickermuleLogo, href: 'https://www.stickermule.com/' },
+      { id: 8, alt: 'unixstickers', src: UnixStickersLogo, href: 'http://www.unixstickers.com/' },
     ],
   },
   {
