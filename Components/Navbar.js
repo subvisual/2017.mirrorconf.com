@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, cloneElement } from 'react';
 import Burger from './Burger';
 import Section from './Section';
 import Link from './Link';
@@ -7,9 +7,19 @@ import Links from '../data/links';
 import '../css/Components/Navbar';
 import MirrorLogo from '../images/logo.svg';
 
-const renderLink = (link, index) => <span key={index} className="Navbar-link">{link}</span>;
+const renderLink = currentRoute => (link, index) => {
+  const linkElement = cloneElement(link, {
+    isActive: currentRoute === link.attributes.href,
+  });
 
-const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
+  return (
+    <span key={index} className="Navbar-link">
+      {linkElement}
+    </span>
+  );
+};
+
+const Navbar = ({ overlayOpen, toggleOverlayMenu, currentRoute }) =>
   <Section>
     <div className="Navbar">
       <Link noHover href="/">
@@ -17,7 +27,7 @@ const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
       </Link>
 
       <div className="Navbar-links">
-        {Links.map(renderLink)}
+        {Links.map(renderLink(currentRoute))}
       </div>
 
       <Burger
@@ -27,10 +37,10 @@ const Navbar = ({ overlayOpen, toggleOverlayMenu }) => (
         onClick={toggleOverlayMenu}
       />
     </div>
-  </Section>
-);
+  </Section>;
 
 Navbar.propTypes = {
+  currentRoute: PropTypes.string,
   overlayOpen: PropTypes.bool.isRequired,
   toggleOverlayMenu: PropTypes.func.isRequired,
 };

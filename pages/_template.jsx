@@ -60,6 +60,7 @@ export default class Template extends Component {
         {this.renderCut()}
         <nav className="Layout-navbar">
           <Navbar
+            currentRoute={this.props.location.pathname}
             overlayOpen={overlayOpen}
             toggleOverlayMenu={this.toggleOverlayMenu}
           />

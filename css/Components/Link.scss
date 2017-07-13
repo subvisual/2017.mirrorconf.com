@@ -33,6 +33,7 @@ $Link-line-height: 26px;
     transition: transform 0.3s ease-out;
   }
 
+  &.is-active,
   &:hover {
     &::after {
       transform: scaleX(1);
