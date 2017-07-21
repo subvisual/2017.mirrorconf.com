@@ -5,6 +5,7 @@ import PixelMattersLogo from '../images/sponsors/pixelmatters.svg';
 import UsersnapLogo from '../images/sponsors/usersnap.svg';
 import BuroLogo from '../images/sponsors/buro.png';
 import MinderaLogo from '../images/sponsors/mindera.png';
+import DesignerNewsLogo from '../images/sponsors/dn.svg';
 
 export default [
   {
@@ -32,6 +33,7 @@ export default [
     title: 'Media',
     logos: [
       { id: 5, alt: 'Usersnap logo', src: UsersnapLogo, href: 'https://usersnap.com/' },
+      { id: 8, alt: 'DesignerNews logo', src: DesignerNewsLogo, href: 'https://www.designernews.co/' },
     ],
   },
 ];
