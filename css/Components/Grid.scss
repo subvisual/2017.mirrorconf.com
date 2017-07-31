@@ -9,6 +9,10 @@ $Grid-number-of-columns: 11;
   width: 100%;
 }
 
+.Grid-invisibleColumn {
+  visibility: hidden;
+}
+
 @for $col from 1 through $Grid-number-of-columns {
   .Grid--#{$col}offset {
     padding: 0;
@@ -18,6 +22,18 @@ $Grid-number-of-columns: 11;
     }
   }
 
+  .Grid-#{$col}column {
+    position: relative;
+  }
+
+  .Grid-overflow#{$col}Column {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+  }
+
+  .Grid-overflow#{$col}Column,
   .Grid-#{$col}column {
     display: inline-block;
     vertical-align: top;

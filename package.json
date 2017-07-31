@@ -22,6 +22,7 @@
     "pngquant-bin": "^3.1.1",
     "preact": "^7.2.0",
     "preact-compat": "^3.14.2",
+    "prop-types": "^15.5.10",
     "react": "^15.4.2",
     "react-headroom": "^2.1.2",
     "react-helmet": "^4.0.0",
