@@ -7,7 +7,7 @@ const Mirror = ({ children }) => (
     <div className="Mirror-original">
       {children}
     </div>
-    <div className="Mirror-reflection">
+    <div aria-hidden="true" className="Mirror-reflection">
       {children}
     </div>
   </div>
