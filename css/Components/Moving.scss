@@ -24,9 +24,13 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 .Moving-subtitle {
   position: relative;
 
-  margin: $Spacing-xSmall 0;
+  margin-bottom: $Spacing-xSmall;
 
   z-index: $Moving-z-index-foreground;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-xSmall;
+  }
 }
 
 .Moving-section {

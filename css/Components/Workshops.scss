@@ -17,20 +17,15 @@ $Workshops-item-mobile-height: 286px;
 }
 
 .Workshops-header {
-  margin-bottom: $Spacing-small;
+  margin-bottom: $Spacing-base;
 
   @include Breakpoint-desktopOnly {
     margin-left: $Spacing-xxSmall;
-    margin-bottom: $Spacing-base;
   };
 }
 
 .Workshops-description {
-  margin-bottom: $Spacing-xSmall;
-
-  @include Breakpoint-desktopOnly {
-    margin-bottom: $Spacing-base;
-  };
+  margin-bottom: $Spacing-base;
 }
 
 .Workshops-ticket {

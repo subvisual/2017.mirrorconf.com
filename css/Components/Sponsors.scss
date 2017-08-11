@@ -30,27 +30,15 @@
 }
 
 .Sponsors-title {
-  margin-bottom: $Spacing-small;
-
-  @include Breakpoint-desktopOnly {
-    margin-bottom: $Spacing-base;
-  }
+  margin-bottom: $Spacing-base;
 }
 
 .Sponsors-levelsTitle {
-  margin-bottom: $Spacing-small;
-
-  @include Breakpoint-desktopOnly {
-    margin-bottom: $Spacing-base;
-  }
+  margin-bottom: $Spacing-base;
 }
 
 .Sponsors-level {
-  padding-bottom: $Spacing-small;
-
-  @include Breakpoint-desktopOnly {
-    padding-bottom: $Spacing-base;
-  }
+  padding-bottom: $Spacing-base;
 }
 
 .Sponsors-levelTitle {

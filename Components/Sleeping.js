@@ -82,7 +82,9 @@ const Sleeping = () => (
             <Location {...HotelData[0]} />
           </div>
 
-          <div className="Grid-1column" />
+          <div className="Sleeping-emptyColumn">
+            <div className="Grid-1column" />
+          </div>
 
           <div className="Grid-4column">
             <Location {...HotelData[1]} />
@@ -96,7 +98,9 @@ const Sleeping = () => (
             <Location {...HotelData[2]} />
           </div>
 
-          <div className="Grid-1column" />
+          <div className="Sleeping-emptyColumn">
+            <div className="Grid-1column" />
+          </div>
 
           <div className="Grid-4column">
             <Location {...HotelData[3]} />
