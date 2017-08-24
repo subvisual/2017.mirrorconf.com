@@ -7,7 +7,12 @@ import '../css/Components/ShowMore';
 class ShowMore extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-  }
+    isExpanded: PropTypes.boolean,
+  };
+
+  static defaultProps = {
+    isExpanded: false,
+  };
 
   handleClick = () => {
     this.setState({ expanded: true });
@@ -16,7 +21,7 @@ class ShowMore extends React.Component {
   render() {
     const classes = classNames({
       ShowMore: true,
-      'is-expanded': this.state.expanded,
+      'is-expanded': this.props.isExpanded || this.state.expanded,
     });
 
     return (

@@ -16,25 +16,25 @@ const WorkshopsPage = () => (
       <SectionTitle>Workshops</SectionTitle>
 
       <div className="WorkshopsPage-workshop">
-        <ShowMore>
+        <ShowMore isExpanded={WorkshopData[0].isExpanded}>
           <WorkshopDetails {...WorkshopData[0]} />
         </ShowMore>
       </div>
 
       <div className="WorkshopsPage-workshop">
-        <ShowMore>
+        <ShowMore isExpanded={WorkshopData[1].isExpanded}>
           <WorkshopDetails {...WorkshopData[1]} />
         </ShowMore>
       </div>
 
       <div className="WorkshopsPage-workshop">
-        <ShowMore>
+        <ShowMore isExpanded={WorkshopData[2].isExpanded}>
           <WorkshopDetails {...WorkshopData[2]} />
         </ShowMore>
       </div>
 
       <div className="WorkshopsPage-workshop">
-        <ShowMore>
+        <ShowMore isExpanded={WorkshopData[3].isExpanded}>
           <WorkshopDetails {...WorkshopData[3]} />
         </ShowMore>
       </div>
