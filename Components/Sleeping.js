@@ -49,7 +49,7 @@ const HotelData = [
     stars: 2,
     singlePrice: 34.5,
     doublePrice: 38,
-    address: 'Avenida Da Liberdade 96  Sao Jose De Sao Lazaro, 4715-037 Braga',
+    address: 'Avenida Da Liberdade 96, 4715-037 Braga',
     addressUrl: 'https://www.google.pt/maps/dir/Teatro+Circo+de+Braga+Sa,+Avenida+da+Liberdade,+Braga/Hotel+ibis+budget+Braga+Centro,+Avenida+da+Liberdade/@41.547477,-8.4227654,17z/am=t/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0xd24e87650169dfd:0x46276da956d09542!2m2!1d-8.4223874!2d41.5497678!1m5!1m1!1s0xd24fec76f686f75:0x85ac1f205c41d442!2m2!1d-8.419154!2d41.545131?hl=pt-PT',
     minutes: 7,
     phone: '+351 253 614 500',
