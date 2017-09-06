@@ -1,6 +1,7 @@
 @import "../Theme/Color";
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
+@import "../Theme/Browsers";
 
 .ShowMore-content {
   position: relative;
@@ -37,7 +38,12 @@
   max-height: 400px;
   pointer-events: none;
 
-  background-image: linear-gradient(to bottom, rgba(8, 19, 64, 0), #081340);
+  background-image: linear-gradient(to bottom, rgba(8, 19, 64, 0), $Color-deep-cove);
+
+  @include variablesSupported {
+    background-image: linear-gradient(to bottom, rgba(8, 19, 64, 0), var(--color-background));
+  }
+
   z-index: 1;
 }
 

@@ -3,14 +3,10 @@
 @import "../Theme/Color";
 @import "../Theme/Spacing";
 
-$Footer-gradient-start: rgba(0, 0, 0, 0);
-$Footer-gradient-end: rgba(0, 0, 0, 0.3);
 $Footer-separator-height: 1px;
 
 .Footer {
   padding: 0 $Spacing-xxSmall $Spacing-small;
-
-  background: linear-gradient(to bottom, $Footer-gradient-start, $Footer-gradient-end);
 
   @include Breakpoint-desktopOnly {
     padding: 0 0 $Spacing-small;
