@@ -11,9 +11,7 @@ import DropcapText from './DropcapText';
 import SectionTitle from './SectionTitle';
 import WorkshopsData from '../data/workshops';
 import SubSectionTitle from './SubSectionTitle';
-import Button from './Button';
 import Link from './Link';
-import Text from './Text';
 
 const workshopsReducer = (accum, workshop, index) => {
   if (index % 2 === 0) {
@@ -93,27 +91,6 @@ const Workshops = () => (
       <div className="Workshops-list">
         <div className="Grid Grid--1offset">
           {workshops.map(renderWorkshopsRow)}
-        </div>
-      </div>
-
-      <div className="Workshops-ticket">
-        <div className="Grid Grid--1offset">
-          <div className="Grid-5column">
-            <div className="Workshops-subHeader">
-              <SubSectionTitle>Get your workshops ticket</SubSectionTitle>
-            </div>
-
-            <Text>
-              We have also prepared a ticket bundle  with the conference ticket
-              plus one or two workshops to make it easier for you to not miss anything.
-            </Text>
-
-            <div className="Workshops-ticketLink">
-              <Link noHover target="_blank" href="https://ti.to/subvisual/mirror-conf-2017">
-                <Button>Buy Ticket</Button>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </Section>
