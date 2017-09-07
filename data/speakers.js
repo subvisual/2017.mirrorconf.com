@@ -29,8 +29,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Head of Design at Garanti</Title>
       <Text>Prior to joining Garanti, he was the product director for ÇiçekSepeti, the largest flower and gifting site in the world. Before ÇiçekSepeti, Aras was a Product Development Group Manager at Monitise, where his team of product managers and designers delivered top-notch digital experiences for leading financial institutions and e-commerce sites, such as İşBank, Visa, eBay, Turkcell and Turkish Airlines.</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>User Research for everyone</Title>
+      <Text>You can champion for great user research, even if you are not a designer or a researcher! We will cover a wide range of user research methods, learn to avoid common mistakes, and do case studies together to see how leading companies plan, execute and analyse user research in three simple steps.</Text>
     </EventDescription>,
   },
   {
@@ -45,8 +45,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Author of Atomic Design</Title>
       <Text>Brad Frost is a web designer, speaker, consultant, musician, and artist located in beautiful Pittsburgh, He has also helped create some tools and resources for web designers, including This Is Responsive, Pattern Lab, Styleguides.io, WTF Mobile Web, and Mobile Web Best Practices.</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>Let's Work Together!</Title>
+      <Text>Nobody works alone in a vacuum, and successful work hinges on how well a team communicates and collaborates with each other. This talk will explore many methods, tools, and techniques teams use to produce great web experiences. How do front-end development teams make sure they write clean and consistent code together? How do designers ensure colors, typography, and other design elements are used correctly? What deliverables should be created in an effective web design process? How are decisions communicated with the team, stakeholders, and the broader organization? There are no “right” answers to these questions, but this talk will cover some important principles and helpful tactics to help your team make great work together.</Text>
     </EventDescription>,
   },
   {
@@ -61,8 +61,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Chief Design Strategist at Fresh Tilled Soil</Title>
       <Text>C. Todd Lombardo is a leader who wears many hats, all at once: Author, designer, scientist, professor, and visualizer. After originally beginning his career in science, C. Todd shifted his focus to product and design, ultimately innovating, designing, and managing products for countless companies large and small.</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>What’s Your Roadmap?</Title>
+      <Text>A product roadmap is not a release plan, nor a Gantt chart, so why do so many product teams conflate the two? Using case studies and personal experience, this talk walks through what a roadmaps is and how teams can leverage them for a successful product future.</Text>
     </EventDescription>,
   },
   {
@@ -78,8 +78,8 @@ export default [
       <Title>Design Director at Microsoft</Title>
       <Text>Claudio is the Design Director at Microsoft Groove and Movies & TV, former CD at Elephant working for Apple, and Design Director at Fi.</Text>
       <Text>He's a regular design speaker and a casual writer. </Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>Home</Title>
+      <Text>“Home” is a talk about users’ digital life and designers’ roles in shaping them for the best. Home, understood as “the place where one lives permanently as a member of a household” is no longer a physical space for a vast group of people. Many of us find comfort in digital environments and use them for work and leisure and sometimes support.This talk aims to dig deeper into that relationship over time and discuss the key factors that will help designers keep and improve that connection between their products and their users.</Text>
     </EventDescription>,
   },
   {
@@ -94,8 +94,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Senior Engineer at Dadi</Title>
       <Text>Eduardo is a software engineer with a crush on the web. When he's not writing code or writing about writing code, you can find him advocating open-sourced software and rambling on about the importance of an open, democratic and accessible web. He creates tools like Staticman (https://staticman.net) or SpeedTracker (https://speedtracker.org) and spends his time working on a cutting-edge open-source web stack at DADI (https://dadi.tech).</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>Web Performance Kinetosis</Title>
+      <Text>Kinetosis, commonly known as motion sickness, is a condition in which a disagreement exists between visually perceived movement and the vestibular system’s sense of movement. Similarly, the way you think your website moves may be radically different from what your audience is actually experiencing.</Text>
     </EventDescription>,
   },
   {
@@ -158,8 +158,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Co-found and technical lead at Clearleft</Title>
       <Text>Jeremy made his first website for a band he was playing with in Germany in 1997. He founded Clearleft with Andy Budd and Richard Rutter in 2005, and now guides the company’s technical direction.</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>Evaluating Technology</Title>
+      <Text>We work with technology every day. And every day it seems like there’s more and more technology to understand: graphic design tools, build tools, frameworks and libraries, not to mention new HTML, CSS and JavaScript features landing in browsers. How should we best choose which technologies to invest our time in? When we decide to weigh up the technology choices that confront us, what are the best criteria for doing that? This talk will help you evaluate tools and technologies in a way that best benefits the people who use the websites that we are designing and developing. Let’s take a look at some of the hottest new web technologies like service workers and web components. Together we will dig beneath the hype to find out whether they will really change life on the web for the better.</Text>
     </EventDescription>,
   },
   {
