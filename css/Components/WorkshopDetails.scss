@@ -70,6 +70,7 @@ $WorkshopDetails-name-font-weight: bold;
 }
 
 .WorkshopDetails-name,
+.WorkshopDetails-soldOut,
 .WorkshopDetails-priceValue {
   max-width: 650px;
 
@@ -84,6 +85,12 @@ $WorkshopDetails-name-font-weight: bold;
     font-size: $WorkshopDetails-name-font-size-desktop;
     line-height: $WorkshopDetails-name-line-height-desktop;
   }
+}
+
+.WorkshopDetails-soldOut {
+  margin-top: $Spacing-xSmall;
+
+  color: $Color-razzmatazz;
 }
 
 .WorkshopDetails-price {

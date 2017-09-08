@@ -32,6 +32,23 @@ ticketSection.propTypes = {
   nonAttendeePrice: PropTypes.number.isRequired,
 };
 
+
+const Tickets = (props) => {
+  if (props.soldOut) {
+    return <div className="WorkshopDetails-soldOut">Sold Out</div>;
+  }
+
+  return ticketSection({ className: 'WorkshopDetails-ticketsDesktop', ...props });
+};
+
+Tickets.propTypes = {
+  soldOut: PropTypes.boolean,
+};
+
+Tickets.defaultProps = {
+  soldOut: false,
+};
+
 const WorkshopDetails = props => (
   <div className="WorkshopDetails" id={props.id}>
     <div className="WorkshopDetails-imageContainer">
@@ -55,8 +72,7 @@ const WorkshopDetails = props => (
               {props.location}
             </Link>
           </div>
-
-          {ticketSection({ className: 'WorkshopDetails-ticketsDesktop', ...props })}
+          <Tickets {...props} />
         </div>
       </Mirrored>
       <div className="WorkshopDetails-description">

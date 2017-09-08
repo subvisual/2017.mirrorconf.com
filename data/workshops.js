@@ -71,6 +71,7 @@ export default [
     location: 'GNRation',
     locationUrl: 'https://www.google.pt/maps/place/GNRation/@41.5531265,-8.4284087,17z/data=!3m1!4b1!4m5!3m4!1s0xd24fee9ae15fe63:0xf715da419f911455!8m2!3d41.5531265!4d-8.42622?hl=en',
     attendeePrice: 150,
+    soldOut: true,
     nonAttendeePrice: 200,
     description: <EventDescription>
       <Text>Style guides, design systems, and pattern libraries provide solid ground for us to stand on as we tackle the increasingly diverse and fast-moving web landscape. This full-day session will tackle all that goes into making and maintaining successful interface design systems, including:</Text>
