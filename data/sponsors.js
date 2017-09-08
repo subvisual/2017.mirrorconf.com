@@ -8,12 +8,17 @@ import MinderaLogo from '../images/sponsors/mindera.png';
 import DesignerNewsLogo from '../images/sponsors/dn.svg';
 import StickermuleLogo from '../images/sponsors/sticker-mule-logo.svg';
 import UnixStickersLogo from '../images/sponsors/unixstickers-logo.svg';
+import TapLogo from '../images/sponsors/tap.png';
+import StartupBragaLogo from '../images/sponsors/startupbraga.png';
+import WeDoLogo from '../images/sponsors/wedo.png';
 
 export default [
   {
     title: 'Gold',
     logos: [
       { id: 1, alt: 'Seegno logo', src: SeegnoLogo, href: 'https://seegno.com/' },
+      { id: 2, alt: 'Startup Braga logo', src: StartupBragaLogo, href: 'http://www.investbraga.com/startup' },
+      { id: 3, alt: 'WeDo logo', src: WeDoLogo, href: 'http://ww1.wedotechnologies.com/en/' },
     ],
   },
   {
@@ -31,6 +36,7 @@ export default [
       { id: 6, alt: 'Bürocratik', src: BuroLogo, href: 'http://www.burocratik.com/' },
       { id: 7, alt: 'Stickermule', src: StickermuleLogo, href: 'https://www.stickermule.com/' },
       { id: 8, alt: 'unixstickers', src: UnixStickersLogo, href: 'http://www.unixstickers.com/' },
+      { id: 9, alt: 'Tap Logo', src: TapLogo, href: 'https://www.flytap.com/pt-pt' },
     ],
   },
   {
