@@ -37,7 +37,7 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
   position: relative;
 
   @include Breakpoint-desktopOnly {
-    height: $Moving-image-height;
+    min-height: $Moving-image-height;
   }
 }
 
@@ -102,4 +102,54 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
   @include Breakpoint-desktopOnly {
     padding: 0;
   }
+}
+
+.Moving-tap {
+  position: relative;
+  height: 200px;
+
+
+  @media screen and (min-width: $Breakpoint-desktop + 1) {
+    margin-top: 80px;
+  }
+}
+
+.Moving-tapLogo {
+  @include responsive-background-image("../../images/moving/tap/tap");
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 26px;
+
+  background-position: left;
+}
+
+.Moving-tapPlane {
+  @include responsive-background-image("../../images/moving/tap/plane");
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 150px;
+  max-width: 300px;
+
+  transform: translate(-50%, -50%);
+}
+
+.Moving-tapActions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Moving-tapAction {
+  padding-top: $Spacing-xSmall;
+}
+
+.Moving-tapAction:first-child {
+  padding-right: $Spacing-xSmall;
 }

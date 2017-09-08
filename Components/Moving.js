@@ -4,12 +4,14 @@ import '../css/Components/Grid';
 import '../css/Components/Moving';
 
 import Text from '../Components/Text';
+import Button from '../Components/Button';
 import Link from '../Components/Link';
 import Section from '../Components/Section';
 import SectionTitle from '../Components/SectionTitle';
 import TextHighlight from '../Components/TextHighlight';
 import NumberedBlock from '../Components/NumberedBlock';
 import SubSectionTitle from '../Components/SubSectionTitle';
+import pdf from '../tap.pdf';
 
 const Moving = () => (
   <div className="Moving">
@@ -87,6 +89,42 @@ const Moving = () => (
           <div className="Grid Grid--1offset">
             <div className="Grid-5column">
               <div className="Moving-lisbonImage" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="Moving-section">
+        <div className="Grid Grid--1offset">
+          <div className="Grid-4column">
+            <div className="Moving-tap">
+              <div className="Moving-tapLogo" />
+              <div className="Moving-tapPlane" />
+            </div>
+          </div>
+          <div className="Grid-5column">
+            <div className="Moving-subtitle">
+              <SubSectionTitle>Flight discount</SubSectionTitle>
+            </div>
+            <div className="Moving-description">
+              <Text>
+                Our official airline, TAP Portugal, is giving a
+                discount code to all attendees. If you are traveling
+                in tourist class you will have a 10% discount. If
+                traveling in business class you will get 20%
+                discount.
+              </Text>
+              <div className="Moving-tapActions">
+                <div className="Moving-tapAction">
+                  <Link noHover href={pdf} target="_blank">
+                    <Button transparent>Get Your Code</Button>
+                  </Link>
+                </div>
+                <div className="Moving-tapAction">
+                  <Link noHover href="https://ti.to/subvisual/mirror-conf-2017" target="_blank">
+                    <Button>Buy Your Ticket</Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -2,6 +2,12 @@ var cssnext = require("postcss-cssnext");
 var CompressionPlugin = require("compression-webpack-plugin");
 
 exports.modifyWebpackConfig = function (config, env) {
+  config.loader('pdf', function(cfg) {
+    cfg.test = /\.pdf/
+    cfg.loader = 'file-loader'
+    return cfg
+  });
+
   config.merge({
     postcss: [
       cssnext({
