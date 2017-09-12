@@ -18,7 +18,7 @@ export default class Tabs extends Component {
     return () => this.setState({ activeTab: component });
   }
 
-  renderLink = (tab) => {
+  renderLink = tab => {
     const { activeTab } = this.state;
 
     const className = classNames({
@@ -28,6 +28,7 @@ export default class Tabs extends Component {
 
     return (
       <button className={className} onClick={this.switchTabTo(tab)}>
+        <div className="Tabs-background" />
         <div className="Tabs-linkLabel">
           <SubSectionTitle edge>{tab.label}</SubSectionTitle>
         </div>
@@ -42,13 +43,9 @@ export default class Tabs extends Component {
     return (
       <div className="Tabs">
         <Section>
-          <div className="Tabs-navigation">
-            {tabs.map(this.renderLink)}
-          </div>
+          <div className="Tabs-navigation">{tabs.map(this.renderLink)}</div>
         </Section>
-        <div className="Tabs-content">
-          {activeTab.component}
-        </div>
+        <div className="Tabs-content">{activeTab.component}</div>
       </div>
     );
   }

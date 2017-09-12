@@ -1,0 +1,251 @@
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+$ScheduleTable-durations: 100 200 300 400 25 50 75 125;
+$ScheduleTable-time-column-width: 52px;
+$ScheduleTable-time-column-width-desktop: 112px;
+
+.ScheduleTable {
+  display: flex;
+
+  max-width: 100%;
+
+  @include Breakpoint-mobileOnly {
+    flex-direction: column;
+  };
+
+  &-header {
+    display: flex;
+  }
+
+  &-headerColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: $Spacing-xSmall;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-headerRow {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+
+    @include Breakpoint-mobileOnly {
+      margin-left: $ScheduleTable-time-column-width;
+    };
+  }
+
+  &-day {
+    margin-bottom: $Spacing-xxSmall;
+
+    text-align: center;
+    font-size: 26px;
+    font-family: $Global-font-family-serif;
+    font-weight: bold;
+    color: $Color-white;
+
+    @include Breakpoint-desktopOnly {
+      font-size: 51px;
+    };
+  }
+
+  &-dayWrapper {
+    flex: 1;
+  }
+
+  &-dayWrapper:first-child {
+    @include Breakpoint-desktopOnly {
+      margin-left: $ScheduleTable-time-column-width-desktop;
+    };
+  }
+
+  &-dayWrapper:not(:first-child) {
+    @include Breakpoint-desktopOnly {
+      .ScheduleTable-time {
+        display: none;
+      }
+
+      .ScheduleTable-row {
+        margin-left: $Spacing-xSmall;
+
+        .ScheduleTable-entry:not(:last-child):after {
+          content: "";
+          position: absolute;
+
+          top: 0;
+          left: -$Spacing-xSmall;
+          width: $Spacing-xSmall;
+          height: 100%;
+
+          background: rgba($Color-white, 0.1);
+        }
+
+        .ScheduleTable-entry.ScheduleTable-filler:after {
+          display: none;
+        }
+      }
+
+      .ScheduleTable-header {
+        margin-left: $Spacing-xSmall;
+      }
+    };
+  }
+
+  &-dayWrapper:not(:last-child) {
+    @include Breakpoint-mobileOnly {
+      margin-bottom: $Spacing-base;
+    };
+  }
+
+  &-locationName {
+    flex: 1;
+
+    margin-right: $Spacing-xxSmall;
+    padding: $Spacing-xSmall 0;
+
+    background-color: rgba($Color-white, 0.1);
+
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.44;
+    font-family: $Global-font-family-serif;
+    color: $Color-coral;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include Breakpoint-desktopOnly {
+      margin-right: $Spacing-xSmall;
+
+      font-size: 18px;
+    };
+  }
+
+  &-time {
+    min-width: $ScheduleTable-time-column-width;
+
+    font-size: 13px;
+    font-weight: bold;
+    font-family: $Global-font-family-serif;
+    color: $Color-coral;
+
+    @include Breakpoint-desktopOnly {
+      position: absolute;
+
+      top: 0;
+      height: 100%;
+      left: -$ScheduleTable-time-column-width-desktop;
+
+      width: $ScheduleTable-time-column-width-desktop;
+
+      font-size: 18px;
+
+      background-color: rgba($Color-white, 0.1);
+    };
+  }
+
+  &-row {
+    display: flex;
+    position: relative;
+
+    margin-bottom: $Spacing-xxSmall;
+
+    background-color: rgba($Color-white, 0.1);
+
+    @include Breakpoint-desktopOnly {
+      margin-bottom: $Spacing-xSmall;
+    };
+  }
+
+  &-entry {
+    flex: 1;
+    position: relative;
+
+    margin-right: $Spacing-xxSmall;
+
+    background-color: rgba($Color-white, 0.1);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include Breakpoint-desktopOnly {
+      margin-right: $Spacing-xSmall;
+      padding-right: $Spacing-xxSmall;
+    };
+  }
+
+  &-row:not(:last-child) &-entry:before {
+    position: absolute;
+
+    content: "";
+
+    width: 100%;
+    height: $Spacing-xxSmall;
+
+    bottom: -$Spacing-xxSmall;
+    left: 0;
+    background-color: rgba($Color-white, 0.1);
+
+    @include Breakpoint-desktopOnly {
+      height: $Spacing-xSmall;
+
+      bottom: -$Spacing-xSmall;
+    };
+  }
+
+  &-entryTitle,
+  &-entrySubtitle {
+    font-family: $Global-font-family-sans;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $Color-white;
+
+    @include Breakpoint-desktopOnly {
+      font-size: 26px;
+    };
+  }
+
+  &-entryTitle {
+    font-weight: bold;
+  }
+
+  &-entrySubtitle {
+    margin-bottom: $Spacing-xxSmall;
+  }
+
+  &-entrySpeaker {
+    font-family: $Global-font-family-sans;
+    font-size: 13px;
+    color: $Color-white;
+
+    @include Breakpoint-desktopOnly {
+      font-size: 18px;
+    };
+  }
+
+  @each $duration in $ScheduleTable-durations {
+    &-#{$duration}hours {
+      height: ($duration / 100) * 104px;
+    }
+  }
+
+  &-filler {
+    display: none;
+
+    @include Breakpoint-desktopOnly {
+      display: block;
+
+      background: none;
+    };
+  }
+}
