@@ -7,8 +7,6 @@ $SpeakerDetails-name-font-size: 51px;
 $SpeakerDetails-name-line-height: 78px;
 $SpeakerDetails-name-font-size-mobile: 26px;
 $SpeakerDetails-name-line-height-mobile: 39px;
-$SpeakerDetails-name-font-family: "matrix-ii";
-$SpeakerDetails-link-font-family: "matrix-ii";
 $SpeakerDetails-name-font-weight: bold;
 
 .SpeakerDetails {
@@ -60,7 +58,7 @@ $SpeakerDetails-name-font-weight: bold;
 
 .SpeakerDetails-info {
   color: $Color-white;
-  font-family: "matrix-ii";
+  font-family: $Global-font-family-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -72,7 +70,7 @@ $SpeakerDetails-name-font-weight: bold;
 
   color: $Color-coral;
 
-  font-family: $SpeakerDetails-name-font-family;
+  font-family: $Global-font-family-serif;
   font-size: $SpeakerDetails-name-font-size-mobile;
   font-weight: $SpeakerDetails-name-font-weight;
   line-height: $SpeakerDetails-name-line-height-mobile;
@@ -146,11 +144,11 @@ $SpeakerDetails-name-font-weight: bold;
 .SpeakerDetails-websiteIcon {
   background-image: url("../../images/globe.svg");
 }
- 
+
 .SpeakerDetails-link {
   color: $Color-razzmatazz;
   font-weight: bold;
-  font-family: $SpeakerDetails-link-font-family;
+  font-family: $Global-font-family-serif;
 }
 
 .SpeakerDetails-name,

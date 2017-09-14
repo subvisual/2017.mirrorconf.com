@@ -1,15 +1,15 @@
 @import "../Theme/Color";
+@import "../Theme/Global";
 @import "../Theme/Breakpoint";
 
 $Text-font-size: 18px;
 $Text-line-height: 26px;
-$Text-font-family: "proxima-nova";
 $Text-font-weight: normal;
 
 .Text {
   color: $Color-white;
 
-  font-family: $Text-font-family;
+  font-family: $Global-font-family-sans;
   font-size: $Text-font-size;
   font-weight: $Text-font-weight;
   line-height: $Text-line-height;
@@ -22,4 +22,3 @@ $Text-font-weight: normal;
 .Text.Text--preLineBreak {
   white-space: pre-line;
 }
-

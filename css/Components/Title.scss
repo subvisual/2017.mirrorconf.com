@@ -1,17 +1,17 @@
 @import "../Theme/Color";
+@import "../Theme/Global";
 @import "../Theme/Breakpoint";
 
 $Title-font-size-desktop: 72px;
 $Title-line-height-desktop: 91px;
 $Title-font-size-mobile: 39px;
 $Title-line-height-mobile: 52px;
-$Title-font-family: "matrix-ii";
 $Title-font-weight: bold;
 
 .Title {
   color: $Color-white;
 
-  font-family: $Title-font-family;
+  font-family: $Global-font-family-serif;
   font-size: $Title-font-size-mobile;
   font-weight: $Title-font-weight;
   line-height: $Title-line-height-mobile;

@@ -1,8 +1,7 @@
 @import "../Theme/Breakpoint";
 @import "../Theme/Color";
 @import "../Theme/Mixins";
-
-$CaptionedNumber-font-family: "matrix-ii";
+@import "../Theme/Global";
 
 $CaptionedNumber-nr-font-size-desktop: 52px;
 $CaptionedNumber-nr-line-height-desktop: 54px;
@@ -14,7 +13,7 @@ $CaptionedNumber-caption-font-size: 18px;
 $CaptionedNumber-caption-line-height: 26px;
 
 .CaptionedNumber {
-  font-family: $CaptionedNumber-font-family;
+  font-family: $Global-font-family-serif;
 }
 
 .CaptionedNumber-nr {

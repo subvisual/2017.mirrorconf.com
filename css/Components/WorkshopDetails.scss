@@ -7,7 +7,6 @@ $WorkshopDetails-name-font-size-mobile: 26px;
 $WorkshopDetails-name-font-size-desktop: 51px;
 $WorkshopDetails-name-line-height-mobile: 39px;
 $WorkshopDetails-name-line-height-desktop: 78px;
-$WorkshopDetails-name-font-family: "matrix-ii";
 $WorkshopDetails-name-font-weight: bold;
 
 .WorkshopDetails {
@@ -54,7 +53,7 @@ $WorkshopDetails-name-font-weight: bold;
 
 .WorkshopDetails-info {
   color: $Color-white;
-  font-family: "matrix-ii";
+  font-family: $Global-font-family-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -76,7 +75,7 @@ $WorkshopDetails-name-font-weight: bold;
 
   color: $Color-coral;
 
-  font-family: $WorkshopDetails-name-font-family;
+  font-family: $Global-font-family-serif;
   font-weight: $WorkshopDetails-name-font-weight;
   font-size: $WorkshopDetails-name-font-size-mobile;
   line-height: $WorkshopDetails-name-line-height-mobile;

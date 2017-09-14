@@ -9,7 +9,6 @@ $Speaker-name-font-size: 26px;
 $Speaker-name-line-height: 39px;
 $Speaker-name-font-size-mobile: 18px;
 $Speaker-name-line-height-mobile: 26px;
-$Speaker-name-font-family: "matrix-ii";
 $Speaker-name-font-weight: bold;
 
 .Speaker {
@@ -34,7 +33,7 @@ $Speaker-name-font-weight: bold;
 .Speaker-name {
   color: $Color-coral;
 
-  font-family: $Speaker-name-font-family;
+  font-family: $Global-font-family-serif;
   font-size: $Speaker-name-font-size-mobile;
   font-weight: $Speaker-name-font-weight;
   line-height: $Speaker-name-line-height-mobile;

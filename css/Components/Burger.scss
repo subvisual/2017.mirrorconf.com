@@ -2,12 +2,12 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 @import "../Theme/Mixins";
+@import "../Theme/Global";
 
 $Burger-outer-size: 48px;
 $Burger-line-height: 2px;
 $Burger-label-font-size: 8px;
 $Burger-label-line-height: 8px;
-$Burger-label-font-family: "proxima-nova";
 $Burger-label-font-weight: bold;
 $Burger-label-letter-spacing: 0.5px;
 
@@ -49,7 +49,7 @@ $Burger-label-letter-spacing: 0.5px;
 
   display: block;
 
-  font-family: $Burger-label-font-family;
+  font-family: $Global-font-family-sans;
   font-size: $Burger-label-font-size;
   font-weight: $Burger-label-font-weight;
   letter-spacing: $Burger-label-letter-spacing;

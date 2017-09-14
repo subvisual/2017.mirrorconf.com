@@ -7,7 +7,6 @@ $Workshop-name-font-size: 26px;
 $Workshop-name-line-height: 39px;
 $Workshop-name-font-size-mobile: 18px;
 $Workshop-name-line-height-mobile: 26px;
-$Workshop-name-font-family: "matrix-ii";
 $Workshop-name-font-weight: bold;
 
 .Workshop {
@@ -32,7 +31,7 @@ $Workshop-name-font-weight: bold;
 .Workshop-name {
   color: $Color-coral;
 
-  font-family: $Workshop-name-font-family;
+  font-family: $Global-font-family-serif;
   font-size: $Workshop-name-font-size-mobile;
   font-weight: $Workshop-name-font-weight;
   line-height: $Workshop-name-line-height-mobile;

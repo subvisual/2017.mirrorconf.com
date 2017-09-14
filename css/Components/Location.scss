@@ -1,7 +1,6 @@
 @import "../Theme/Color";
+@import "../Theme/Global";
 @import "../Theme/Spacing";
-
-$Location-priceValue-font-family: "matrix-ii";
 
 .Location {
   margin-bottom: $Spacing-base;
@@ -20,7 +19,7 @@ $Location-priceValue-font-family: "matrix-ii";
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
-  font-family: $Location-priceValue-font-family;
+  font-family: $Global-font-family-serif;
 }
 
 .Location-transparentText {

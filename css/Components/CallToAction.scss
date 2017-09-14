@@ -1,4 +1,5 @@
 @import "../Theme/Color";
+@import "../Theme/Global";
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 
@@ -6,7 +7,6 @@ $CallToAction-title-font-size: 26px;
 $CallToAction-title-line-height: 39px;
 $CallToAction-title-font-size-mobile: 18px;
 $CallToAction-title-line-height-mobile: 26px;
-$CallToAction-title-font-family: "matrix-ii";
 $CallToAction-title-font-weight: bold;
 
 .CallToAction-title {
@@ -14,7 +14,7 @@ $CallToAction-title-font-weight: bold;
 
   color: $Color-madison;
 
-  font-family: $CallToAction-title-font-family;
+  font-family: $Global-font-family-serif;
   font-size: $CallToAction-title-font-size-mobile;
   font-weight: $CallToAction-title-font-weight;
   line-height: $CallToAction-title-line-height-mobile;

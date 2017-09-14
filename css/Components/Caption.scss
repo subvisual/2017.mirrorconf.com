@@ -3,14 +3,13 @@
 
 $Caption-font-size: 13px;
 $Caption-line-height: 26px;
-$Caption-font-family: "proxima-nova";
 $Caption-font-weight: bold;
 $Caption-letter-spacing: 0.5px;
 
 .Caption {
   color: $Color-white;
 
-  font-family: $Caption-font-family;
+  font-family: $Global-font-family-sans;
   font-size: $Caption-font-size;
   font-weight: $Caption-font-weight;
   letter-spacing: $Caption-letter-spacing;

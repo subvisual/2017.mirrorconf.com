@@ -1,4 +1,5 @@
 @import "../Theme/Color";
+@import "../Theme/Global";
 @import "../Theme/Spacing";
 
 $Button-anim-offset: 3px;
@@ -18,7 +19,7 @@ $Button-alternative-color: #190b5b;
   color: $Color-white;
   cursor: pointer;
 
-  font-family: "proxima-nova";
+  font-family: $Global-font-family-sans;
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 0.7px;

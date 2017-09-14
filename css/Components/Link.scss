@@ -1,6 +1,6 @@
 @import "../Theme/Color";
+@import "../Theme/Global";
 
-$Link-font-family: "proxima-nova";
 $Link-font-size: 18px;
 $Link-font-size-small: 13px;
 $Link-line-height: 26px;
@@ -10,7 +10,7 @@ $Link-line-height: 26px;
 
   color: $Color-white;
 
-  font-family: $Link-font-family;
+  font-family: $Global-font-family-sans;
   font-size: $Link-font-size;
   line-height: $Link-line-height;
   text-decoration: none;
@@ -55,5 +55,5 @@ $Link-line-height: 26px;
 }
 
 .Link.Link--alternateFont {
-  font-family: "matrix-ii";
+  font-family: $Global-font-family-serif;
 }
