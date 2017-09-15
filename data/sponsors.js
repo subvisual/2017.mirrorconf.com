@@ -9,8 +9,10 @@ import DesignerNewsLogo from '../images/sponsors/dn.svg';
 import StickermuleLogo from '../images/sponsors/sticker-mule-logo.svg';
 import UnixStickersLogo from '../images/sponsors/unixstickers-logo.svg';
 import TapLogo from '../images/sponsors/tap.png';
-import StartupBragaLogo from '../images/sponsors/startupbraga.png';
-import WeDoLogo from '../images/sponsors/wedo.png';
+import StartupBragaLogo from '../images/sponsors/startupbraga@2x.png';
+import WeDoLogo from '../images/sponsors/wedo@2x.png';
+import SubvisualLogo from '../images/sponsors/subvisual@2x.png';
+import WhitesmithLogo from '../images/sponsors/whitesmith@2x.png';
 
 export default [
   {
@@ -25,6 +27,13 @@ export default [
     title: 'Wi-fi',
     logos: [
       { id: 7, alt: 'Mindera', src: MinderaLogo, href: 'https://www.mindera.com/' },
+    ],
+  },
+  {
+    title: 'Quiz',
+    logos: [
+      { id: 7, alt: 'Subvisual', src: SubvisualLogo, href: 'https://subvisual.co/' },
+      { id: 8, alt: 'Whitesmith', src: WhitesmithLogo, href: 'https://www.whitesmith.co/' },
     ],
   },
   {
