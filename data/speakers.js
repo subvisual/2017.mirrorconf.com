@@ -110,8 +110,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Designer, Writer and Illustrator</Title>
       <Text>Frank Chimero (key-mare-oh) is a designer, writer, and illustrator. He runs a one-man studio from Brooklyn, specializing in publication design for page and screen, digital design systems, and image-making.</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>How to Tell When You're Tired</Title>
+      <Text>The most famous story about work comes from Greek myth: Sisyphus woke each morning to push a rock up a mountain, then the next day found the rock back at the bottom, his progress gone and the challenge reset. After 20 years of making websites, his story sounds familiar to me. If expertise is impossible because everything changes so frequently, how does a person develop wisdom about their work? How do you not burn out? Are these silly questions? Maybe, but change begins with diligent effort and a new perspective on the work.</Text>
     </EventDescription>,
   },
   {
