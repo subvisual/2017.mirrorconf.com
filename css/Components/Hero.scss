@@ -124,6 +124,10 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
     font-size: $Hero-uvp-font-size-desktop;
     line-height: $Hero-uvp-line-height-desktop;
   }
+
+  @include Breakpoint-tabletOnly {
+    max-width: $Hero-uvp-max-width;
+  }
 }
 
 .Hero-date,

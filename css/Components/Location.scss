@@ -70,6 +70,10 @@ $Location-priceValue-font-family: "matrix-ii";
 
 .Location-stars {
   display: flex;
+
+  .Location-star:not(:first-child) {
+    margin-left: 6px;
+  }
 }
 
 .Location-star {
