@@ -110,7 +110,7 @@ const Moving = () => (
                 Our official airline, TAP Portugal, is giving a
                 discount code to all attendees. If you are traveling
                 in tourist class you will have a 10% discount. If
-                traveling in business class you will get 20%
+                traveling in business class you will get 15%
                 discount.
               </Text>
               <div className="Moving-tapActions">
