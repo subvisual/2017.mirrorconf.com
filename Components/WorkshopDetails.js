@@ -19,7 +19,7 @@ const ticketSection = ({ className, attendeePrice, nonAttendeePrice }) => (
     </div>
 
     <div className="WorkshopDetails-cta">
-      <Link alternateFontuhref="https://ti.to/subvisual/mirror-conf-2017">
+      <Link alternateFont href="https://ti.to/subvisual/mirror-conf-2017">
         <Button>Buy ticket</Button>
       </Link>
     </div>
