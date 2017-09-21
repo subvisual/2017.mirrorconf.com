@@ -13,14 +13,26 @@ import StartupBragaLogo from '../images/sponsors/startupbraga@2x.png';
 import WeDoLogo from '../images/sponsors/wedo@2x.png';
 import SubvisualLogo from '../images/sponsors/subvisual@2x.png';
 import WhitesmithLogo from '../images/sponsors/whitesmith@2x.png';
+import UniplacesLogo from '../images/sponsors/uniplaces@2x.png';
+import ReactiveConfLogo from '../images/sponsors/reactiveconf@2x.png';
+import DankeLogo from '../images/sponsors/danke@2x.png';
+import BragaioLogo from '../images/sponsors/bragaio@2x.png';
+import BlipLogo from '../images/sponsors/blip-logo@2x.png';
 
 export default [
+  {
+    title: 'Platinum',
+    logos: [
+      { id: 1, alt: 'Uniplaces logo', src: UniplacesLogo, href: 'https://www.uniplaces.com/' },
+    ],
+  },
   {
     title: 'Gold',
     logos: [
       { id: 1, alt: 'Seegno logo', src: SeegnoLogo, href: 'https://seegno.com/' },
       { id: 2, alt: 'Startup Braga logo', src: StartupBragaLogo, href: 'http://www.investbraga.com/startup' },
       { id: 3, alt: 'WeDo logo', src: WeDoLogo, href: 'http://ww1.wedotechnologies.com/en/' },
+      { id: 4, alt: 'Blip logo', src: BlipLogo, href: 'https://blip.pt/' },
     ],
   },
   {
@@ -46,6 +58,7 @@ export default [
       { id: 7, alt: 'Stickermule', src: StickermuleLogo, href: 'https://www.stickermule.com/' },
       { id: 8, alt: 'unixstickers', src: UnixStickersLogo, href: 'http://www.unixstickers.com/' },
       { id: 9, alt: 'Tap Logo', src: TapLogo, href: 'https://www.flytap.com/pt-pt' },
+      { id: 10, alt: 'Danke logo', src: DankeLogo, href: 'http://www.danke.pt/' },
     ],
   },
   {
@@ -53,6 +66,8 @@ export default [
     logos: [
       { id: 5, alt: 'Usersnap logo', src: UsersnapLogo, href: 'https://usersnap.com/' },
       { id: 8, alt: 'DesignerNews logo', src: DesignerNewsLogo, href: 'https://www.designernews.co/' },
+      { id: 9, alt: 'Reactive Conf logo', src: ReactiveConfLogo, href: 'https://reactiveconf.com/' },
+      { id: 10, alt: 'Braga IO logo', src: BragaioLogo, href: 'http://braga.io/pt/' },
     ],
   },
 ];
