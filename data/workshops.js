@@ -34,6 +34,7 @@ export default [
     location: 'GNRation',
     locationUrl: 'https://www.google.pt/maps/place/GNRation/@41.5531265,-8.4284087,17z/data=!3m1!4b1!4m5!3m4!1s0xd24fee9ae15fe63:0xf715da419f911455!8m2!3d41.5531265!4d-8.42622?hl=en',
     attendeePrice: 150,
+    soldOut: true,
     nonAttendeePrice: 200,
     description: <EventDescription>
       <Text>CSS has seen a lot of new feature releases in the last few years. Keeping up with everything can sometimes be overwhelming. It’s even harder for many designers and developers to ditch the tools and frameworks they’re already familiar with and relying on, in favor of new, native “frameworks” with a less than familiar syntax. But doing so is the way forward. CSS’s native features like Flexbox and Grid as well as CSS Variables provide a lot more power and flexibility than any previous frameworks or tools did—power than we should embrace and put to good use today moving forward.</Text>
