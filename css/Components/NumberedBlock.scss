@@ -1,4 +1,5 @@
 @import "../Theme/Spacing";
+@import "../Theme/Global";
 
 .NumberedBlock {
   position: relative;
@@ -6,9 +7,14 @@
 
 .NumberedBlock-number {
   position: absolute;
+  top: 0;
+  left: 0;
 
-  top: 50%;
-  left: -$Spacing-xSmall;
+  font-family: $Global-font-family-serif;
+  font-size: 18px;
+  line-height: 26px;
+}
 
-  transform: translateY(-50%);
+.NumberedBlock-block {
+  padding-left: $Spacing-xSmall;
 }

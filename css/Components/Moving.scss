@@ -41,41 +41,58 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
   margin-bottom: $Spacing-base;
 }
 
-.Moving-portoImage,
-.Moving-lisbonImage {
-  position: relative;
+.Moving-portoImageWrapper {
+  margin-top: -$Spacing-small;
+}
 
-  width: 100%;
+.Moving-lisbonImageWrapper {
+  margin-top: -$Spacing-xSmall;
+}
+
+.Moving-portoImageWrapper,
+.Moving-lisbonImageWrapper {
+  position: relative;
   height: $Moving-image-height;
 
-  margin-bottom: -$Spacing-small;
-
-  transform: translateY(-$Spacing-small);
-
-  z-index: $Moving-z-index-background;
+  @include Breakpoint-mobileOnly {
+    height: 0;
+    $image-ratio: $Moving-image-height / 294px;
+    padding-bottom: calc(100% * #{$image-ratio});
+    max-width: 500px;
+  }
 
   @include Breakpoint-desktopOnly {
-    transform: none;
+    margin-top: 0;
   }
+}
+
+.Moving-portoImage,
+.Moving-lisbonImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $Moving-z-index-background;
 }
 
 .Moving-portoImage {
   $pre: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color);
-  @include responsive-background-image("../../images/moving/porto", $pre: $pre);
+  @include responsive-background-image("../../images/moving/porto", $pre: $pre, $size: cover);
 
   @include Breakpoint-desktopOnly {
     $pre: linear-gradient(to left, $Moving-gradient-start-color, $Moving-gradient-end-color);
-    @include responsive-background-image("../../images/moving/porto", $pre: $pre);
+    @include responsive-background-image("../../images/moving/porto", $pre: $pre, $size: cover);
   }
 }
 
 .Moving-lisbonImage {
   $pre: linear-gradient(to top, $Moving-gradient-start-color, $Moving-gradient-end-color);
-  @include responsive-background-image("../../images/moving/lisbon", $pre: $pre);
+  @include responsive-background-image("../../images/moving/lisbon", $pre: $pre, $size: cover);
 
   @include Breakpoint-desktopOnly {
     $pre: linear-gradient(to right, $Moving-gradient-start-color, $Moving-gradient-end-color);
-    @include responsive-background-image("../../images/moving/lisbon", $pre: $pre);
+    @include responsive-background-image("../../images/moving/lisbon", $pre: $pre, $size: cover);
   }
 }
 
@@ -90,13 +107,14 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 
 .Moving-description {
   position: relative;
-
-  padding-left: $Spacing-xSmall;
-
   z-index: $Moving-z-index-foreground;
+}
 
+.Moving-descriptionNumberedBlock {
   @include Breakpoint-desktopOnly {
-    padding: 0;
+    position: relative;
+    top: 0;
+    left: -$Spacing-xSmall;
   }
 }
 

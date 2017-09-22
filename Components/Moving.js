@@ -31,28 +31,30 @@ const Moving = () => (
                 The closest airport is in Porto (OPO), from where you can either:
               </Text>
               <br />
-              <NumberedBlock number="1.">
-                <Text>
-                  Catch a direct bus with a service called
-                  {' '}
-                  <Link target="_blank" href="https://getbus.eu/en/" noHover>
-                    <TextHighlight>GetBus</TextHighlight>
-                  </Link>
-                  ;
-                </Text>
-              </NumberedBlock>
-              <br />
-              <NumberedBlock number="2.">
-                <Text>
-                  Catch a
-                  {' '}
-                  <Link target="_blank" href="https://www.cp.pt/passageiros/pt/consultar-horarios/estacoes/porto-campanha" noHover>
-                    <TextHighlight>train at Porto Campanhã</TextHighlight>
-                  </Link>
-                  {' '}
-                  (~ 1 hour trip).
-                </Text>
-              </NumberedBlock>
+              <div className="Moving-descriptionNumberedBlock">
+                <NumberedBlock number="1.">
+                  <Text>
+                    Catch a direct bus with a service called
+                    {' '}
+                    <Link target="_blank" href="https://getbus.eu/en/" noHover>
+                      <TextHighlight>GetBus</TextHighlight>
+                    </Link>
+                    ;
+                  </Text>
+                </NumberedBlock>
+                <br />
+                <NumberedBlock number="2.">
+                  <Text>
+                    Catch a
+                    {' '}
+                    <Link target="_blank" href="https://www.cp.pt/passageiros/pt/consultar-horarios/estacoes/porto-campanha" noHover>
+                      <TextHighlight>train at Porto Campanhã</TextHighlight>
+                    </Link>
+                    {' '}
+                    (~ 1 hour trip).
+                  </Text>
+                </NumberedBlock>
+              </div>
             </div>
           </div>
         </div>
@@ -60,7 +62,9 @@ const Moving = () => (
           <div className="Grid Grid--1offset">
             <div className="Grid-4column" />
             <div className="Grid-5column">
-              <div className="Moving-portoImage" />
+              <div className="Moving-portoImageWrapper">
+                <div className="Moving-portoImage" />
+              </div>
             </div>
           </div>
         </div>
@@ -88,7 +92,9 @@ const Moving = () => (
         <div className="Moving-imageWrapper">
           <div className="Grid Grid--1offset">
             <div className="Grid-5column">
-              <div className="Moving-lisbonImage" />
+              <div className="Moving-lisbonImageWrapper">
+                <div className="Moving-lisbonImage" />
+              </div>
             </div>
           </div>
         </div>
