@@ -24,6 +24,7 @@ $SpeakerDetails-name-font-weight: bold;
   padding: 0 $Spacing-xSmall;
 
   @include Breakpoint-desktopOnly {
+    display: flex;
     padding: 0;
   }
 }
@@ -34,20 +35,18 @@ $SpeakerDetails-name-font-weight: bold;
   }
 }
 
-.SpeakerDetails-columns {
-  margin-top: $Spacing-xSmall;
-
-  @include Breakpoint-desktopOnly {
-    display: flex;
-  }
-}
-
 .SpeakerDetails-details,
 .SpeakerDetails-description {
   flex-shrink: 0;
   flex-basis: 50%;
+}
 
+.SpeakerDetails-details {
   margin-bottom: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    margin-bottom: 0;
+  }
 }
 
 .SpeakerDetails-details {

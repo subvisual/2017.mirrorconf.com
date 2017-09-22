@@ -6,13 +6,15 @@ $SpeakersPage-content-max-width: 982px;
   margin-top: $Spacing-xLarge;
 }
 
+.SpeakersPage-title {
+  margin-bottom: $Spacing-large;
+}
+
 .SpeakersPage-speaker {
   max-width: $SpeakersPage-content-max-width;
 }
 
-.SpeakersPage-section,
 .SpeakersPage-speaker {
   margin: auto;
-  margin-top: $Spacing-large;
-  margin-bottom: $Spacing-large;
+  margin-bottom: $Spacing-xLarge;
 }

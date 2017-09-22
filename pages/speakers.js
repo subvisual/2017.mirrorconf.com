@@ -11,7 +11,9 @@ import SpeakerData from '../data/speakers';
 const SpeakersPage = () => (
   <div className="SpeakersPage">
     <Section>
-      <SectionTitle>Speakers</SectionTitle>
+      <div className="SpeakersPage-title">
+        <SectionTitle>Speakers</SectionTitle>
+      </div>
 
       {SpeakerData.map(speakerData =>
         <div className="SpeakersPage-speaker">
