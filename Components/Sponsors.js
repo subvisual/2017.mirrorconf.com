@@ -11,37 +11,28 @@ import SectionTitle from './SectionTitle';
 import SubSectionTitle from './SubSectionTitle';
 import SponsorsData from '../data/sponsors';
 
-const renderLogos = logos => logos.map((logo) => {
-  const classes = `Sponsors-logo Sponsors-${logo.alt.toLowerCase()}`;
+const renderLogos = logos =>
+  logos.map(logo => {
+    const classes = `Sponsors-logo Sponsors-${logo.alt.toLowerCase()}`;
 
-  return (
-    <span className="Sponsors-levelLogo">
-      <Link
-        target="_blank"
-        href={logo.href}
-      >
-        <img
-          className={classes}
-          alt={logo.alt}
-          key={logo.id}
-          src={logo.src}
-        />
-      </Link>
-    </span>
-  );
-});
+    return (
+      <span className="Sponsors-levelLogo">
+        <Link target="_blank" href={logo.href}>
+          <img className={classes} alt={logo.alt} key={logo.id} src={logo.src} />
+        </Link>
+      </span>
+    );
+  });
 
-const renderLevel = (data) => {
+const renderLevel = data => {
   const classes = `Sponsors-level Sponsors-${data.title.toLowerCase()}`;
 
   return (
     <div key={data.title} className={classes}>
       <div className="Sponsors-levelTitle">
-        <SubSectionTitle>{ data.title }</SubSectionTitle>
+        <SubSectionTitle>{data.title}</SubSectionTitle>
       </div>
-      <div className="Sponsors-levelLogos">
-        { renderLogos(data.logos) }
-      </div>
+      <div className="Sponsors-levelLogos">{renderLogos(data.logos)}</div>
     </div>
   );
 };
@@ -59,11 +50,9 @@ const Sponsors = () => (
               <div className="Sponsors-levelsTitle">
                 <Text alternative>A warm thank you to our amazing sponsors.</Text>
               </div>
-              { SponsorsData.map(renderLevel) }
+              {SponsorsData.map(renderLevel)}
             </div>
-            <SubSectionTitle alternate>
-              Want to help us make the best conference?
-            </SubSectionTitle>
+            <SubSectionTitle alternate>Want to help us make the best conference?</SubSectionTitle>
             <div className="Sponsors-actions">
               <Link noHover href="/sponsoring.pdf" target="_blank">
                 <Button alternative>Sponsor us</Button>

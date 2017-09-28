@@ -18,28 +18,39 @@ import ReactiveConfLogo from '../images/sponsors/reactiveconf@2x.png';
 import DankeLogo from '../images/sponsors/danke@2x.png';
 import BragaioLogo from '../images/sponsors/bragaio@2x.png';
 import BlipLogo from '../images/sponsors/blip-logo@2x.png';
+import ResponsiveDesignLogo from '../images/sponsors/responsivedesign.png';
+import UtrustLogo from '../images/sponsors/utrust.svg';
 
 export default [
   {
     title: 'Platinum',
     logos: [
       { id: 1, alt: 'Uniplaces logo', src: UniplacesLogo, href: 'https://www.uniplaces.com/' },
+      {
+        id: 2,
+        alt: 'Utrust logo',
+        src: UtrustLogo,
+        href: 'https://utrust.io/',
+      },
     ],
   },
   {
     title: 'Gold',
     logos: [
       { id: 1, alt: 'Seegno logo', src: SeegnoLogo, href: 'https://seegno.com/' },
-      { id: 2, alt: 'Startup Braga logo', src: StartupBragaLogo, href: 'http://www.investbraga.com/startup' },
+      {
+        id: 2,
+        alt: 'Startup Braga logo',
+        src: StartupBragaLogo,
+        href: 'http://www.investbraga.com/startup',
+      },
       { id: 3, alt: 'WeDo logo', src: WeDoLogo, href: 'http://ww1.wedotechnologies.com/en/' },
       { id: 4, alt: 'Blip logo', src: BlipLogo, href: 'https://blip.pt/' },
     ],
   },
   {
     title: 'Wi-fi',
-    logos: [
-      { id: 7, alt: 'Mindera', src: MinderaLogo, href: 'https://www.mindera.com/' },
-    ],
+    logos: [{ id: 7, alt: 'Mindera', src: MinderaLogo, href: 'https://www.mindera.com/' }],
   },
   {
     title: 'Quiz',
@@ -65,9 +76,25 @@ export default [
     title: 'Media',
     logos: [
       { id: 5, alt: 'Usersnap logo', src: UsersnapLogo, href: 'https://usersnap.com/' },
-      { id: 8, alt: 'DesignerNews logo', src: DesignerNewsLogo, href: 'https://www.designernews.co/' },
-      { id: 9, alt: 'Reactive Conf logo', src: ReactiveConfLogo, href: 'https://reactiveconf.com/' },
+      {
+        id: 8,
+        alt: 'DesignerNews logo',
+        src: DesignerNewsLogo,
+        href: 'https://www.designernews.co/',
+      },
+      {
+        id: 9,
+        alt: 'Reactive Conf logo',
+        src: ReactiveConfLogo,
+        href: 'https://reactiveconf.com/',
+      },
       { id: 10, alt: 'Braga IO logo', src: BragaioLogo, href: 'http://braga.io/pt/' },
+      {
+        id: 11,
+        alt: 'Responsive Design logo',
+        src: ResponsiveDesignLogo,
+        href: 'https://responsivedesign.is/',
+      },
     ],
   },
 ];
