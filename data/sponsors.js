@@ -20,6 +20,7 @@ import BragaioLogo from '../images/sponsors/bragaio@2x.png';
 import BlipLogo from '../images/sponsors/logo_blip_powering.svg';
 import ResponsiveDesignLogo from '../images/sponsors/responsivedesign.svg';
 import UtrustLogo from '../images/sponsors/utrust.svg';
+import GinettaLogo from '../images/sponsors/ginetta-logo@2x.png';
 
 export default [
   {
@@ -46,6 +47,7 @@ export default [
       },
       { id: 3, alt: 'WeDo logo', src: WeDoLogo, href: 'http://ww1.wedotechnologies.com/en/' },
       { id: 4, alt: 'Blip logo', src: BlipLogo, href: 'https://blip.pt/' },
+      { id: 4, alt: 'Ginetta logo', src: GinettaLogo, href: 'https://ginetta.net/' },
     ],
   },
   {
