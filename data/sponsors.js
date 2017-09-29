@@ -17,8 +17,8 @@ import UniplacesLogo from '../images/sponsors/uniplaces@2x.png';
 import ReactiveConfLogo from '../images/sponsors/reactiveconf@2x.png';
 import DankeLogo from '../images/sponsors/danke@2x.png';
 import BragaioLogo from '../images/sponsors/bragaio@2x.png';
-import BlipLogo from '../images/sponsors/blip-logo@2x.png';
-import ResponsiveDesignLogo from '../images/sponsors/responsivedesign.png';
+import BlipLogo from '../images/sponsors/logo_blip_powering.svg';
+import ResponsiveDesignLogo from '../images/sponsors/responsivedesign.svg';
 import UtrustLogo from '../images/sponsors/utrust.svg';
 
 export default [
