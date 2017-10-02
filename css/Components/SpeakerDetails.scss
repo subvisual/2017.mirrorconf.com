@@ -11,11 +11,11 @@ $SpeakerDetails-name-font-weight: bold;
 
 .SpeakerDetails {
   position: relative;
+  z-index: 1;
 
   width: 100%;
   height: 100%;
-
-  z-index: 1;
+  overflow: hidden;
 }
 
 .SpeakerDetails-columns {
@@ -90,7 +90,7 @@ $SpeakerDetails-name-font-weight: bold;
   position: absolute;
 
   width: 100%;
-  right: $Spacing-xSmall;
+  left: $Spacing-xSmall;
   max-width: 370px;
   max-height: 400px;
 
@@ -99,7 +99,6 @@ $SpeakerDetails-name-font-weight: bold;
   @include Breakpoint-desktopOnly {
     max-height: none;
     top: 0;
-    right: initial;
     left: 100px;
   }
 }
