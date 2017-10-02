@@ -24,7 +24,8 @@
   background-color: $Color-white;
 
   @include Breakpoint-desktopOnly {
-    padding: $Spacing-large 0;
+    padding-top: $Spacing-large;
+    padding-bottom: $Spacing-large;
     margin-right: 0;
   };
 }
