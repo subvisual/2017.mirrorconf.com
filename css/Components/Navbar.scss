@@ -14,7 +14,7 @@ $Navbar-cta-z-index: 20;
   padding: $Spacing-xxSmall $Spacing-xxSmall 0;
 
   @include Breakpoint-desktopOnly {
-    padding: $Spacing-xSmall 0 0;
+    padding-top: $Spacing-xSmall;
   }
 }
 
@@ -45,8 +45,11 @@ $Navbar-cta-z-index: 20;
 
   margin-bottom: $Spacing-xSmall;
 
-  @include Breakpoint-desktopOnly {
+  &:not(:last-child) {
     margin-right: $Spacing-xSmall;
+  }
+
+  @include Breakpoint-desktopOnly {
     margin-bottom: 0;
   }
 }
