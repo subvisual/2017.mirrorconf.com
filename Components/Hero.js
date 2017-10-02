@@ -69,7 +69,7 @@ export default class Hero extends React.Component {
                 <div className="Hero-title">
                   <h1 className="Hero-headline">Mirror Conf 2017</h1>
                   <h2 className="Hero-uvp">
-                    For designers and front-end developers.
+                    For designers <span className="Hero-noBreakingWords">and front-</span>end developers.
                   </h2>
                   <h3 className="Hero-date">
                     October 10 — 13, 2017<br />

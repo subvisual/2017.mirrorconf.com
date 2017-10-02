@@ -271,3 +271,7 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
 .Hero-socialLink:not(:last-child) {
   margin-right: $Spacing-xSmall;
 }
+
+.Hero-noBreakingWords {
+  white-space: nowrap;
+}
