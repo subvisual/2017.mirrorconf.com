@@ -3,10 +3,6 @@
 
 .Sleeping {
   padding: 0 $Spacing-xxSmall;
-
-  @include Breakpoint-desktopOnly {
-    padding: 0;
-  }
 }
 
 .Sleeping-section {

@@ -11,10 +11,6 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 
 .Moving {
   padding: 0 $Spacing-xxSmall;
-
-  @include Breakpoint-desktopOnly {
-    padding: 0;
-  }
 }
 
 .Moving-title {
