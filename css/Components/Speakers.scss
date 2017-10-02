@@ -19,7 +19,12 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
   display: flex;
   flex-wrap: wrap;
 
-  margin: $Spacing-base auto 0;
+  margin-top: $Spacing-base;
+
+  @include Breakpoint-desktopOnly {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @include Breakpoint-mobileOnly {
