@@ -31,10 +31,7 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 
 .Moving-section {
   position: relative;
-
-  @include Breakpoint-desktopOnly {
-    min-height: $Moving-image-height;
-  }
+  min-height: $Moving-image-height;
 }
 
 .Moving-section:not(:last-child) {
@@ -53,13 +50,6 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 .Moving-lisbonImageWrapper {
   position: relative;
   height: $Moving-image-height;
-
-  @include Breakpoint-mobileOnly {
-    height: 0;
-    $image-ratio: $Moving-image-height / 294px;
-    padding-bottom: calc(100% * #{$image-ratio});
-    max-width: 500px;
-  }
 
   @include Breakpoint-desktopOnly {
     margin-top: 0;
@@ -98,16 +88,23 @@ $Moving-gradient-start-color: rgba(13, 29, 97, 0.4);
 
 .Moving-imageWrapper {
   width: 100%;
-  @include Breakpoint-desktopOnly {
-    position: absolute;
+  position: absolute;
+  top: 0;
 
-    top: 0;
+  @include Breakpoint-mobileOnly {
+    position: initial;
   }
 }
 
 .Moving-description {
   position: relative;
   z-index: $Moving-z-index-foreground;
+}
+
+.Moving-listTitle {
+  @include Breakpoint-tabletAndBelow {
+    margin-left: $Spacing-xSmall;
+  }
 }
 
 .Moving-descriptionNumberedBlock {

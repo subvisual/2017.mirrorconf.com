@@ -27,9 +27,11 @@ const Moving = () => (
               <SubSectionTitle>Porto Airport (OPO)</SubSectionTitle>
             </div>
             <div className="Moving-description">
-              <Text>
-                The closest airport is in Porto (OPO), from where you can either:
-              </Text>
+              <div className="Moving-listTitle">
+                <Text>
+                  The closest airport is in Porto (OPO), from where you can either:
+                </Text>
+              </div>
               <br />
               <div className="Moving-descriptionNumberedBlock">
                 <NumberedBlock number="1.">
