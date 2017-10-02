@@ -26,6 +26,10 @@ $Workshops-item-mobile-height: 286px;
 
 .Workshops-description {
   margin-bottom: $Spacing-base;
+
+  @include Breakpoint-tabletAndBelow {
+    max-width: 534px;
+  }
 }
 
 .Workshops-ticket {
@@ -67,6 +71,8 @@ $Workshops-item-mobile-height: 286px;
 }
 
 .Workshops-row {
+  width: 100%;
+
   @include Breakpoint-desktopOnly {
     &:nth-child(even) {
       .Workshops-item {

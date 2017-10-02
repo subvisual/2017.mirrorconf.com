@@ -37,7 +37,7 @@ const Venue = () => (
           <SectionTitle>The Venue</SectionTitle>
         </div>
         <div className="Grid Grid--1offset">
-          <div className="Grid-5column">
+          <div className="Grid-5column md-11">
             <div className="Venue-subtitle">
               <SubSectionTitle>Theatro Circo, Braga, Portugal</SubSectionTitle>
             </div>

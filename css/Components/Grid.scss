@@ -1,9 +1,13 @@
 @import "../Theme/Breakpoint";
 @import "../Theme/Spacing";
 
-$Grid-col-width: 86px;
-$Grid-col-spacing: 26px;
+$Grid-gutter: 26px;
 $Grid-number-of-columns: 11;
+
+@function Grid-column-width($columns) {
+  $column-ratio: $columns / $Grid-number-of-columns;
+  @return percentage($column-ratio);
+}
 
 .Grid {
   width: 100%;
@@ -14,26 +18,36 @@ $Grid-number-of-columns: 11;
     padding: 0;
 
     @include Breakpoint-desktopOnly {
-      padding: 0 calc((#{$Grid-col-width} + #{$Grid-col-spacing}) * #{$col});
+      &::before,
+      &::after {
+        content: '';
+
+        display: inline-block;
+        width: calc(#{Grid-column-width($col)});
+      }
     }
   }
 
   .Grid-#{$col}column {
     display: inline-block;
     vertical-align: top;
-
-    width: 100%;
-    max-width: calc((#{$Grid-col-width} * #{$col}) + (#{$Grid-col-spacing} * (#{$col} - 1)));
-    margin-right: $Grid-col-spacing;
+    width: calc(#{Grid-column-width($col)});
+    padding-right: $Grid-gutter;
 
     @include Breakpoint-mobileOnly {
-      max-width: 100%;
+      width: 100%;
 
-      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include Breakpoint-tabletOnly {
+    .md-#{$col} {
+      width: calc(#{Grid-column-width($col)});
     }
   }
 
   .Grid-#{$col}column:last-child {
-    margin-right: 0;
+    padding-right: 0;
   }
 }

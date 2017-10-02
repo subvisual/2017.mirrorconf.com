@@ -32,11 +32,8 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
     width: 100%;
     max-width: 100%;
 
-    padding: 0 $Spacing-xxSmall;
-    margin: $Spacing-xSmall 0;
-
-    &:first-child {
-      margin-top: 0;
+    &:not(:first-child) {
+      margin-top: $Spacing-xSmall;
     }
   }
 }
@@ -44,11 +41,12 @@ $Speakers-3-column-size: $Global-speaker-width * 3 + $Spacing-xSmall * 2;
 .Speakers-item {
   transition: opacity 0.2s ease-in;
 }
+
 .Speakers-list:hover .Speakers-item:not(:hover) {
   opacity: 0.2;
 }
 
-@media (min-width: $Speakers-2-column-size) and (max-width: $Speakers-3-column-size) {
+@media (min-width: $Speakers-2-column-size) and (max-width: #{$Speakers-3-column-size - 1}) {
   .Speakers-list {
     max-width: $Speakers-2-column-size;
   }

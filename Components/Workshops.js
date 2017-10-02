@@ -38,8 +38,8 @@ const renderWorkshop = isOddRow => (workshop, index) => {
   const isEvenWorkshop = index % 2 !== 0;
 
   const className = classNames({
-    'Grid-4column': (isEvenWorkshop && !isOddRow) || (!isEvenWorkshop && isOddRow),
-    'Grid-5column': (!isEvenWorkshop && !isOddRow) || (isEvenWorkshop && isOddRow),
+    'Grid-4column md-5': (isEvenWorkshop && !isOddRow) || (!isEvenWorkshop && isOddRow),
+    'Grid-5column md-6': (!isEvenWorkshop && !isOddRow) || (isEvenWorkshop && isOddRow),
   });
 
   return (
@@ -58,7 +58,7 @@ const renderWorkshopsRow = (row, index) => {
 
   return (
     <div key={index} className="Workshops-row">
-      <div className="Grid">
+      <div className="Grid Grid--1offset">
         {row.map(renderWorkshop(isOddRow))}
       </div>
     </div>
@@ -73,7 +73,7 @@ const Workshops = () => (
       </div>
       <div className="Workshops-description">
         <div className="Grid Grid--1offset">
-          <div className="Grid-5column">
+          <div className="Grid-5column md-11">
             <div className="Workshops-subHeader">
               <SubSectionTitle>Enlarging the Experience</SubSectionTitle>
             </div>
@@ -89,9 +89,7 @@ const Workshops = () => (
       </div>
 
       <div className="Workshops-list">
-        <div className="Grid Grid--1offset">
-          {workshops.map(renderWorkshopsRow)}
-        </div>
+        {workshops.map(renderWorkshopsRow)}
       </div>
     </Section>
   </section>

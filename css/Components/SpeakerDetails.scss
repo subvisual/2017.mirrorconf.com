@@ -41,8 +41,6 @@ $SpeakerDetails-name-font-weight: bold;
   @include Breakpoint-desktopOnly {
     top: 0;
     left: $SpeakerDetails-image-offset-desktop;
-
-    max-height: none;
   }
 }
 

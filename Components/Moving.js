@@ -22,7 +22,7 @@ const Moving = () => (
 
       <div className="Moving-section">
         <div className="Grid Grid--1offset">
-          <div className="Grid-5column">
+          <div className="Grid-5column md-6">
             <div className="Moving-subtitle">
               <SubSectionTitle>Porto Airport (OPO)</SubSectionTitle>
             </div>
@@ -62,8 +62,8 @@ const Moving = () => (
         </div>
         <div className="Moving-imageWrapper">
           <div className="Grid Grid--1offset">
-            <div className="Grid-4column" />
-            <div className="Grid-5column">
+            <div className="Grid-4column md-5" />
+            <div className="Grid-5column md-6">
               <div className="Moving-portoImageWrapper">
                 <div className="Moving-portoImage" />
               </div>
@@ -74,8 +74,8 @@ const Moving = () => (
 
       <div className="Moving-section">
         <div className="Grid Grid--1offset">
-          <div className="Grid-4column" />
-          <div className="Grid-5column">
+          <div className="Grid-4column md-5" />
+          <div className="Grid-5column md-6">
             <div className="Moving-subtitle">
               <SubSectionTitle>Lisbon Airport (LIS)</SubSectionTitle>
             </div>
@@ -93,7 +93,7 @@ const Moving = () => (
         </div>
         <div className="Moving-imageWrapper">
           <div className="Grid Grid--1offset">
-            <div className="Grid-5column">
+            <div className="Grid-5column md-6">
               <div className="Moving-lisbonImageWrapper">
                 <div className="Moving-lisbonImage" />
               </div>
@@ -103,13 +103,13 @@ const Moving = () => (
       </div>
       <div className="Moving-section">
         <div className="Grid Grid--1offset">
-          <div className="Grid-4column">
+          <div className="Grid-4column md-5">
             <div className="Moving-tap">
               <div className="Moving-tapLogo" />
               <div className="Moving-tapPlane" />
             </div>
           </div>
-          <div className="Grid-5column">
+          <div className="Grid-5column md-6">
             <div className="Moving-subtitle">
               <SubSectionTitle>Flight discount</SubSectionTitle>
             </div>

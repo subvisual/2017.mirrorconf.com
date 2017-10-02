@@ -6,6 +6,8 @@ import FacebookLogo from '../images/facebook.svg';
 import LinkedInLogo from '../images/linkedin.svg';
 import GooglePlusLogo from '../images/google.svg';
 
+import '../css/Components/SocialLinks';
+
 const renderSocialLink = (href, alt, img) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="Footer-socialLink">
     <img alt={alt} src={img} />

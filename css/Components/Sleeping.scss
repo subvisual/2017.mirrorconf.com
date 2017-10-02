@@ -8,11 +8,3 @@
 .Sleeping-section {
   margin-top: $Spacing-base;
 }
-
-.Sleeping-emptyColumn {
-  display: none;
-
-  @include Breakpoint-desktopOnly {
-    display: initial;
-  }
-}

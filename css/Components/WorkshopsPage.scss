@@ -1,9 +1,22 @@
 @import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
 
 $WorkshopsPage-content-max-width: 982px;
 
 .WorkshopsPage {
   margin-top: $Spacing-xLarge;
+}
+
+.WorkshopsPage-content {
+  padding: 0 $Spacing-xxSmall;
+}
+
+.WorkshopsPage-workshops {
+  padding-top: $Spacing-small;
+
+  @include Breakpoint-desktopOnly {
+    padding-top: $Spacing-base;
+  }
 }
 
 .WorkshopsPage-workshop {
@@ -12,7 +25,19 @@ $WorkshopsPage-content-max-width: 982px;
 
 .WorkshopsPage-section,
 .WorkshopsPage-workshop {
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.WorkshopsPage-workshop:not(:first-child) {
+  margin-top: $Spacing-large;
+
+  @include Breakpoint-desktopOnly {
+    margin-top: $Spacing-xLarge;
+  }
+}
+
+.WorkshopsPage-section {
   margin-top: $Spacing-large;
   margin-bottom: $Spacing-large;
 }

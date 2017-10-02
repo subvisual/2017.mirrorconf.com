@@ -25,6 +25,10 @@ $About-photo-mobile-gradient: to right,
   rgba($Color-deep-cove, 1),
   rgba($Color-deep-cove, 0.4);
 
+$About-photo-mobile-gradient-reverse: to left,
+  rgba($Color-deep-cove, 1),
+  rgba($Color-deep-cove, 0.4);
+
 .About {
   padding: 0 $Spacing-xxSmall;
 }
@@ -72,12 +76,16 @@ $About-photo-mobile-gradient: to right,
 
   @include Breakpoint-mobileOnly {
     width: 294px;
-    height: 286px;
 
     margin-top: $Spacing-large;
     margin-right: 0;
 
     background-image: linear-gradient($About-photo-mobile-gradient),
+                      url($About-attendancePhoto);
+  }
+
+  @include Breakpoint-tabletOnly {
+    background-image: linear-gradient($About-photo-mobile-gradient-reverse),
                       url($About-attendancePhoto);
   }
 }

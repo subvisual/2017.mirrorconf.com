@@ -4,7 +4,8 @@
 @import "../Theme/Breakpoint";
 
 $Speaker-height: 416px;
-$Speaker-width: 268px;
+$Speaker-height-mobile: 286px;
+$Speaker-width: 294px;
 $Speaker-name-font-size: 26px;
 $Speaker-name-line-height: 39px;
 $Speaker-name-font-size-mobile: 18px;
@@ -16,10 +17,16 @@ $Speaker-name-font-weight: bold;
   align-items: flex-end;
 
   width: $Speaker-width;
-  height: $Speaker-height;
+  height: $Speaker-height-mobile;
 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+
+  @include Breakpoint-tabletAndAbove {
+    height: $Speaker-height;
+
+    background-size: contain;
+  }
 
   @include Breakpoint-desktopOnly {
     width: $Global-speaker-width;
@@ -27,7 +34,11 @@ $Speaker-name-font-weight: bold;
 }
 
 .Speaker-details {
-  transform: translateX(- $Spacing-xxSmall);
+  transform: translateX($Spacing-xxSmall);
+
+  @include Breakpoint-desktopOnly {
+    transform: translateX(-$Spacing-xxSmall);
+  }
 }
 
 .Speaker-name {

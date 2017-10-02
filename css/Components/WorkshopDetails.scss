@@ -21,12 +21,6 @@ $WorkshopDetails-name-font-weight: bold;
 .WorkshopDetails-name,
 .WorkshopDetails-columns {
   position: relative;
-
-  padding: 0 $Spacing-xSmall;
-
-  @include Breakpoint-desktopOnly {
-    padding: 0;
-  }
 }
 
 .WorkshopDetails-columns {
