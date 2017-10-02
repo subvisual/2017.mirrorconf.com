@@ -11,8 +11,8 @@ import SectionTitle from './SectionTitle';
 import SubSectionTitle from './SubSectionTitle';
 import SponsorsData from '../data/sponsors';
 
-const renderLogos = logos =>
-  logos.map(logo => {
+const renderLogos = logos => (
+  logos.map((logo) => {
     const classes = `Sponsors-logo Sponsors-${logo.alt.toLowerCase()}`;
 
     return (
@@ -22,9 +22,10 @@ const renderLogos = logos =>
         </Link>
       </span>
     );
-  });
+  })
+);
 
-const renderLevel = data => {
+const renderLevel = (data) => {
   const classes = `Sponsors-level Sponsors-${data.title.toLowerCase()}`;
 
   return (
