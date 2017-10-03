@@ -49,19 +49,24 @@
 .Sponsors-levelLogos {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -$Spacing-small;
 
   @include Breakpoint-mobileOnly {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: -$Spacing-xSmall;
   }
 }
 
-.Sponsors-levelLogo:not(:last-child) {
-  margin-right: $Spacing-small;
+.Sponsors-levelLogo {
   margin-bottom: $Spacing-small;
 
   @include Breakpoint-mobileOnly {
     margin-bottom: $Spacing-xSmall;
+  }
+
+  &:not(:last-child) {
+    margin-right: $Spacing-small;
   }
 }
 
