@@ -18,7 +18,7 @@ export default class Tabs extends Component {
     return () => this.setState({ activeTab: component });
   }
 
-  renderLink = tab => {
+  renderLink = (tab) => {
     const { activeTab } = this.state;
 
     const className = classNames({
