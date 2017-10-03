@@ -17,9 +17,9 @@ const renderLogos = logos => (
 
     return (
       <span className="Sponsors-levelLogo">
-        <Link target="_blank" href={logo.href}>
+        <a className="Sponsors-levelLogoLink" target="_blank" href={logo.href} rel="noopener noreferrer">
           <img className={classes} alt={logo.alt} key={logo.id} src={logo.src} />
-        </Link>
+        </a>
       </span>
     );
   })

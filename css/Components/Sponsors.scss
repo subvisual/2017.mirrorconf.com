@@ -59,6 +59,8 @@
 }
 
 .Sponsors-levelLogo {
+  display: flex;
+  align-items: center;
   margin-bottom: $Spacing-small;
 
   @include Breakpoint-mobileOnly {
@@ -68,6 +70,10 @@
   &:not(:last-child) {
     margin-right: $Spacing-small;
   }
+}
+
+.Sponsors-levelLogoLink {
+  display: flex;
 }
 
 .Sponsors-actions {
@@ -88,10 +94,4 @@
 .Sponsors-stone .Sponsors-logo,
 .Sponsors-media .Sponsors-logo {
   max-height: 26px;
-}
-
-.Sponsors-media .Sponsors-logo.Sponsors-designernews {
-  height: 40px;
-
-  max-height: 40px;
 }
