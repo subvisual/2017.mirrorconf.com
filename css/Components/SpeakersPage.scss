@@ -1,10 +1,18 @@
 @import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
 
 $SpeakersPage-content-max-width: 982px;
 
 .SpeakersPage {
-  padding: 0 $Spacing-xxSmall;
   margin-top: $Spacing-xLarge;
+
+  @include Breakpoint-mobileOnly {
+    margin-top: $Spacing-large;
+  }
+}
+
+.SpeakersPage-content {
+  padding: 0 $Spacing-xxSmall;
 }
 
 .SpeakersPage-title {

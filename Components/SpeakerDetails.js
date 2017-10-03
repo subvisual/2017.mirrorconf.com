@@ -13,21 +13,26 @@ const SpeakerDetails = props => (
     <div className="SpeakerDetails-columns">
       <div className="SpeakerDetails-details">
         <h2 className="SpeakerDetails-name">{props.nameWithBreaks}</h2>
-        <Link href={`https://twitter.com/${props.twitter}`} target="_blank" noHover>
-          <div className="SpeakerDetails-link">
-            <span className="SpeakerDetails-twitterIcon" />
-            <span>Twitter</span>
-          </div>
-        </Link>
+        <div className="SpeakerDetails-detailsContent">
+          <Link href={`https://twitter.com/${props.twitter}`} target="_blank" noHover>
+            <div className="SpeakerDetails-link">
+              <span className="SpeakerDetails-twitterIcon" />
+              <span>Twitter</span>
+            </div>
+          </Link>
 
-        <Link href={props.website} target="_blank" noHover>
-          <div className="SpeakerDetails-link">
-            <span className="SpeakerDetails-websiteIcon" />
-            <span>Website</span>
-          </div>
-        </Link>
+          <Link href={props.website} target="_blank" noHover>
+            <div className="SpeakerDetails-link">
+              <span className="SpeakerDetails-websiteIcon" />
+              <span>Website</span>
+            </div>
+          </Link>
 
-        <div className="SpeakerDetails-info">{props.datetime}</div>
+          {
+            props.datetime &&
+            <div className="SpeakerDetails-info">{props.datetime}</div>
+          }
+        </div>
       </div>
       <div className="SpeakerDetails-description">
         {props.description}

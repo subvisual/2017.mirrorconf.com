@@ -3,6 +3,10 @@
 @import "../Theme/Spacing";
 @import "../Theme/Breakpoint";
 
+$SpeakerDetails-image-offset-desktop: 112px;
+$SpeakerDetails-image-height-mobile: 286px;
+$SpeakerDetails-image-width-mobile: 198px;
+$SpeakerDetails-image-width-desktop: 310px;
 $SpeakerDetails-name-font-size: 51px;
 $SpeakerDetails-name-line-height: 78px;
 $SpeakerDetails-name-font-size-mobile: 26px;
@@ -18,41 +22,65 @@ $SpeakerDetails-name-font-weight: bold;
   overflow: hidden;
 }
 
+.SpeakerDetails-imageContainer {
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  max-width: $SpeakerDetails-image-width-desktop;
+  overflow: hidden;
+
+  @include Breakpoint-mobileOnly {
+    max-height: $SpeakerDetails-image-height-mobile;
+  }
+
+  @include Breakpoint-tabletOnly {
+    max-width: $SpeakerDetails-image-width-mobile;
+  }
+
+  @include Breakpoint-desktopOnly {
+    top: 0;
+    left: $SpeakerDetails-image-offset-desktop;
+
+    max-height: none;
+  }
+}
+
 .SpeakerDetails-columns {
   position: relative;
 
-  padding: 0 $Spacing-xSmall;
+  display: flex;
+  flex-direction: column;
 
-  @include Breakpoint-desktopOnly {
-    display: flex;
-    padding: 0;
+  @include Breakpoint-tabletAndAbove {
+    flex-direction: row;
   }
-}
-
-.SpeakerDetails-name {
-  @include Breakpoint-desktopOnly {
-    white-space: pre-line;
-  }
-}
-
-.SpeakerDetails-details,
-.SpeakerDetails-description {
-  flex-shrink: 0;
-  flex-basis: 50%;
 }
 
 .SpeakerDetails-details {
-  margin-bottom: $Spacing-xSmall;
+  display: flex;
+  flex-direction: column;
+  height: $SpeakerDetails-image-height-mobile;
+
+  @include Breakpoint-mobileOnly {
+    justify-content: space-between;
+    margin-bottom: $Spacing-xSmall;
+  }
+
+  @include Breakpoint-tabletAndAbove {
+    flex: 0 0 $SpeakerDetails-image-width-mobile;
+    margin-right: $Spacing-xSmall;
+  }
 
   @include Breakpoint-desktopOnly {
+    flex: 0 0 $SpeakerDetails-image-offset-desktop + $SpeakerDetails-image-width-desktop;
+    height: initial;
     margin-bottom: 0;
   }
 }
 
-.SpeakerDetails-details {
-  @include Breakpoint-desktopOnly {
-    margin-top: 0;
-  }
+.SpeakerDetails-description {
+  flex: 1 0 0%;
 }
 
 .SpeakerDetails-info {
@@ -66,6 +94,7 @@ $SpeakerDetails-name-font-weight: bold;
 
 .SpeakerDetails-name {
   max-width: 650px;
+  margin-bottom: $Spacing-xSmall;
 
   color: $Color-coral;
 
@@ -77,6 +106,7 @@ $SpeakerDetails-name-font-weight: bold;
   @include Breakpoint-desktopOnly {
     font-size: $SpeakerDetails-name-font-size;
     line-height: $SpeakerDetails-name-line-height;
+    white-space: pre-line;
   }
 }
 
@@ -84,28 +114,6 @@ $SpeakerDetails-name-font-weight: bold;
   width: 100%;
   display: inline;
   vertical-align: top;
-}
-
-.SpeakerDetails-imageContainer {
-  position: absolute;
-
-  width: 100%;
-  left: $Spacing-xSmall;
-  max-width: 370px;
-  max-height: 400px;
-
-  overflow: hidden;
-
-  @include Breakpoint-desktopOnly {
-    max-height: none;
-    top: 0;
-    left: 100px;
-  }
-}
-
-.SpeakerDetails-details {
-  max-height: 400px;
-  height: 400px;
 }
 
 .SpeakerDetails-imageOverlay {
@@ -154,6 +162,5 @@ $SpeakerDetails-name-font-weight: bold;
 .SpeakerDetails-link {
   display: flex;
   align-items: center;
-
-  margin-bottom: $Spacing-small;
+  margin-bottom: $Spacing-xSmall;
 }

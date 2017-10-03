@@ -10,19 +10,20 @@ import SpeakerData from '../data/speakers';
 
 const SpeakersPage = () => (
   <div className="SpeakersPage">
-    <Section>
-      <div className="SpeakersPage-title">
-        <SectionTitle>Speakers</SectionTitle>
-      </div>
+    <div className="SpeakersPage-content">
+      <Section>
+        <div className="SpeakersPage-title">
+          <SectionTitle>Speakers</SectionTitle>
+        </div>
 
-      {SpeakerData.map(speakerData =>
-        <div className="SpeakersPage-speaker">
-          <SpeakerDetails {...speakerData} />
-        </div>,
-      )}
-
-      <Footer />
-    </Section>
+        {SpeakerData.map(speakerData =>
+          <div className="SpeakersPage-speaker">
+            <SpeakerDetails {...speakerData} />
+          </div>,
+        )}
+      </Section>
+    </div>
+    <Footer />
   </div>
 );
 
