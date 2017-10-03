@@ -99,6 +99,7 @@ export default [
     location: 'GNRation',
     locationUrl: 'https://www.google.pt/maps/place/GNRation/@41.5531265,-8.4284087,17z/data=!3m1!4b1!4m5!3m4!1s0xd24fee9ae15fe63:0xf715da419f911455!8m2!3d41.5531265!4d-8.42622?hl=en',
     attendeePrice: 150,
+    soldOut: true,
     nonAttendeePrice: 200,
     description: <EventDescription>
       <Text>Are you ready for a design challenge? In this brand new workshop, Vitaly Friedman, editor-in-chief and co-founder of Smashing Magazine, will be taking a microscopic examination of common interface components and problems appearing in responsive user interfaces. In this workshop, we’ll be spending an entire day drawing and designing responsive interfaces, starting from accordions, to date/time pickers, sliders, feature comparisons, car configurators all the way to insurance calculators and trip planners.</Text>
