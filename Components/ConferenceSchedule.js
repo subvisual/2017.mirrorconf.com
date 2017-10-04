@@ -82,7 +82,7 @@ const renderSchedule = events =>
 const ConferenceSchedule = () => (
   <div className="ConferenceSchedule">
     <Section>
-      <div className="ScheduleTable">{renderSchedule(conference)}</div>
+      <div className="ScheduleTable ScheduleTable--conference">{renderSchedule(conference)}</div>
     </Section>
   </div>
 );
