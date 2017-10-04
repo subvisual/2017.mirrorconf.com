@@ -98,6 +98,30 @@ $ScheduleTable-time-column-width-desktop: 112px;
     };
   }
 
+  @include Breakpoint-desktopOnly {
+    &.ScheduleTable--conference {
+      .ScheduleTable-dayWrapper:not(:first-child) {
+        .ScheduleTable-entry:not(.ScheduleTable-filler) {
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: $Spacing-xSmall;
+            height: 100%;
+
+            background-color: rgba($Color-white, 0.1);
+
+            transform: translateX(-100%);
+          }
+        }
+      }
+    }
+  }
+
   &-dayWrapper:not(:last-child) {
     @include Breakpoint-mobileOnly {
       margin-bottom: $Spacing-base;

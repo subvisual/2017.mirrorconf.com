@@ -5,7 +5,7 @@ export const workshops = [
       {
         location: 'Gnration Room 1',
         time: '10:00',
-        name: 'Roadmaping your product roadmap',
+        name: 'Roadmapping Your Product Roadmap',
         subtitle: 'pt.1',
         speaker: 'C Todd Lombardo',
         duration: 400,
@@ -13,7 +13,7 @@ export const workshops = [
       {
         location: 'Gnration Room 1',
         time: '13:00',
-        name: 'Roadmaping your product roadmap',
+        name: 'Roadmapping Your Product Roadmap',
         subtitle: 'pt.2',
         speaker: 'C Todd Lombardo',
         duration: 400,
@@ -21,7 +21,7 @@ export const workshops = [
       {
         location: 'Gnration Room 2',
         time: '10:00',
-        name: 'The front-end expresso shot',
+        name: 'The Front-End Expresso Shot',
         subtitle: 'pt.1',
         speaker: 'Sara Soueidan',
         duration: 400,
@@ -29,7 +29,7 @@ export const workshops = [
       {
         location: 'Gnration Room 2',
         time: '13:00',
-        name: 'The front-end expresso shot',
+        name: 'The Front-End Expresso Shot',
         subtitle: 'pt.2',
         speaker: 'Sara Soueidan',
         duration: 400,
