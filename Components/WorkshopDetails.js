@@ -6,43 +6,48 @@ import Link from './Link';
 import Button from './Button';
 import Mirrored from './Mirrored';
 
-const ticketSection = ({ className, attendeePrice, nonAttendeePrice, soldOut }) => {
-  const href = soldOut ? null : 'https://ti.to/subvisual/mirror-conf-2017';
-  return (
-    <div className={className}>
-      <div className="WorkshopDetails-price">
-        <div className="WorkshopDetails-priceValue">€{nonAttendeePrice}</div>
-        <div className="WorkshopDetails-priceLabel">Normal Price</div>
-      </div>
-
-      <div className="WorkshopDetails-price">
-        <div className="WorkshopDetails-priceValue">€{attendeePrice}</div>
-        <div className="WorkshopDetails-priceLabel">With full ticket</div>
-      </div>
-
-      <div className="WorkshopDetails-cta">
-        <Link alternateFont href={href}>
-          <Button disabled={soldOut}>Buy ticket</Button>
-        </Link>
-      </div>
+const ticketSection = ({ className, attendeePrice, nonAttendeePrice }) => (
+  <div className={className}>
+    <div className="WorkshopDetails-price">
+      <div className="WorkshopDetails-priceValue">€{nonAttendeePrice}</div>
+      <div className="WorkshopDetails-priceLabel">Normal Price</div>
     </div>
-  );
-};
+
+    <div className="WorkshopDetails-price">
+      <div className="WorkshopDetails-priceValue">€{attendeePrice}</div>
+      <div className="WorkshopDetails-priceLabel">With full ticket</div>
+    </div>
+
+    <div className="WorkshopDetails-cta">
+      <Link alternateFont href="https://ti.to/subvisual/mirror-conf-2017">
+        <Button>Buy ticket</Button>
+      </Link>
+    </div>
+  </div>
+);
 
 ticketSection.propTypes = {
   className: PropTypes.string.isRequired,
   attendeePrice: PropTypes.number.isRequired,
   nonAttendeePrice: PropTypes.number.isRequired,
+};
+
+
+const Tickets = (props) => {
+  if (props.soldOut) {
+    return <div className="WorkshopDetails-soldOut">Sold Out</div>;
+  }
+
+  return ticketSection({ className: 'WorkshopDetails-ticketsDesktop', ...props });
+};
+
+Tickets.propTypes = {
   soldOut: PropTypes.boolean,
 };
 
-ticketSection.defaultProps = {
+Tickets.defaultProps = {
   soldOut: false,
 };
-
-const Tickets = props => (
-  ticketSection({ className: 'WorkshopDetails-ticketsDesktop', ...props })
-);
 
 const WorkshopDetails = props => (
   <div className="WorkshopDetails" id={props.id}>

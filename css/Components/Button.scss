@@ -90,11 +90,6 @@ $Button-alternative-color: #190b5b;
 }
 
 .Button.Button--disabled {
-  &,
-  &::after {
-    @include Button-hover;
-  }
-
   cursor: default;
 
   text-decoration: line-through;
