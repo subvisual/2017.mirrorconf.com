@@ -1,88 +1,411 @@
 import React from 'react';
-import _ from 'lodash';
-import classNames from 'classnames';
 
 import Section from './Section';
 
-import { conference } from '../data/schedule';
+import '../css/Components/Event.scss';
 import '../css/Components/ScheduleTable.scss';
-
-const renderLocations = locations =>
-  _.map(locations, location => (
-    <p key={location} className="ScheduleTable-locationName">
-      {location}
-    </p>
-  ));
-
-const renderHeader = (day, entries) => {
-  const locations = _(entries)
-    .uniqBy('location')
-    .map('location')
-    .value();
-
-  return (
-    <div key={day} className="ScheduleTable-headerColumn">
-      <h2 className="ScheduleTable-day">{day}</h2>
-      <div className="ScheduleTable-headerRow">{renderLocations(locations)}</div>
-    </div>
-  );
-};
-
-const renderFringeHeader = entries =>
-  _(entries)
-    .map('location')
-    .uniq()
-    .map(location => (
-      <div key={location} className="ScheduleTable-headerColumn">
-        <div className="ScheduleTable-headerRow">{renderLocations([location])}</div>
-      </div>
-    ))
-    .value();
-
-const renderItems = items =>
-  _.map(items, ({ name, speaker, subtitle, duration, filler }) => {
-    const className = classNames({
-      'ScheduleTable-entry': true,
-      'ScheduleTable-filler': filler,
-      [`ScheduleTable-${duration}hours`]: duration,
-    });
-
-    return (
-      <div className={className}>
-        <h3 className="ScheduleTable-entryTitle">{name}</h3>
-        <p className="ScheduleTable-entrySubtitle">{subtitle}</p>
-        <h3 className="ScheduleTable-entrySpeaker">{speaker}</h3>
-      </div>
-    );
-  });
-
-const renderBody = entries =>
-  _(entries)
-    .groupBy('time')
-    .map((items, time) => (
-      <div className="ScheduleTable-row">
-        <div className="ScheduleTable-time">{time}</div>
-        {renderItems(items)}
-      </div>
-    ))
-    .value();
-
-const renderSchedule = events =>
-  _.map(events, day => (
-    <div key={day} className="ScheduleTable-dayWrapper">
-      <div className="ScheduleTable-header">{renderHeader(day.day, day.entries)}</div>
-      <div className="ScheduleTable-body">{renderBody(day.entries)}</div>
-      <div className="ScheduleTable-fringe">
-        <div className="ScheduleTable-header">{renderFringeHeader(day.fringe)}</div>
-        <div className="ScheduleTable-body">{renderBody(day.fringe)}</div>
-      </div>
-    </div>
-  ));
 
 const ConferenceSchedule = () => (
   <div className="ConferenceSchedule">
     <Section>
-      <div className="ScheduleTable ScheduleTable--conference">{renderSchedule(conference)}</div>
+      <div className="ScheduleTable">
+        <h2 className="ScheduleTable-header">12</h2>
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">09:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">
+              Theatro Circo<br />Main Room
+            </h3>
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-text">Check-in</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration15">
+              <p className="Event-time">09:45</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration15">
+              <p className="Event-text">Opening</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">10:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">How to Tell When You're Tired</p>
+              <p className="Event-text">Frank Chimero</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-time">11:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-text">Coffee Break</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">11:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">
+                The {'<'}svg{'>'} of .svg
+              </p>
+              <p className="Event-text">Sara Soueidan</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">12:15</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">User Research for Everyone</p>
+              <p className="Event-text">Aras Bilgen</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-time">13:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-text">Lunch</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">15:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">Design for Emotion</p>
+              <p className="Event-text">Henry Daubrez</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">15:45</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">Solving Layout Problems with CSS Grid and Friends</p>
+              <p className="Event-text">Rachel Andrew</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-time">16:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-text">Coffee Break</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">17:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">A Little Story About A Big Bang Redesign</p>
+              <p className="Event-text">Vitaly Friedman</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">18:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">Mirror Quiz</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">19:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">Barhaus</h3>
+
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">MirrorConf Party</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="ScheduleTable">
+        <h2 className="ScheduleTable-header">13</h2>
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">
+              Theatro Circo<br />Main Room
+            </h3>
+            <div className="ScheduleTable-cell duration60 filler" />
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">10:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">Tall To Be Announced</p>
+              <p className="Event-text">Gabriel Valdivia</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-time">11:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-text">Coffee Break</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">11:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">Evaluating Technology</p>
+              <p className="Event-text">Jeremy Keith</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">12:15</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">What’s Your Roadmap?</p>
+              <p className="Event-text">C. Todd Lombardo</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-time">13:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-text">Lunch</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">15:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">Web Performance Kinetosis</p>
+              <p className="Event-text">Eduardo Bouças</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-time">15:45</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration45">
+              <p className="Event-heading">Home</p>
+              <p className="Event-text">Claudio Guglieri</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-time">16:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration30">
+              <p className="Event-text">Coffee Break</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">17:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">Let's Work Together!</p>
+              <p className="Event-text">Brad Frost</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">18:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-text">Closing</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </Section>
   </div>
 );

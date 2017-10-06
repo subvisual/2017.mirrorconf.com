@@ -1,0 +1,52 @@
+@import "../Theme/Color";
+@import "../Theme/Global";
+@import "../Theme/Spacing";
+@import "../Theme/Breakpoint";
+
+.Event {
+  background-color: rgba($Color-white, 0.1);
+
+  &-heading,
+  &-subHeading {
+    font-family: $Global-font-family-sans;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $Color-white;
+    font-weight: bold;
+
+    @include Breakpoint-desktopOnly {
+      font-size: 26px;
+    };
+  }
+
+  &-subHeading {
+    margin-bottom: $Spacing-xxSmall;
+
+    font-weight: normal;
+  }
+
+  &-text {
+    font-family: $Global-font-family-sans;
+    font-size: 13px;
+    color: $Color-white;
+
+    @include Breakpoint-desktopOnly {
+      font-size: 18px;
+    };
+
+    &.bold {
+      font-weight: bold;
+    }
+  }
+
+  &-time {
+    font-size: 13px;
+    font-weight: bold;
+    font-family: $Global-font-family-serif;
+    color: $Color-coral;
+
+    @include Breakpoint-desktopOnly {
+      font-size: 18px;
+    };
+  }
+}

@@ -4,6 +4,10 @@
 
 .Schedule {
   padding: $Spacing-xLarge 0 0;
+
+  @include Breakpoint-mobileOnly {
+    padding: ($Spacing-large + $Spacing-xSmall) 0 0;
+  };
 }
 
 .Schedule-subtitle {
@@ -16,8 +20,10 @@
 
 .Schedule-hero,
 .Schedule-body {
-  @include Breakpoint-mobileOnly {
-    padding: 0 $Spacing-xxSmall;
+  padding: 0 $Spacing-xxSmall;
+
+  @include Breakpoint-desktopOnly {
+    padding: 0 $Spacing-xSmall;
   };
 }
 

@@ -11,14 +11,14 @@ export default class Tabs extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { activeTab: props.tabs[0] };
+    this.state = { activeTab: props.activeTab || props.tabs[0] };
   }
 
   switchTabTo(component) {
     return () => this.setState({ activeTab: component });
   }
 
-  renderLink = (tab) => {
+  renderLink = tab => {
     const { activeTab } = this.state;
 
     const className = classNames({

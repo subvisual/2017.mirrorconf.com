@@ -1,87 +1,230 @@
 import React from 'react';
-import _ from 'lodash';
-import classNames from 'classnames';
 
 import Section from './Section';
 
-import { workshops } from '../data/schedule';
+import '../css/Components/Event.scss';
 import '../css/Components/ScheduleTable.scss';
-
-const renderLocations = locations =>
-  _.map(locations, location => (
-    <p key={location} className="ScheduleTable-locationName">
-      {location}
-    </p>
-  ));
-
-const renderHeader = (day, entries) => {
-  const locations = _(entries)
-    .uniqBy('location')
-    .map('location')
-    .value();
-
-  return (
-    <div key={day} className="ScheduleTable-headerColumn">
-      <h2 className="ScheduleTable-day">{day}</h2>
-      <div className="ScheduleTable-headerRow">{renderLocations(locations)}</div>
-    </div>
-  );
-};
-
-const renderFringeHeader = entries =>
-  _(entries)
-    .map('location')
-    .uniq()
-    .map(location => (
-      <div key={location} className="ScheduleTable-headerColumn">
-        <div className="ScheduleTable-headerRow">{renderLocations([location])}</div>
-      </div>
-    ))
-    .value();
-
-const renderItems = items =>
-  _.map(items, ({ name, speaker, subtitle, duration }) => {
-    const className = classNames({
-      'ScheduleTable-entry': true,
-      [`ScheduleTable-${duration}hours`]: duration,
-    });
-
-    return (
-      <div className={className}>
-        <h3 className="ScheduleTable-entryTitle">{name}</h3>
-        <p className="ScheduleTable-entrySubtitle">{subtitle}</p>
-        <h3 className="ScheduleTable-entrySpeaker">{speaker}</h3>
-      </div>
-    );
-  });
-
-const renderBody = entries =>
-  _(entries)
-    .groupBy('time')
-    .map((items, time) => (
-      <div className="ScheduleTable-row">
-        <div className="ScheduleTable-time">{time}</div>
-        {renderItems(items)}
-      </div>
-    ))
-    .value();
-
-const renderSchedule = events =>
-  _.map(events, day => (
-    <div key={day} className="ScheduleTable-dayWrapper">
-      <div className="ScheduleTable-header">{renderHeader(day.day, day.entries)}</div>
-      <div className="ScheduleTable-body">{renderBody(day.entries)}</div>
-      <div className="ScheduleTable-fringe">
-        <div className="ScheduleTable-header">{renderFringeHeader(day.fringe)}</div>
-        <div className="ScheduleTable-body">{renderBody(day.fringe)}</div>
-      </div>
-    </div>
-  ));
 
 const WorkshopsSchedule = () => (
   <div className="WorkshopsSchedule">
     <Section>
-      <div className="ScheduleTable">{renderSchedule(workshops)}</div>
+      <div className="ScheduleTable">
+        <h2 className="ScheduleTable-header">10</h2>
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-time">10:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">
+              Gnration<br />Room 1
+            </h3>
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">Roadmapping Your Product Roadmap</p>
+              <p className="Event-subHeading">pt. 1</p>
+              <p className="Event-text">C. Todd Lombardo</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-columnGutter">
+            <div className="ScheduleTable-cell duration240" />
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">
+              Gnration<br />Room 2
+            </h3>
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">The Front-End Espresso Shot</p>
+              <p className="Event-subHeading">pt. 1</p>
+              <p className="Event-text">Sara Soueidan</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-time">12:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-text">Lunch</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-columnGutter">
+            <div className="ScheduleTable-cell duration120" />
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-text">Lunch</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-time">13:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">Roadmapping Your Product Roadmap</p>
+              <p className="Event-subHeading">pt. 2</p>
+              <p className="Event-text">C. Todd Lombardo</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-columnGutter">
+            <div className="ScheduleTable-cell duration240" />
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">The Front-End Espresso Shot</p>
+              <p className="Event-subHeading">pt. 2</p>
+              <p className="Event-text">Sara Soueidan</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">18:30</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">Subvisual Office</h3>
+
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-text bold">Meetup</p>
+              <p className="Event-text">Braga.Design + Braga.JS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="ScheduleTable">
+        <h2 className="ScheduleTable-header">11</h2>
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-time">10:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">
+              Gnration<br />Room 1
+            </h3>
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">Atomic Design: Patterns and Principles</p>
+              <p className="Event-subHeading">pt. 1</p>
+              <p className="Event-text">Brad Frost</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-columnGutter">
+            <div className="ScheduleTable-cell duration240" />
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">
+              Gnration<br />Room 2
+            </h3>
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">Smart Responsive Design Patterns</p>
+              <p className="Event-subHeading">pt. 1</p>
+              <p className="Event-text">Vitaly Friedman</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-time">12:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-text">Lunch</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-columnGutter">
+            <div className="ScheduleTable-cell duration120" />
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration120">
+              <p className="Event-text">Lunch</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-rowGutter" />
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-time">13:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">Atomic Design: Patterns and Principles</p>
+              <p className="Event-subHeading">pt. 2</p>
+              <p className="Event-text">Brad Frost</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-columnGutter">
+            <div className="ScheduleTable-cell duration240" />
+          </div>
+
+          <div className="ScheduleTable-column">
+            <div className="ScheduleTable-cell duration240">
+              <p className="Event-heading">Smart Responsive Design Patterns</p>
+              <p className="Event-subHeading">pt. 2</p>
+              <p className="Event-text">Vitaly Friedman</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="ScheduleTable-row">
+          <div className="ScheduleTable-column pushLeft">
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-time">20:00</p>
+            </div>
+          </div>
+
+          <div className="ScheduleTable-column">
+            <h3 className="ScheduleTable-columnHeader">Gnration</h3>
+            <div className="ScheduleTable-cell duration60">
+              <p className="Event-heading">Welcome Drinks</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </Section>
   </div>
 );
