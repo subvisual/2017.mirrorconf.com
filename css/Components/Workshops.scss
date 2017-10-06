@@ -52,10 +52,15 @@ $Workshops-item-mobile-height: 286px;
   margin-bottom: -$Spacing-xSmall;
 }
 
+.Workshops-list:hover .Workshops-item:not(:hover) {
+  opacity: 0.2;
+}
+
 .Workshops-item {
   height: $Workshops-item-mobile-height;
-
   margin-bottom: $Spacing-xSmall;
+
+  transition: opacity 0.2s ease-in;
 
   @include Breakpoint-desktopOnly {
     height: $Workshops-item-even-height;
