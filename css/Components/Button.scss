@@ -5,6 +5,10 @@
 $Button-anim-offset: 3px;
 $Button-alternative-color: #190b5b;
 
+@mixin Button-hover {
+  transform: translate(0, 0);
+}
+
 .Button {
   position: relative;
   z-index: 1;
@@ -60,10 +64,9 @@ $Button-alternative-color: #190b5b;
     transition: transform 0.2s ease-out;
   }
 
-
   &:hover,
   &:hover::after {
-    transform: translate(0, 0);
+    @include Button-hover;
   }
 }
 
@@ -84,4 +87,15 @@ $Button-alternative-color: #190b5b;
   &::after {
     border-color: $Color-white;
   }
+}
+
+.Button.Button--disabled {
+  &,
+  &::after {
+    @include Button-hover;
+  }
+
+  cursor: default;
+
+  text-decoration: line-through;
 }

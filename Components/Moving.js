@@ -128,9 +128,7 @@ const Moving = () => (
                   </Link>
                 </div>
                 <div className="Moving-tapAction">
-                  <Link noHover href="https://ti.to/subvisual/mirror-conf-2017" target="_blank">
-                    <Button>Buy Your Ticket</Button>
-                  </Link>
+                  <Button disabled>Buy Your Ticket</Button>
                 </div>
               </div>
             </div>

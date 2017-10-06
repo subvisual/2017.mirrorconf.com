@@ -19,8 +19,6 @@ export default [
     Sponsor Us
   </Link>,
   <span key="5" className="Navbar-cta">
-    <Link noHover target="_blank" href="https://ti.to/subvisual/mirror-conf-2017">
-      <Button>Buy Your Ticket</Button>
-    </Link>
+    <Button disabled>Buy Your Ticket</Button>
   </span>,
 ];

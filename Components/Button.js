@@ -3,11 +3,12 @@ import classNames from 'classnames';
 
 import '../css/Components/Button';
 
-const Button = ({ children, alternative, transparent, onClick }) => {
+const Button = ({ children, alternative, transparent, disabled, onClick }) => {
   const className = classNames({
     Button: true,
     'Button--alternative': alternative,
     'Button--transparent': transparent,
+    'Button--disabled': disabled,
   });
 
   /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -22,6 +23,7 @@ const Button = ({ children, alternative, transparent, onClick }) => {
 Button.propTypes = {
   alternative: PropTypes.bool,
   transparent: PropTypes.bool,
+  disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
 };
@@ -29,6 +31,7 @@ Button.propTypes = {
 Button.defaultProps = {
   alternative: false,
   transparent: false,
+  disabled: false,
   onClick: null,
 };
 
