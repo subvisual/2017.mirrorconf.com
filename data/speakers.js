@@ -24,7 +24,7 @@ export default [
     bio: 'Head of Design at Garanti',
     twitter: 'arasb',
     website: 'http://arasbilgen.com',
-    datetime: '',
+    datetime: 'Oct. 12 — 12:15',
     image: aras,
     description: <EventDescription noMargin>
       <Title>Head of Design at Garanti</Title>
@@ -41,7 +41,7 @@ export default [
     image: brad,
     twitter: 'brad_frost',
     website: 'http://bradfrost.com/',
-    datetime: '',
+    datetime: 'Oct. 13 — 17:00',
     description: <EventDescription noMargin>
       <Title>Author of Atomic Design</Title>
       <Text>Brad Frost is a web designer, speaker, consultant, musician, and artist located in beautiful Pittsburgh, He has also helped create some tools and resources for web designers, including This Is Responsive, Pattern Lab, Styleguides.io, WTF Mobile Web, and Mobile Web Best Practices.</Text>
@@ -57,7 +57,7 @@ export default [
     image: todd,
     twitter: 'iamctodd',
     website: 'http://ctodd.com/',
-    datetime: '',
+    datetime: 'Oct. 13 — 12:15',
     description: <EventDescription noMargin>
       <Title>Chief Design Strategist at Fresh Tilled Soil</Title>
       <Text>C. Todd Lombardo is a leader who wears many hats, all at once: Author, designer, scientist, professor, and visualizer. After originally beginning his career in science, C. Todd shifted his focus to product and design, ultimately innovating, designing, and managing products for countless companies large and small.</Text>
@@ -73,7 +73,7 @@ export default [
     image: claudio,
     twitter: 'claudioguglieri',
     website: 'http://www.guglieri.com/',
-    datetime: '',
+    datetime: 'Oct. 13 — 15:45',
     description: <EventDescription noMargin>
       <Title>Design Director at Microsoft</Title>
       <Text>Claudio is the Design Director at Microsoft Groove and Movies & TV, former CD at Elephant working for Apple, and Design Director at Fi.</Text>
@@ -90,7 +90,7 @@ export default [
     image: eduardo,
     twitter: 'eduardoboucas',
     website: 'https://eduardoboucas.com/',
-    datetime: '',
+    datetime: 'Oct. 13 — 15:00',
     description: <EventDescription noMargin>
       <Title>Senior Engineer at Dadi</Title>
       <Text>Eduardo is a software engineer with a crush on the web. When he's not writing code or writing about writing code, you can find him advocating open-sourced software and rambling on about the importance of an open, democratic and accessible web. He creates tools like Staticman (https://staticman.net) or SpeedTracker (https://speedtracker.org) and spends his time working on a cutting-edge open-source web stack at DADI (https://dadi.tech).</Text>
@@ -106,7 +106,7 @@ export default [
     image: frank,
     twitter: 'frank_chimero',
     website: 'https://www.frankchimero.com/',
-    datetime: '',
+    datetime: 'Oct. 12 — 10:00',
     description: <EventDescription noMargin>
       <Title>Designer, Writer and Illustrator</Title>
       <Text>Frank Chimero (key-mare-oh) is a designer, writer, and illustrator. He runs a one-man studio from Brooklyn, specializing in publication design for page and screen, digital design systems, and image-making.</Text>
@@ -118,7 +118,7 @@ export default [
     id: 'gabriel-valdivia',
     twitter: 'gabrielvaldivia',
     website: 'http://www.gabrielvaldivia.com/',
-    datetime: '',
+    datetime: 'Oct. 13 — 10:00',
     name: 'Gabriel Valdivia',
     nameWithBreaks: 'Gabriel\nValdivia',
     bio: 'Facebook VR Designer',
@@ -134,7 +134,7 @@ export default [
     id: 'henry-daubrez',
     twitter: 'Upskydown',
     website: 'https://www.dogstudio.co',
-    datetime: '',
+    datetime: 'Oct. 12 — 15:00',
     name: 'Henry Daubrez',
     nameWithBreaks: 'Henry\nDaubrez',
     bio: 'Design Director at Dogstudio',
@@ -154,7 +154,7 @@ export default [
     image: jeremy,
     twitter: 'adactio',
     website: 'https://adactio.com/',
-    datetime: '',
+    datetime: 'Oct. 13 — 11:30',
     description: <EventDescription noMargin>
       <Title>Co-found and technical lead at Clearleft</Title>
       <Text>Jeremy made his first website for a band he was playing with in Germany in 1997. He founded Clearleft with Andy Budd and Richard Rutter in 2005, and now guides the company’s technical direction.</Text>
@@ -170,7 +170,7 @@ export default [
     image: rachel,
     twitter: 'rachelandrew',
     website: 'https://rachelandrew.co.uk/',
-    datetime: '',
+    datetime: 'Oct. 12 — 15:45',
     description: <EventDescription noMargin>
       <Title>Web Developer, Speaker and Author</Title>
       <Text>Rachel Andrew is a front and back-end web developer, author and speaker. Her books include the recent Get Ready for CSS Grid Layout and she is a regular contributor to a number of publications both on and offline. Rachel is co-founder of the CMS Perch, a Google Developer Expert and an Invited Expert to the CSS Working Group. She writes about business and technology on her own site at rachelandrew.co.uk.</Text>
@@ -186,7 +186,7 @@ export default [
     image: sara,
     twitter: 'SaraSoueidan',
     website: 'https://www.sarasoueidan.com/',
-    datetime: '',
+    datetime: 'Oct. 12 — 11:30',
     description: <EventDescription noMargin>
       <Title>Front-End Web Developer</Title>
       <Text>Sara is an award-winning freelance front-end Web developer and author from Lebanon. She runs workshops and helps companies and agencies build clean front-end (HTML5, SVG, CSS, JS) foundations for Web sites & applications, with strong focus on progressive enhancement, performance and accessibility.</Text>
@@ -202,7 +202,7 @@ export default [
     image: vitaly,
     twitter: 'smashingmag',
     website: 'https://www.smashingmagazine.com/',
-    datetime: '',
+    datetime: 'Oct. 12 — 17:00',
     description: <EventDescription noMargin>
       <Title>Editor-in-chief of Smashing Magazine</Title>
       <Text>Vitaly Friedman loves beautiful content and doesn’t like to give in easily. Vitaly is writer, speaker, author and editor-in-chief of Smashing Magazine. He runs responsive Web design workshops, online workshops and loves solving complex UX, front-end and performance problems in large companies.</Text>
