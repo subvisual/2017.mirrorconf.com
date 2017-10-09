@@ -5,6 +5,7 @@
 
 $SpeakerDetails-image-offset-desktop: 112px;
 $SpeakerDetails-image-height-mobile: 286px;
+$SpeakerDetails-image-height-tablet: 266px;
 $SpeakerDetails-image-width-mobile: 198px;
 $SpeakerDetails-image-width-desktop: 310px;
 $SpeakerDetails-name-font-size: 51px;
@@ -31,6 +32,7 @@ $SpeakerDetails-name-font-weight: bold;
   overflow: hidden;
 
   @include Breakpoint-mobileOnly {
+    height: 100%;
     max-height: $SpeakerDetails-image-height-mobile;
   }
 
@@ -61,12 +63,16 @@ $SpeakerDetails-name-font-weight: bold;
   height: $SpeakerDetails-image-height-mobile;
 
   @include Breakpoint-mobileOnly {
-    justify-content: space-between;
     margin-bottom: $Spacing-xSmall;
+  }
+
+  @include Breakpoint-tabletAndBelow {
+    justify-content: space-between;
   }
 
   @include Breakpoint-tabletAndAbove {
     flex: 0 0 $SpeakerDetails-image-width-mobile;
+    height: $SpeakerDetails-image-height-tablet;
     margin-right: $Spacing-xSmall;
   }
 
@@ -78,7 +84,7 @@ $SpeakerDetails-name-font-weight: bold;
 }
 
 .SpeakerDetails-description {
-  flex: 1 0 0%;
+  flex: 1 0 auto;
 }
 
 .SpeakerDetails-info {
@@ -123,7 +129,7 @@ $SpeakerDetails-name-font-weight: bold;
   display: inline;
   width: 100%;
 
-  background: linear-gradient(to right, var(--color-background) 0%, rgba(8, 19, 64, 0.2) 100%);
+  background: linear-gradient(to right, $Color-deep-cove 0%, rgba(8, 19, 64, 0.2) 100%);
 }
 
 .SpeakerDetails-info {
@@ -160,5 +166,9 @@ $SpeakerDetails-name-font-weight: bold;
 .SpeakerDetails-link {
   display: flex;
   align-items: center;
+}
+
+.SpeakerDetails-name,
+.SpeakerDetails-link {
   margin-bottom: $Spacing-xSmall;
 }

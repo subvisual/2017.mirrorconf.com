@@ -165,11 +165,11 @@ $WorkshopDetails-name-font-weight: bold;
   display: inline;
   width: 100%;
 
-  background: linear-gradient(to bottom, var(--color-background) 0%, rgba(8, 19, 64, 0.2) 50%, var(--color-background) 100%);
+  background: linear-gradient(to bottom, $Color-deep-cove 0%, rgba(8, 19, 64, 0.2) 50%, $Color-deep-cove 100%);
   // background: linear-gradient(to bottom, $Color-deep-cove, rgba(8, 19, 64, 0.2) 49%, $Color-deep-cove);
 
   @include Breakpoint-desktopOnly {
-    background: linear-gradient(to right, var(--color-background) 0%, rgba(8, 19, 64, 0.2) 50%, var(--color-background) 100%);
+    background: linear-gradient(to right, $Color-deep-cove 0%, rgba(8, 19, 64, 0.2) 50%, $Color-deep-cove 100%);
   }
 }
 
