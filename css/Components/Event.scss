@@ -9,10 +9,14 @@
   &-heading,
   &-subHeading {
     font-family: $Global-font-family-sans;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 1.5;
     color: $Color-white;
     font-weight: bold;
+
+    @media screen and (min-width: 355px) {
+      font-size: 18px;
+    }
 
     @include Breakpoint-desktopOnly {
       font-size: 26px;
