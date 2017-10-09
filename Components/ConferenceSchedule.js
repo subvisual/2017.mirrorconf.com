@@ -54,7 +54,7 @@ const ConferenceSchedule = () => (
 
           <div className="ScheduleTable-column">
             <div className="ScheduleTable-cell duration60">
-              <p className="Event-heading">How to Tell When You're Tired</p>
+              <p className="Event-heading">{"How to Tell When You're Tired"}</p>
               <p className="Event-text">Frank Chimero</p>
             </div>
           </div>
@@ -384,7 +384,7 @@ const ConferenceSchedule = () => (
 
           <div className="ScheduleTable-column">
             <div className="ScheduleTable-cell duration60">
-              <p className="Event-heading">Let's Work Together!</p>
+              <p className="Event-heading">{"Let's Work Together!"}</p>
               <p className="Event-text">Brad Frost</p>
             </div>
           </div>

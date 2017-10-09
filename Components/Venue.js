@@ -59,7 +59,9 @@ const Venue = () => (
         </div>
 
         <div className="Grid Grid--1offset">
-          <div className="Venue-image" style={ImageGradient(VenueImage)} />
+          <div className="Grid-9column md-11">
+            <div className="Venue-image" style={ImageGradient(VenueImage)} />
+          </div>
         </div>
       </Section>
     </Mirror>

@@ -7,6 +7,8 @@ $WorkshopDetails-name-font-size-mobile: 26px;
 $WorkshopDetails-name-font-size-desktop: 51px;
 $WorkshopDetails-name-line-height-mobile: 39px;
 $WorkshopDetails-name-line-height-desktop: 78px;
+$WorkshopDetails-imageContainer-height: 286px;
+$WorkshopDetails-imageContainer-offset: $Spacing-base;
 $WorkshopDetails-name-font-weight: bold;
 
 .WorkshopDetails {
@@ -23,26 +25,56 @@ $WorkshopDetails-name-font-weight: bold;
   position: relative;
 }
 
-.WorkshopDetails-columns {
-  margin-top: $Spacing-xSmall;
-
-  @include Breakpoint-desktopOnly {
-    display: flex;
-  }
-}
-
-.WorkshopDetails-details,
-.WorkshopDetails-description {
-  flex-shrink: 0;
-  flex-basis: 50%;
-
+.WorkshopDetails-name {
   @include Breakpoint-desktopOnly {
     margin-bottom: $Spacing-xSmall;
   }
 }
 
+.WorkshopDetails-columns {
+  @include Breakpoint-desktopOnly {
+    display: flex;
+  }
+}
+
 .WorkshopDetails-details {
-  margin-bottom: $Spacing-xSmall;
+  width: 100%;
+}
+
+.WorkshopDetails-data {
+  display: flex;
+}
+
+.WorkshopDetails-dataInfo,
+.WorkshopDetails-descriptionDesktop {
+  @include Breakpoint-desktopOnly {
+    flex-shrink: 0;
+    flex-basis: 50%;
+  }
+}
+
+.WorkshopDetails-descriptionDesktop {
+  @include Breakpoint-tabletAndBelow {
+    display: none;
+  }
+}
+
+.WorkshopDetails-descriptionMobile {
+  margin-top: $Spacing-xSmall;
+
+  @include Breakpoint-desktopOnly {
+    display: none;
+  }
+}
+
+.WorkshopDetails-detailsMain {
+  display: flex;
+  flex-direction: column;
+
+  @include Breakpoint-tabletAndBelow {
+    justify-content: space-between;
+    height: $WorkshopDetails-imageContainer-height + $WorkshopDetails-imageContainer-offset;
+  }
 }
 
 .WorkshopDetails-info {
@@ -52,14 +84,6 @@ $WorkshopDetails-name-font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   font-style: italic;
-}
-
-.WorkshopDetails-name {
-  margin-bottom: 182px;
-
-  @include Breakpoint-desktopOnly {
-    margin-bottom: 0;
-  }
 }
 
 .WorkshopDetails-name,
@@ -101,6 +125,7 @@ $WorkshopDetails-name-font-weight: bold;
 .WorkshopDetails-priceLabel {
   color: $Color-white;
   white-space: nowrap;
+  font-family: $Global-font-family-sans;
   font-size: 18px;
   line-height: 26px;
 }
@@ -117,19 +142,17 @@ $WorkshopDetails-name-font-weight: bold;
 
 .WorkshopDetails-imageContainer {
   position: absolute;
+  top: $WorkshopDetails-imageContainer-offset;
 
   width: 100%;
   max-width: 550px;
-  max-height: 300px;
-
+  max-height: $WorkshopDetails-imageContainer-height;
   overflow: hidden;
 
-  top: $Spacing-base;
-
   @include Breakpoint-desktopOnly {
-    max-height: none;
     top: 0;
     left: 100px;
+    max-height: none;
   }
 }
 
@@ -155,6 +178,7 @@ $WorkshopDetails-name-font-weight: bold;
 
   @include Breakpoint-desktopOnly {
     display: block;
+    margin-top: $Spacing-xSmall;
   }
 }
 
@@ -164,7 +188,6 @@ $WorkshopDetails-name-font-weight: bold;
   justify-content: space-between;
   width: 100%;
   max-width: 300px;
-  padding: 0 $Spacing-xSmall;
 
   @include Breakpoint-desktopOnly {
     display: none;

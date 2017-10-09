@@ -22,9 +22,10 @@ $Venue-image-height: 403px;
 
 .Venue-image {
   position: relative;
+  z-index: 1;
 
   width: 100%;
   height: $Venue-image-height;
 
-  z-index: 1;
+  background-repeat: no-repeat;
 }

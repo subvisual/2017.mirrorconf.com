@@ -23,7 +23,7 @@ const Schedule = () => (
       <div className="Schedule-hero">
         <SectionTitle>Schedule</SectionTitle>
         <div className="Grid Grid--1offset">
-          <div className="Grid-5column">
+          <div className="Grid-5column md-11">
             <div className="Schedule-subtitle">
               <SubSectionTitle>Enlarging the Experience</SubSectionTitle>
             </div>

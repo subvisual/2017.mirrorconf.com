@@ -55,29 +55,36 @@ const WorkshopDetails = props => (
       <div className="WorkshopDetails-imageOverlay" />
       <img className="WorkshopDetails-image" alt={props.name} src={props.image} />
     </div>
-    <Mirrored hide>
-      <h2 className="WorkshopDetails-name">{props.name}</h2>
-    </Mirrored>
     <div className="WorkshopDetails-columns">
       <Mirrored hide>
         <div className="WorkshopDetails-details">
-          <div className="WorkshopDetails-info">With {props.instructor}</div>
-          <div className="WorkshopDetails-info">
-            <div className="WorkshopDetails-calendarIcon" />
-            {props.datetime}
+          <div className="WorkshopDetails-detailsMain">
+            <h2 className="WorkshopDetails-name">{props.name}</h2>
+            <div className="WorkshopDetails-data">
+              <div className="WorkshopDetails-dataInfo">
+                <div className="WorkshopDetails-info">With {props.instructor}</div>
+                <div className="WorkshopDetails-info">
+                  <div className="WorkshopDetails-calendarIcon" />
+                  {props.datetime}
+                </div>
+                <div className="WorkshopDetails-info">
+                  <div className="WorkshopDetails-locationIcon" />
+                  <Link alternateFont noHover href={props.locationUrl} target="_blank">
+                    {props.location}
+                  </Link>
+                </div>
+                <Tickets {...props} />
+              </div>
+              <div className="WorkshopDetails-descriptionDesktop">
+                {props.description}
+              </div>
+            </div>
           </div>
-          <div className="WorkshopDetails-info">
-            <div className="WorkshopDetails-locationIcon" />
-            <Link alternateFont noHover href={props.locationUrl} target="_blank">
-              {props.location}
-            </Link>
+          <div className="WorkshopDetails-descriptionMobile">
+            {props.description}
           </div>
-          <Tickets {...props} />
         </div>
       </Mirrored>
-      <div className="WorkshopDetails-description">
-        {props.description}
-      </div>
     </div>
     {ticketSection({ className: 'WorkshopDetails-ticketsMobile', ...props })}
   </div>

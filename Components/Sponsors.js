@@ -48,10 +48,12 @@ const Sponsors = () => (
               <SectionTitle alternate>Sponsors</SectionTitle>
             </div>
             <div className="Grid Grid--1offset">
-              <div className="Sponsors-levelsTitle">
-                <Text alternative>A warm thank you to our amazing sponsors.</Text>
+              <div className="Grid-9column">
+                <div className="Sponsors-levelsTitle">
+                  <Text alternative>A warm thank you to our amazing sponsors.</Text>
+                </div>
+                {SponsorsData.map(renderLevel)}
               </div>
-              {SponsorsData.map(renderLevel)}
             </div>
             <SubSectionTitle alternate>Want to help us make the best conference?</SubSectionTitle>
             <div className="Sponsors-actions">
