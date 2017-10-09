@@ -108,7 +108,7 @@ const WorkshopsSchedule = () => (
           </div>
 
           <div className="ScheduleTable-column">
-            <h3 className="ScheduleTable-columnHeader">Subvisual Office</h3>
+            <h3 className="ScheduleTable-columnHeader">Braga.io</h3>
 
             <div className="ScheduleTable-cell duration60">
               <p className="Event-text bold">Meetup</p>
