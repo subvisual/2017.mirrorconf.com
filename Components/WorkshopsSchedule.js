@@ -213,7 +213,7 @@ const WorkshopsSchedule = () => (
         <div className="ScheduleTable-row">
           <div className="ScheduleTable-column pushLeft">
             <div className="ScheduleTable-cell duration60">
-              <p className="Event-time">20:00</p>
+              <p className="Event-time">19:30</p>
             </div>
           </div>
 
