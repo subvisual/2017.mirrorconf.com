@@ -218,7 +218,7 @@ const WorkshopsSchedule = () => (
           </div>
 
           <div className="ScheduleTable-column">
-            <h3 className="ScheduleTable-columnHeader">Gnration</h3>
+            <h3 className="ScheduleTable-columnHeader">Startup Braga, Gnration</h3>
             <div className="ScheduleTable-cell duration60">
               <p className="Event-heading">Welcome Drinks</p>
             </div>
