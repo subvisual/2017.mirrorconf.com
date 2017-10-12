@@ -251,7 +251,7 @@ const ConferenceSchedule = () => (
 
           <div className="ScheduleTable-column">
             <div className="ScheduleTable-cell duration60">
-              <p className="Event-heading">Tall To Be Announced</p>
+              <p className="Event-heading">Designing Beyond the Screen</p>
               <p className="Event-text">Gabriel Valdivia</p>
             </div>
           </div>

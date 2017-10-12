@@ -1,6 +1,6 @@
 import React from 'react';
 
-import EventDescription, { Text, Title, Placeholder } from '../Components/EventDescription';
+import EventDescription, { Text, Title } from '../Components/EventDescription';
 
 import todd from '../images/speakers/todd@2x.jpg';
 import brad from '../images/speakers/brad@2x.jpg';
@@ -126,8 +126,8 @@ export default [
     description: <EventDescription noMargin>
       <Title>Facebook VR Designer</Title>
       <Text>Gabriel is a Cuban Product Designer, based in San Francisco, currently exploring VR as a Lead Designer at Facebook. Most recently, he was part of the design team behind Facebook Spaces and Facebook 360 for the Oculus Rift and Gear VR, respectively. Prior to that, he spent a year in London building a product team and leading the design for Multi-Post Stories, a Facebook initiative focused around long form storytelling.</Text>
-      <Title>Talk To Be Announced</Title>
-      <Placeholder />
+      <Title>Designing Beyond the Screen</Title>
+      <Text>In this talk, Gabe will go over the process for designing Facebook's first VR app's Facebook 360 and Facebook Spaces for the Gear VR and Rift, respectively. The talk covers challenges unique to the new medium and how a product designers can transition from thinking in 2D to 3D.</Text>
     </EventDescription>,
   },
   {
