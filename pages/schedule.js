@@ -41,7 +41,9 @@ const Schedule = () => (
     </Section>
     <div className="Schedule-body">
       <div className="Grid Grid--1offset">
-        <Tabs tabs={tabs} activeTab={tabs[1]} />
+        <div className="Grid-9column md-11">
+          <Tabs tabs={tabs} activeTab={tabs[1]} />
+        </div>
       </div>
     </div>
     <div className="Schedule-footer">

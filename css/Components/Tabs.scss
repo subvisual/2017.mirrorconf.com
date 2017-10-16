@@ -13,10 +13,6 @@ $Tabs-link-height: 4px;
   height: 0;
 
   transform: translateY(-2px);
-
-  @include Breakpoint-desktopOnly {
-    transform: translateY(-18px);
-  };
 }
 
 .Tabs-link {
