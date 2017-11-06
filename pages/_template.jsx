@@ -9,6 +9,7 @@ import Links from '../data/links';
 import Link from '../Components/Link';
 import Navbar from '../Components/Navbar';
 import OverlayMenu from '../Components/OverlayMenu';
+import AwwwardsRibbon from '../Components/AwwwardsRibbon';
 
 import MouseAnimator from '../Components/MouseAnimator';
 
@@ -50,25 +51,28 @@ export default class Template extends Component {
     });
 
     return (
-      <div className={className}>
-        <OverlayMenu isOpen={overlayOpen} onClose={this.toggleOverlayMenu}>
-          {Links.map(renderLink)}
-          <Link href="tel:+351 916 748 994">+351 916 748 994</Link>
-          <Link href="mailto:hello@mirrorconf.com">hello@mirrorconf.com</Link>
-        </OverlayMenu>
+      <div>
+        <div className={className}>
+          <OverlayMenu isOpen={overlayOpen} onClose={this.toggleOverlayMenu}>
+            {Links.map(renderLink)}
+            <Link href="tel:+351 916 748 994">+351 916 748 994</Link>
+            <Link href="mailto:hello@mirrorconf.com">hello@mirrorconf.com</Link>
+          </OverlayMenu>
 
-        {this.renderCut()}
-        <nav className="Layout-navbar">
-          <Navbar
-            currentRoute={this.props.location.pathname}
-            overlayOpen={overlayOpen}
-            toggleOverlayMenu={this.toggleOverlayMenu}
-          />
-        </nav>
+          {this.renderCut()}
+          <nav className="Layout-navbar">
+            <Navbar
+              currentRoute={this.props.location.pathname}
+              overlayOpen={overlayOpen}
+              toggleOverlayMenu={this.toggleOverlayMenu}
+            />
+          </nav>
 
-        <div className="Layout-content">
-          {children}
+          <div className="Layout-content">
+            {children}
+          </div>
         </div>
+        <AwwwardsRibbon />
       </div>
     );
   }

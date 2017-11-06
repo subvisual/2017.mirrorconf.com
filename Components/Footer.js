@@ -8,6 +8,8 @@ import SubSectionTitle from './SubSectionTitle';
 import TextTitle from './TextTitle';
 import SocialLinks from './SocialLinks';
 
+import CssdaMonogram from './CssdaMonogram';
+
 import MirrorLogo from '../images/logo.svg';
 import SubvisualLogo from '../images/subvisual.svg';
 
@@ -75,7 +77,7 @@ const Footer = () => (
       </div>
 
       <div className="Grid Grid--1offset">
-        <div className="Grid-9column">
+        <div className="Grid-5column">
           <div className="Footer-sectionTitle">
             <TextTitle>MirrorConf is powered by</TextTitle>
           </div>
@@ -83,6 +85,9 @@ const Footer = () => (
           <a href="https://subvisual.co" rel="noopener noreferrer" target="_blank">
             <img alt="Subvisual logo" src={SubvisualLogo} />
           </a>
+        </div>
+        <div className="Grid-4column">
+          <CssdaMonogram />
         </div>
       </div>
     </div>

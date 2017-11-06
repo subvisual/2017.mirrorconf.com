@@ -1,0 +1,38 @@
+@import "../Theme/Breakpoint";
+
+.AwwwardsRibbon {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 90px;
+  height: 135px;
+  text-indent: -666em;
+  overflow: hidden;
+  z-index: 999;
+
+  -webkit-transition: all 1s ease;
+    transition: all 1s ease; 
+
+  @include Breakpoint-tabletAndBelow {
+    display: none;
+  }
+}
+
+.AwwwardsRibbon a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 90px;
+  height: 135px;
+  background-repeat: no-repeat;
+  background-size: 90px 135px;
+  background-image: url("../../images/awards/awwwards_nominee.png");
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2),  only screen and (min-device-pixel-ratio: 1.5) {
+
+  .AwwwardsRibbon a {
+    background-image: url("../../images/awards/awwwards_nominee@2x.png");
+  }
+}
