@@ -14,7 +14,7 @@
     transition: all 1s ease; 
 
   @include Breakpoint-tabletAndBelow {
-    display: none;
+    top: 70px;
   }
 }
 

@@ -9,6 +9,7 @@ import Section from './Section';
 import TextTitle from './TextTitle';
 import Mirror from './Mirror';
 import SocialLinks from './SocialLinks';
+import CssdaMonogram from './CssdaMonogram';
 
 import HeroFallback from '../pages/hero.jpg';
 import PlayIcon from '../images/play.svg';
@@ -111,6 +112,10 @@ export default class Hero extends React.Component {
             </div>
           </div>
         </Section>
+
+        <div className="Hero-awards">
+          <CssdaMonogram />
+        </div>
       </section>
     );
   }
