@@ -17,7 +17,7 @@ deploy_to() {
   echo "# Deploying to ${env}"
   echo "#"
 
-  yarn install && yarn run build && s3_website push --config-dir deploy/${env}
+  yarn install && yarn run build && bundle install && bundle exec s3_website push --config-dir deploy/${env}
 }
 
 case $1 in
