@@ -280,6 +280,7 @@ $Hero-backgroundOverlay-color: rgba(8, 19, 64, 0.7);
   position: absolute;
   bottom: 60px;
   left: 0;
+  z-index: 2;
 
   @media screen and (min-width: 701px) {
     left: 13px;
